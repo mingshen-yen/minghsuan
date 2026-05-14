@@ -6,27 +6,27 @@ export const Header = () => {
   const [open, setOpen] = useState(false);
   const NavItems = [
     { to: "/", label: "Home", icon: House },
-    { to: "/about", label: "About", icon: Binoculars },
-    { to: "/portfolio", label: "Portfolio", icon: Sparkles },
+    { to: "/portfolio", label: "Projects", icon: Binoculars },
+    { to: "/about", label: "About Me", icon: Sparkles },
     { to: "/contact", label: "Contact", icon: Inbox },
   ];
   return (
-    <>
-      <div className="container p-4">
+    <div className="bg-slate-900">
+      <div className="">
         <nav className="flex justify-between items-center py-4 text-white">
-          <div className="text-3xl font-black tracking-tighter">
+          <div className="text-2xl font-black tracking-tighter">
             MINGHSUAN
             <span className="not-italic ml-1">✦</span>
           </div>
           {/* Desktop Nav */}
-          <div className="hidden rounded-l-lg overflow-hidden lg:flex ">
+          <div className="hidden text-base md:flex">
             {NavItems.map(({ to, label, icon: Icon }) => {
               const active = location.pathname === to;
               return (
                 <Link
                   key={to}
                   to={to}
-                  className={`flex items-center p-4 transition cursor-pointer ${
+                  className={`flex items-center px-4 transition cursor-pointer ${
                     active ? "text-amber-300" : "hover:text-slate-400"
                   }`}
                 >
@@ -40,7 +40,7 @@ export const Header = () => {
           {!open && (
             <button
               onClick={() => setOpen(true)}
-              className="lg:hidden relative z-130"
+              className="md:hidden relative z-130"
             >
               <Menu size={28} />
             </button>
@@ -48,8 +48,8 @@ export const Header = () => {
 
           {/* Mobile Drawer */}
           <div
-            className={`fixed top-0 right-0 z-130 h-full w-64 bg-slate-600 rounded-l-xl shadow-lg flex flex-col overflow-hidden lg:hidden transform transition-transform duration-300 ease-in-out
-        ${open ? "translate-x-0" : "translate-x-full"}`}
+            className={`fixed top-0 right-0 z-130 h-full w-full bg-slate-700 rounded-l-lg shadow-lg flex flex-col overflow-hidden lg:hidden transform transition-transform duration-300 ease-in-out 
+              ${open ? "translate-y-0" : "translate-y-full"}`}
           >
             {/* X Button inside drawer */}
             <button
@@ -73,6 +73,6 @@ export const Header = () => {
           </div>
         </nav>
       </div>
-    </>
+    </div>
   );
 };
