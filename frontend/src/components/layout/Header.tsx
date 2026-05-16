@@ -7,17 +7,17 @@ export const Header = () => {
   const NavItems = [
     { to: "/", label: "Home", icon: House },
     { to: "/portfolio", label: "Projects", icon: Binoculars },
-    { to: "/about", label: "About Me", icon: Sparkles },
+    { to: "/channel", label: "Channels", icon: Sparkles },
     { to: "/contact", label: "Contact", icon: Inbox },
   ];
   return (
     <div className="bg-slate-900">
       <div className="">
         <nav className="flex justify-between items-center py-4 text-white">
-          <div className="text-2xl font-black tracking-tighter">
+          <Link to={"/"} className="text-2xl font-black tracking-tighter">
             MINGHSUAN
             <span className="not-italic ml-1">✦</span>
-          </div>
+          </Link>
           {/* Desktop Nav */}
           <div className="hidden text-base md:flex">
             {NavItems.map(({ to, label, icon: Icon }) => {
@@ -48,8 +48,8 @@ export const Header = () => {
 
           {/* Mobile Drawer */}
           <div
-            className={`fixed top-0 right-0 z-130 h-full w-full bg-slate-700 rounded-l-lg shadow-lg flex flex-col overflow-hidden lg:hidden transform transition-transform duration-300 ease-in-out 
-              ${open ? "translate-y-0" : "translate-y-full"}`}
+            className={`fixed top-0 left-0 z-130 w-full max-h-1200 bg-slate-600 shadow-lg flex flex-col justify-center items-center pb-10 overflow-hidden md:hidden transform transition-transform duration-300 ease-in-out
+  ${open ? "translate-y-0" : "-translate-y-full"}`}
           >
             {/* X Button inside drawer */}
             <button

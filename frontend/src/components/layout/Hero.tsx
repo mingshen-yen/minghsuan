@@ -1,18 +1,13 @@
 export const Hero = () => {
-  const experItems = [
-    "Python",
-    "MATLAB",
-    "React",
-    "TypeScript",
-    "Node.js",
-    "MongoDB",
-  ];
+  const experItems = ["Python", "React", "TypeScript", "Node.js", "MongoDB"];
 
   return (
     <>
       <section className="hero">
         <div id="hero-text">
-          <div className="hero-eyebrow">Data Scientist & Researcher</div>
+          <div className="hero-eyebrow">
+            Data Scientist & Web Developer & Content Creator
+          </div>
           <h1>
             I do research
             <br />
@@ -21,7 +16,7 @@ export const Hero = () => {
             <em>content</em> about it.
           </h1>
           <p className="hero-bio">
-            PhD in Geophysics. 5+ years building reproducible analytical
+            PhD in Geophysics. 8+ years building reproducible analytical
             workflows and translating complex datasets into actionable insights
             — bridging scientific rigour with business impact.
           </p>
@@ -35,7 +30,7 @@ export const Hero = () => {
 
           <div className="hero-cta">
             <a href="mailto:minghsuanyen@gmail.com" className="btn-primary">
-              Get In Touch
+              Contact Me
               <svg
                 width="14"
                 height="14"
@@ -70,12 +65,12 @@ export const Hero = () => {
 
         <div className="hero-visual">
           <div className="avatar-frame">
-            <div className="avatar-ring"></div>
+            <div className="avatar-ring" />
             <div className="avatar-inner">
               <img src="/src/assets/profile-1.jpg" alt="Minghsuan avatar" />
             </div>
             <div className="stat-card">
-              <div className="stat-num">6+</div>
+              <div className="stat-num">8+</div>
               <div className="stat-label">Years exp.</div>
             </div>
             <div className="stat-card">
@@ -89,7 +84,7 @@ export const Hero = () => {
         <div className="stats-inner">
           <div className="stat-item">
             <div className="num">
-              6<span>+</span>
+              8<span>+</span>
             </div>
             <div className="lbl">Years Experience</div>
           </div>

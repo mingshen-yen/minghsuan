@@ -1,3 +1,7 @@
 export const ContactPage = () => {
-  return <></>;
+  return (
+    <>
+      <div className="container"></div>
+    </>
+  );
 };
