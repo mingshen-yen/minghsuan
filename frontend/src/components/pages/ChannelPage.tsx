@@ -2,7 +2,7 @@ export const ChannelPage = () => {
   return (
     <>
       <section id="personal" className="container">
-        <div className="max-w-5xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-20 mb-28">
+        <div className="max-w-5xl mx-auto flex flex-col lg:flex-row justify-center items-center gap-12 lg:gap-20 mb-28">
           <div className="">
             <div className="pb-8">
               <em className="text-lg text-white bg-red-700 py-0.5 px-1.5 rounded-lg">
@@ -11,8 +11,7 @@ export const ChannelPage = () => {
               <h3>Mingshen See the world</h3>
             </div>
             <p>
-              Exploring corners of the world through curious eyes — one journey,
-              one story at a time. <br />
+              Exploring corners of the world through curious eyes. <br />
             </p>
           </div>
           <div className="w-full lg:w-132 shrink-0">
