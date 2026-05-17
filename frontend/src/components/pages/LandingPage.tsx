@@ -6,7 +6,7 @@ export const LandingPage = () => {
   const doItems = [
     { to: "/portfolio", label: "Data Science", icon: House },
     { to: "/portfolio", label: "Web Development", icon: House },
-    { to: "/channel", label: "Content Creation", icon: House },
+    { to: "/channel#personal", label: "Content Creation", icon: House },
   ];
 
   return (

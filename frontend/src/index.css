@@ -82,21 +82,20 @@
   }
 
   .container {
-    @apply py-30 px-15 lg:py-35 lg:px-20;
+    @apply max-w-275 mx-auto py-30 px-15 lg:py-35 lg:px-20;
   }
   /* ── NAV ── */
   nav {
-    @apply fixed top-0 left-0 right-0 z-100 flex items-center justify-between px-5 lg:px-12 h-17 bg-[rgba(14,22,40,0.85)] backdrop-blur-lg border-b border-white/[0.07];
+    @apply fixed top-0 left-0 right-0 z-100 flex items-center justify-between px-5 lg:px-12 h-17 bg-[rgba(14,22,40,0.85)] backdrop-blur-lg;
   }
 
   footer {
-    @apply relative z-10 text-slate-200 py-10 bg-slate-900 border-t border-white/[0.07];
+    @apply relative z-10 text-slate-200 py-10 bg-slate-900;
   }
 
   /* ── HERO ── */
   .hero {
-    @apply relative z-10 min-h-screen gap-12 text-center lg:text-start items-center max-w-275 mx-auto px-12 pt-30 pb-20 grid-cols-1 lg:grid lg:grid-cols-2 lg:pb-0 lg:gap-20;
-    grid-template-columns: 1fr 1fr;
+    @apply relative z-10 gap-12 text-center lg:text-start items-center max-w-275 mx-auto px-12 pt-30 pb-20 grid-cols-1 lg:grid lg:grid-cols-2 lg:gap-20;
     animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 
@@ -128,7 +127,7 @@
 
   /* Buttons */
   .hero-cta {
-    @apply flex gap-3.5 items-center pb-20 justify-center lg:justify-start;
+    @apply flex gap-3.5 items-center pb-20 lg:pb-0 justify-center lg:justify-start;
   }
 
   .btn-primary {
@@ -141,7 +140,7 @@
 
   /* ── HERO VISUAL ── */
   .hero-visual {
-    @apply flex justify-center items-center lg:pb-10;
+    @apply flex justify-center items-center;
   }
 
   .avatar-frame {
