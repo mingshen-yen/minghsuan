@@ -1,32 +1,16 @@
 export const Hero = () => {
-  const experItems = ["Python", "React", "TypeScript", "Node.js", "MongoDB"];
-
   return (
     <>
       <section className="hero">
         <div id="hero-text">
-          <div className="hero-eyebrow">
-            Data Scientist & Web Developer & Content Creator
-          </div>
+          <div className="hero-eyebrow">Data Scientist & Web Developer</div>
           <h1>
-            I do research
+            I do <em>research</em>
             <br />
             and make
             <br />
             <em>content</em> about it.
           </h1>
-          <p className="hero-bio">
-            PhD in Geophysics. 8+ years building reproducible analytical
-            workflows and translating complex datasets into actionable insights
-            — bridging scientific rigour with business impact.
-          </p>
-
-          <div className="skills-label">Experience with</div>
-          <div className="skill-tags">
-            {experItems.map((item) => {
-              return <span className="skill-tag">{item}</span>;
-            })}
-          </div>
 
           <div className="hero-cta">
             <a href="mailto:minghsuanyen@gmail.com" className="btn-primary">
@@ -80,28 +64,6 @@ export const Hero = () => {
           </div>
         </div>
       </section>
-      <div className="stats-strip">
-        <div className="stats-inner">
-          <div className="stat-item">
-            <div className="num">
-              8<span>+</span>
-            </div>
-            <div className="lbl">Years Experience</div>
-          </div>
-          <div className="stat-item">
-            <div className="num">PhD</div>
-            <div className="lbl">Geophysics</div>
-          </div>
-          <div className="stat-item">
-            <div className="num">{experItems.length}</div>
-            <div className="lbl">Core Technologies</div>
-          </div>
-          <div className="stat-item">
-            <div className="num">∞</div>
-            <div className="lbl">Curiosity</div>
-          </div>
-        </div>
-      </div>
     </>
   );
 };

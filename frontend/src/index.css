@@ -27,10 +27,7 @@
   }
 
   body {
-    @apply bg-[#0d1a34] text-[#e8eaf2] font-extralight leading-relaxed min-h-screen overflow-x-hidden;
-    font-family:
-      "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
-      Arial, sans-serif;
+    @apply bg-[#051b2d] text-[#ffffff] font-sans min-h-screen overflow-x-hidden;
   }
 
   body::before {
@@ -66,27 +63,35 @@
   }
 
   h1 {
-    @apply font-serif font-bold text-[56px] text-[#e8eaf2] mb-7 tracking-tight leading-none;
+    @apply lg:py-6 font-serif font-bold text-[56px] lg:text-[60px] text-[#e8eaf2] mb-7 tracking-tight lg:tracking-normal leading-[1.05];
   }
 
   h1 em {
-    @apply italic text-[#5de8b0];
+    @apply italic text-[#2fe39b];
   }
 
   h2 {
-    @apply text-4xl lg:text-5xl font-black uppercase;
+    @apply text-4xl md:text-5xl font-black uppercase;
   }
 
   h3 {
-    @apply text-4xl font-black;
+    @apply text-3xl md:text-4xl font-black;
+  }
+  p {
+    @apply text-sm md:text-base;
   }
 
   .container {
-    @apply max-w-275 mx-auto py-30 px-15 lg:py-35 lg:px-20;
+    @apply min-h-screen max-w-300 mx-auto px-12 pt-30 lg:px-20;
+    animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
   /* ── NAV ── */
   nav {
     @apply fixed top-0 left-0 right-0 z-100 flex items-center justify-between px-5 lg:px-12 h-17 bg-[rgba(14,22,40,0.85)] backdrop-blur-lg;
+  }
+
+  header {
+    @apply bg-slate-900;
   }
 
   footer {
@@ -95,7 +100,7 @@
 
   /* ── HERO ── */
   .hero {
-    @apply relative z-10 gap-12 text-center lg:text-start items-center max-w-275 mx-auto px-12 pt-30 pb-20 grid-cols-1 lg:grid lg:grid-cols-2 lg:gap-20;
+    @apply relative z-10 min-h-screen gap-20 text-center lg:text-start items-center max-w-275 mx-auto px-12 pt-30 pb-20 grid-cols-1 lg:grid lg:grid-cols-2 lg:gap-25;
     animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 
@@ -105,11 +110,11 @@
 
   .hero-eyebrow::before {
     content: "";
-    @apply block w-7 h-px bg-[#5de8b0];
+    @apply block w-7 h-px bg-[#2fe39b];
   }
 
   .hero-bio {
-    @apply text-base text-[#8b93b0] leading-6 mb-10;
+    @apply text-base text-[#d3d4d8] leading-6 mb-10;
   }
 
   /* Skills */
@@ -131,11 +136,11 @@
   }
 
   .btn-primary {
-    @apply inline-flex items-center gap-1 px-5 py-3.5 w-fit bg-[#5de8b0] text-[#0e1628] rounded-md text-sm font-bold cursor-pointer transition-all duration-200 hover:bg-[#7df0c0] hover:-translate-y-px hover:shadow-[0_8px_24px_rgba(93,232,176,0.25)];
+    @apply inline-flex items-center gap-1 px-4 py-2.5 w-fit rounded-xs bg-[#2fe39b] text-[#0e1628] text-sm font-bold cursor-pointer transition-all duration-200 hover:bg-[#7df0c0] hover:-translate-y-px hover:shadow-[0_8px_24px_rgba(93,232,176,0.25)];
   }
 
   .btn-ghost {
-    @apply inline-flex items-center gap-1 px-5 py-3.5 w-fit text-[#8b93b0] border border-white/[0.07] rounded-md text-sm font-bold cursor-pointer transition-all duration-200 hover:border-[rgba(93,232,176,0.4)] hover:text-[#e8eaf2] hover:-translate-y-px;
+    @apply inline-flex items-center gap-1 px-4 py-2.5 w-fit rounded-xs text-[#ffffff] border border-white text-sm font-bold cursor-pointer transition-all duration-200 hover:border-[rgba(93,232,176,0.4)] hover:text-[#e8eaf2] hover:-translate-y-px;
   }
 
   /* ── HERO VISUAL ── */
@@ -144,7 +149,7 @@
   }
 
   .avatar-frame {
-    @apply relative w-80 h-80 lg:w-88 lg:h-88;
+    @apply relative w-88 h-88 lg:w-110 lg:h-110;
   }
 
   .avatar-ring {
@@ -171,7 +176,7 @@
 
   /* Floating stat cards */
   .stat-card {
-    @apply absolute bg-[rgba(20,30,53,0.9)] backdrop-blur-xl border border-white/[0.07] rounded-xl px-4 py-3 whitespace-nowrap;
+    @apply absolute bg-[rgba(20,30,53,0.9)] backdrop-blur-xl border border-white/[0.07] rounded-sm px-4 py-3 whitespace-nowrap;
   }
 
   .stat-card:nth-child(3) {
@@ -183,14 +188,11 @@
   }
 
   .stat-num {
-    @apply mb-0.5 text-2xl text-[#5de8b0] leading-none font-medium text-center;
-    font-family:
-      "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    @apply font-sans mb-0.5 text-2xl text-[#5de8b0] leading-none font-medium text-center;
   }
 
   .stat-label {
-    @apply text-xs text-[#4e5878] tracking-wider uppercase;
+    @apply text-xs text-[#ffffff] tracking-wider uppercase;
   }
 
   /* ── STATS STRIP ── */
@@ -207,10 +209,7 @@
   }
 
   .stat-item .num {
-    @apply text-3xl text-[#e8eaf2] leading-none mb-1.5;
-    font-family:
-      "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    @apply font-sans text-3xl text-[#e8eaf2] leading-none mb-1.5;
   }
 
   .stat-item .num span {

@@ -2,7 +2,7 @@ export const ChannelPage = () => {
   return (
     <>
       <section id="personal" className="container">
-        <div className="max-w-5xl mx-auto flex flex-col lg:flex-row justify-center items-center gap-12 lg:gap-20 mb-28">
+        <div className="max-w-5xl mx-auto flex flex-col lg:flex-row justify-center lg:items-center gap-12 lg:gap-20 mb-28">
           <div className="">
             <div className="pb-8">
               <em className="text-lg text-white bg-red-700 py-0.5 px-1.5 rounded-lg">
@@ -43,16 +43,18 @@ export const ChannelPage = () => {
               quiet observations from daily moments in between.
             </p>
           </div>
-          <div className="w-full lg:w-auto shrink-0 rounded-lg overflow-hidden shadow-2xl">
-            <iframe
-              className="block"
-              title="Firstory Podcast"
-              width="530"
-              height="316"
-              src="https://open.firstory.me/embed/user/cmdthrpjf01ra01umdz514uwp"
-              scrolling="no"
-              style={{ maxWidth: "100%" }}
-            />
+          <div className="w-full lg:w-132 shrink-0">
+            <div className="relative w-full pb-[56.25%]">
+              <iframe
+                className="block"
+                title="Firstory Podcast"
+                width="530"
+                height="316"
+                src="https://open.firstory.me/embed/user/cmdthrpjf01ra01umdz514uwp"
+                scrolling="no"
+                style={{ maxWidth: "100%" }}
+              />
+            </div>
           </div>
         </div>
       </section>
