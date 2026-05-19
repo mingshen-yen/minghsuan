@@ -27,7 +27,7 @@
   }
 
   body {
-    @apply bg-[#0e1628] text-[#e8eaf2] font-extralight leading-relaxed min-h-screen overflow-x-hidden;
+    @apply bg-[#0d1a34] text-[#e8eaf2] font-extralight leading-relaxed min-h-screen overflow-x-hidden;
     font-family:
       "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
       Arial, sans-serif;
