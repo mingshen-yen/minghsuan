@@ -1,9 +1,10 @@
 import { House, Binoculars, Sparkles, Inbox, Menu, X } from "lucide-react";
 import { useState } from "react";
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 
 export const Header = () => {
   const [open, setOpen] = useState(false);
+  const location = useLocation();
   const NavItems = [
     { to: "/", label: "Home", icon: House },
     { to: "/about", label: "About", icon: House },
@@ -12,24 +13,23 @@ export const Header = () => {
     { to: "/contact", label: "Contact", icon: Inbox },
   ];
   return (
-    <header>
-      <nav className="flex justify-start md:justify-around items-center text-white">
-        {/* <Link to={"/"} className="text-2xl font-black tracking-tighter">
-            MINGHSUAN
-            <span className="not-italic ml-1">✦</span>
-          </Link> */}
+    <>
+      <nav>
+        <Link to={"/"} className="text-2xl font-black tracking-tighter">
+          M<span className="not-italic ml-1">✦</span>
+        </Link>
         {/* Desktop Nav */}
-        <div className="hidden text-base md:flex md:gap-20">
+        <div className="hidden text-base md:flex md:flex-col md:gap-5 md:pt-20 items-center">
           {NavItems.map(({ to, label, icon: Icon }) => {
             const active = location.pathname === to;
             return (
               <Link
                 key={to}
                 to={to}
-                className={`flex items-center transition cursor-pointer ${
+                className={`flex items-center transition cursor-pointer whitespace-nowrap ${
                   active
-                    ? "text-[#5de8b0] border-b"
-                    : "hover:border-b hover:shadow-2xl"
+                    ? "line-through decoration-7 decoration-[#5de8b0]/60 rotate-4"
+                    : "hover:scale-110"
                 }`}
               >
                 {/* {Icon && <Icon className="h-4 w-4 mr-2" />} */}
@@ -74,6 +74,6 @@ export const Header = () => {
           ))}
         </div>
       </nav>
-    </header>
+    </>
   );
 };
