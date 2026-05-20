@@ -1,8 +1,11 @@
+import { SideBar } from "../layout/SideBar";
+
 export const ChannelPage = () => {
   return (
     <>
-      <section id="personal" className="container">
-        <div className="max-w-5xl mx-auto flex flex-col lg:flex-row justify-center lg:items-center gap-12 lg:gap-20 mb-28">
+      <div className="max-h-screen mx-auto">
+        <SideBar />
+        <div className="box grid grid-cols-1">
           <div className="">
             <div className="pb-8">
               <em className="text-lg text-white bg-red-700 py-0.5 px-1.5 rounded-lg">
@@ -57,7 +60,7 @@ export const ChannelPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </>
   );
 };
