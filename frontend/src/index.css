@@ -27,7 +27,7 @@
   }
 
   body {
-    @apply bg-[#051b2d] text-[#ffffff] font-sans min-h-screen overflow-x-hidden;
+    @apply bg-[rgb(15,17,18)] text-[#ffffff] min-h-screen overflow-x-hidden;
   }
 
   body::before {
@@ -36,29 +36,29 @@
     z-index: 0;
     background:
       radial-gradient(
-        ellipse 80% 60% at 70% 0%,
+        ellipse 80% 60% at 70% 100%,
         rgba(93, 232, 176, 0.04) 0%,
-        transparent 60%
+        transparent 50%
       ),
       radial-gradient(
-        ellipse 60% 80% at 10% 100%,
+        ellipse 60% 90% at 10% 100%,
         rgba(74, 130, 234, 0.05) 0%,
-        transparent 60%
+        transparent 50%
       );
   }
 
   body::after {
     content: "";
-    @apply fixed inset-0 pointer-events-none;
+    @apply fixed inset-0 pointer-events-none rotate-30;
     z-index: 0;
     background-image:
       linear-gradient(var(--border) 1px, transparent 1px),
       linear-gradient(90deg, var(--border) 1px, transparent 1px);
     background-size: 64px 64px;
     mask-image: radial-gradient(
-      ellipse 80% 80% at 50% 50%,
-      black 20%,
-      transparent 80%
+      ellipse 70% 60% at 60% 50%,
+      black 10%,
+      transparent 90%
     );
   }
 
@@ -81,26 +81,44 @@
     @apply text-sm md:text-base;
   }
 
-  .container {
-    @apply min-h-screen max-w-300 mx-auto px-12 pt-30 lg:px-20;
-    animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) both;
-  }
-  /* ── NAV ── */
-  nav {
-    @apply fixed top-0 left-0 right-0 z-100 flex items-center justify-between px-5 lg:px-12 h-17 bg-[rgba(14,22,40,0.85)] backdrop-blur-lg;
+  .left_bar {
+    @apply hidden md:flex fixed left-0 top-0 z-5 w-15 h-full justify-center items-center;
   }
 
-  header {
-    @apply bg-slate-900;
+  .social_bar {
+    @apply hidden md:flex fixed right-0 top-0 z-5 w-15 h-full justify-center items-center;
+  }
+
+  .social_bar ul {
+    @apply flex flex-col gap-15 p-5;
+  }
+
+  .social_btn {
+    @apply rotate-270 flex text-sm text-[#edeef0] items-center justify-center hover:scale-95 hover:shadow-[0_8px_24px_rgba(93,232,176,0.25)];
+    animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  /* ── NAV ── */
+  nav {
+    @apply fixed top-0 left-0 h-full z-50 py-5 px-10 flex flex-col items-center justify-start bg-[rgba(14,16,19,0.95)];
+  }
+
+  desk_nav {
+    @apply flex;
   }
 
   footer {
     @apply relative z-10 text-slate-200 py-10 bg-slate-900;
   }
 
+  .container {
+    @apply md:left-15 relative z-10 min-h-screen gap-20 text-center lg:text-start items-center max-w-275 mx-auto px-12 lg:px-35 pt-35 pb-20 lg:gap-25;
+    animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
   /* ── HERO ── */
   .hero {
-    @apply relative z-10 min-h-screen gap-20 text-center lg:text-start items-center max-w-275 mx-auto px-12 pt-30 pb-20 grid-cols-1 lg:grid lg:grid-cols-2 lg:gap-25;
+    @apply md:left-15 relative z-10 min-h-screen gap-20 text-center lg:text-start items-center max-w-255 mx-auto px-12 pt-20 pb-20 grid-cols-1 lg:grid lg:grid-cols-2;
     animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 
@@ -140,7 +158,7 @@
   }
 
   .btn-ghost {
-    @apply inline-flex items-center gap-1 px-4 py-2.5 w-fit rounded-xs text-[#ffffff] border border-white text-sm font-bold cursor-pointer transition-all duration-200 hover:border-[rgba(93,232,176,0.4)] hover:text-[#e8eaf2] hover:-translate-y-px;
+    @apply inline-flex items-center gap-1 px-4 py-2.5 w-fit rounded-xs text-[#ffffff] border border-white text-sm font-bold cursor-pointer transition-all duration-200 hover:border-[#2fe39b] hover:text-[#e8eaf2] hover:-translate-y-px hover:shadow-[0_8px_24px_rgba(93,232,176,0.25)];
   }
 
   /* ── HERO VISUAL ── */
@@ -149,7 +167,7 @@
   }
 
   .avatar-frame {
-    @apply relative w-88 h-88 lg:w-110 lg:h-110;
+    @apply relative w-88 h-88 lg:w-100 lg:h-100;
   }
 
   .avatar-ring {
@@ -176,7 +194,7 @@
 
   /* Floating stat cards */
   .stat-card {
-    @apply absolute bg-[rgba(20,30,53,0.9)] backdrop-blur-xl border border-white/[0.07] rounded-sm px-4 py-3 whitespace-nowrap;
+    @apply absolute bg-[rgba(23,26,31,0.95)] backdrop-blur-xl border border-[#5de8b0]/60 rounded-sm px-4 py-3 whitespace-nowrap;
   }
 
   .stat-card:nth-child(3) {
