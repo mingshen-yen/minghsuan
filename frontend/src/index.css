@@ -27,7 +27,7 @@
   }
 
   body {
-    @apply bg-[rgb(15,17,18)] text-[#ffffff] min-h-screen overflow-x-hidden;
+    @apply bg-[rgba(15,17,18)] text-[#ffffff] min-h-screen overflow-x-hidden;
   }
 
   body::before {
@@ -71,7 +71,7 @@
   }
 
   h2 {
-    @apply text-4xl md:text-5xl font-black uppercase;
+    @apply text-5xl md:text-6xl font-black uppercase;
   }
 
   h3 {
@@ -87,19 +87,27 @@
 
   /* ── NAV ── */
   nav {
-    @apply fixed top-0 left-0 md:h-full z-50 p-5 md:px-3 lg:px-4 xl:px-10 flex flex-col items-center justify-between md:justify-start lg:justify-between bg-[rgba(14,16,19,0.95)];
+    @apply fixed top-0 w-full md:w-fit md:left-0 md:h-full z-10 p-5 md:px-3 lg:px-4 xl:px-10 flex md:flex-col items-center justify-around md:justify-start lg:justify-between bg-[rgba(24,26,28,0.75)];
   }
 
   .logo {
-    @apply hidden md:flex text-2xl font-black tracking-tighter not-italic;
+    @apply md:flex text-2xl font-black tracking-tighter not-italic;
   }
 
   .desk_nav {
     @apply hidden text-base md:flex md:flex-col md:gap-5 md:pt-10 lg:pb-50 items-center;
   }
 
+  .md_nav {
+    @apply md:hidden fixed items-center p-5 top-0 right-0;
+  }
+
   .md_drawer {
-    @apply fixed top-0 left-0 z-130 w-full max-h-1200 bg-[rgba(14,16,19,0.99)] shadow-lg flex flex-col justify-center items-center pb-10 overflow-hidden md:hidden transform transition-transform duration-300 ease-in-out;
+    @apply fixed top-0 right-0 z-130 w-full max-h-1200 bg-[rgba(24,26,28,0.98)] shadow-lg flex flex-col justify-center items-center pb-10 overflow-hidden md:hidden transform transition-transform duration-300 ease-in-out;
+  }
+
+  .burger {
+    @apply md:hidden flex items-center relative z-130;
   }
 
   .xbtn {
@@ -124,12 +132,12 @@
   }
 
   .social_btn {
-    @apply py-2 rotate-270 flex text-sm text-[#edeef0] items-center justify-center hover:scale-95 hover:shadow-[0_8px_24px_rgba(93,232,176,0.25)];
+    @apply py-2 rotate-270 flex text-sm text-[#edeef0] items-center justify-center hover:scale-95 hover:text-[#5de8b0];
     animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 
   .box {
-    @apply md:left-8 lg:left-15 relative z-5 min-h-screen gap-20 text-center lg:text-start items-center max-w-255 md:max-w-260 lg:max-w-270 xl:max-w-280 mx-auto px-12 md:px-30 xl:px-20 pt-20 pb-20 grid-cols-1 lg:grid lg:grid-cols-3;
+    @apply md:left-5 lg:left-15 relative z-5 min-h-screen gap-10 text-center lg:text-start items-center max-w-255 md:max-w-260 lg:max-w-270 xl:max-w-280 mx-auto px-12 md:px-30 xl:px-20 pt-30 lg:pt-0 grid-cols-1 lg:grid lg:grid-cols-2;
     animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 
@@ -207,7 +215,7 @@
 
   /* Floating stat cards */
   .stat-card {
-    @apply absolute bg-[rgba(23,26,31,0.95)] backdrop-blur-xl border border-[#5de8b0]/60 rounded-sm px-4 py-3 whitespace-nowrap;
+    @apply absolute bg-[rgba(24,26,28,0.75)] backdrop-blur-xl border border-[#5de8b0]/60 rounded-sm px-4 py-3 whitespace-nowrap;
   }
 
   .stat-card:nth-child(3) {
@@ -250,6 +258,32 @@
   .stat-item .lbl {
     @apply text-xs text-[#4e5878] tracking-widest uppercase;
   }
+}
+
+/* Media */
+.media-box {
+  @apply md:left-8 lg:left-15 relative z-5 min-h-80 gap-10 justify-center items-center max-w-255 md:max-w-260 lg:max-w-270 xl:max-w-280 mx-auto px-12 md:px-30 xl:px-20 pt-30 lg:pt-0 grid-cols-1 lg:grid lg:grid-cols-2;
+  animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.media-card {
+  @apply relative z-10 mb-8 p-8 rounded-xs flex flex-col border border-[#5de8b0]/20 gap-8 items-center md:items-start bg-[#07140f] shadow-2xl hover:-translate-y-px hover:shadow-[0_8px_24px_rgba(93,232,176,0.25)];
+}
+
+.media-frame {
+  @apply w-full flex-1 min-h-0;
+}
+
+.media-frame-video {
+  @apply flex-none;
+}
+
+.media-embed {
+  @apply block w-full min-h-80 border-0;
+}
+
+.media-tag {
+  @apply w-fit italic text-sm font-bold text-white py-0.5 px-1.5 rounded-sm;
 }
 
 @layer utilities {

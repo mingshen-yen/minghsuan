@@ -17,8 +17,8 @@ export const Header = () => {
   const NavItems = [
     { to: "/", label: "Home", icon: House },
     { to: "/about", label: "About", icon: CircleStar },
-    { to: "/portfolio", label: "Works", icon: FolderOpenDot },
-    { to: "/channel", label: "Media", icon: Film },
+    { to: "/portfolio", label: "Projects", icon: FolderOpenDot },
+    { to: "/media", label: "Media", icon: Film },
     { to: "/contact", label: "Contact", icon: Contact },
   ];
   return (
@@ -41,7 +41,11 @@ export const Header = () => {
                     : "hover:scale-110"
                 }`}
               >
-                {Icon && <Icon className="hidden md:flex lg:hidden h-6 w-6" />}
+                {Icon && (
+                  <Icon
+                    className={`hidden md:flex lg:hidden h-6 w-6 ${active ? "text-[#5de8b0]" : ""}`}
+                  />
+                )}
                 <span className="md:hidden lg:flex">{label}</span>
                 <span className="hidden md:hover:flex lg:hidden text-xs">
                   {label}
@@ -53,42 +57,41 @@ export const Header = () => {
         <Footer />
 
         {/* Mobile Nav - Burger Icon */}
-        {!open && (
-          <button
-            onClick={() => setOpen(true)}
-            className="md:hidden relative z-130"
+        <div className="md_nav">
+          {!open && (
+            <button onClick={() => setOpen(true)} className="burger">
+              <Menu size={28} />
+            </button>
+          )}
+
+          {/* Mobile Drawer */}
+          <div
+            className={`md_drawer ${open ? "translate-y-0" : "-translate-y-full"}`}
           >
-            <Menu size={28} />
-          </button>
-        )}
+            {/* X Button inside drawer */}
+            <button onClick={() => setOpen(false)} className="xbtn">
+              <X size={24} />
+            </button>
 
-        {/* Mobile Drawer */}
-        <div
-          className={`md_drawer ${open ? "translate-y-0" : "-translate-y-full"}`}
-        >
-          {/* X Button inside drawer */}
-          <button onClick={() => setOpen(false)} className="xbtn">
-            <X size={24} />
-          </button>
-
-          {/* Nav Items */}
-          {NavItems.map(({ to, label, icon: Icon }) => {
-            const active = location.pathname === to;
-            return (
-              <Link
-                key={to}
-                to={to}
-                onClick={() => setOpen(false)}
-                className={`nav_item ${
-                  active
-                    ? "line-through decoration-7 decoration-[#5de8b0]/60 rotate-4"
-                    : "hover:scale-110"
-                }`}
-              >
-                {label}
-              </Link>
-            );
-          })}
+            {/* Nav Items */}
+            {NavItems.map(({ to, label, icon: Icon }) => {
+              const active = location.pathname === to;
+              return (
+                <Link
+                  key={to}
+                  to={to}
+                  onClick={() => setOpen(false)}
+                  className={`nav_item ${
+                    active
+                      ? "line-through decoration-7 decoration-[#5de8b0]/60 rotate-4"
+                      : "hover:scale-110"
+                  }`}
+                >
+                  {label}
+                </Link>
+              );
+            })}
+          </div>
         </div>
       </nav>
     </>
