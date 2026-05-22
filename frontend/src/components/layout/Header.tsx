@@ -17,7 +17,7 @@ export const Header = () => {
   const NavItems = [
     { to: "/", label: "Home", icon: House },
     { to: "/about", label: "About", icon: CircleStar },
-    { to: "/portfolio", label: "Projects", icon: FolderOpenDot },
+    // { to: "/portfolio", label: "Projects", icon: FolderOpenDot },
     { to: "/media", label: "Media", icon: Film },
     { to: "/contact", label: "Contact", icon: Contact },
   ];

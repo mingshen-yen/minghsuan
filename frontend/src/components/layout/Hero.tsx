@@ -1,4 +1,6 @@
 export const Hero = () => {
+  const experItems = ["Python", "React", "TypeScript", "Node.js", "MongoDB"];
+
   return (
     <>
       <section className="hero">
@@ -11,6 +13,14 @@ export const Hero = () => {
             <br />
             <em>content</em> about it.
           </h1>
+          <div>
+            <div className="skills-label">Experience with</div>
+            <div className="skill-tags">
+              {experItems.map((item) => {
+                return <span className="skill-tag">{item}</span>;
+              })}
+            </div>
+          </div>
 
           <div className="hero-cta">
             <a href="mailto:minghsuanyen@gmail.com" className="btn-primary">
@@ -47,11 +57,11 @@ export const Hero = () => {
           </div>
         </div>
 
-        <div className="hero-visual">
+        <div className="avatar-visual">
           <div className="avatar-frame">
             <div className="avatar-ring" />
             <div className="avatar-inner">
-              <img src="/src/assets/profile-1.jpg" alt="Minghsuan avatar" />
+              <img src="/src/assets/profile-3.png" alt="Minghsuan avatar" />
             </div>
             <div className="stat-card">
               <div className="stat-num">8+</div>
