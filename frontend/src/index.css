@@ -63,11 +63,11 @@
   }
 
   h1 {
-    @apply lg:py-6 font-serif font-bold text-[56px] lg:text-[60px] text-[#e8eaf2] mb-7 tracking-tight lg:tracking-normal leading-[1.05];
+    @apply lg:py-2 font-serif font-bold text-[56px] lg:text-[60px] text-[#e8eaf2] mb-7 tracking-tight lg:tracking-normal leading-[1.05];
   }
 
   h1 em {
-    @apply italic text-[#2fe39b];
+    @apply text-[#2fe39b];
   }
 
   h2 {
@@ -75,14 +75,23 @@
   }
 
   h3 {
-    @apply text-3xl md:text-4xl font-black;
+    @apply pb-2 text-3xl md:text-4xl font-black;
   }
+
+  h4 {
+    @apply pt-4 text-lg md:text-xl font-bold text-[#5de8b0];
+  }
+
   p {
     @apply text-sm md:text-base;
   }
 
   footer {
     @apply hidden lg:flex relative z-10 bottom-0 text-[10px] text-slate-400/60 text-center;
+  }
+
+  .md-footer {
+    @apply md:hidden flex items-center bottom-0;
   }
 
   /* ── NAV ── */
@@ -158,15 +167,15 @@
 
   /* Skills */
   .skills-label {
-    @apply text-xs font-medium tracking-widest uppercase text-[#4e5878] mb-3;
+    @apply text-[11px] font-medium tracking-widest uppercase text-[#b4d0c5] mb-3;
   }
 
   .skill-tags {
-    @apply flex flex-wrap gap-2 mb-11 justify-center lg:justify-start;
+    @apply flex flex-wrap gap-2 mb-10 justify-center lg:justify-start;
   }
 
   .skill-tag {
-    @apply px-3.5 py-1.5 rounded text-sm tracking-wide bg-[#1c2b4a] border border-white/[0.07] text-[#8b93b0] transition-all duration-200 hover:border-[rgba(93,232,176,0.4)] hover:text-[#5de8b0] hover:bg-[rgba(93,232,176,0.12)];
+    @apply px-2.5 py-1.5 rounded-xs text-xs tracking-wide bg-[#07140f] border border-white/[0.07] text-[#136645] transition-all duration-200 hover:border-[rgba(93,232,176,0.4)] hover:text-[#5de8b0] hover:bg-[rgba(93,232,176,0.12)];
   }
 
   /* Buttons */
@@ -183,7 +192,7 @@
   }
 
   /* ── HERO VISUAL ── */
-  .hero-visual {
+  .avatar-visual {
     @apply flex justify-center items-center;
   }
 
@@ -192,8 +201,8 @@
   }
 
   .avatar-ring {
-    @apply absolute inset-0 rounded-full border border-[rgba(93,232,176,0.4)];
-    animation: spin 30s linear infinite;
+    @apply absolute inset-0 rounded-full;
+    /* animation: spin 30s linear infinite; */
   }
 
   .avatar-ring::before {
@@ -203,10 +212,7 @@
   }
 
   .avatar-inner {
-    @apply absolute inset-5 rounded-full bg-[#141e35] border border-white/[0.07] flex items-center justify-center overflow-hidden;
-    box-shadow:
-      0 0 80px rgba(93, 232, 176, 0.08),
-      inset 0 0 40px rgba(14, 22, 40, 0.6);
+    @apply absolute inset-5 rounded-full flex items-center justify-center;
   }
 
   .avatar-inner img {
@@ -236,7 +242,7 @@
 
   /* ── STATS STRIP ── */
   .stats-strip {
-    @apply relative z-10 border-t border-b border-white/[0.07] bg-[rgba(20,30,53,0.4)] backdrop-blur-md;
+    @apply relative z-10 border-t border-b border-[#5de8b0]/20 bg-[#07140f] backdrop-blur-md;
   }
 
   .stats-inner {
@@ -244,11 +250,11 @@
   }
 
   .stat-item {
-    @apply py-8 text-center md:border-r border-white/[0.07] md:last:border-r-0;
+    @apply py-7 text-center md:border-r border-[#5de8b0]/20 md:last:border-r-0;
   }
 
   .stat-item .num {
-    @apply font-sans text-3xl text-[#e8eaf2] leading-none mb-1.5;
+    @apply font-sans font-medium text-3xl text-[#e8eaf2] leading-none mb-1.5;
   }
 
   .stat-item .num span {
@@ -256,8 +262,13 @@
   }
 
   .stat-item .lbl {
-    @apply text-xs text-[#4e5878] tracking-widest uppercase;
+    @apply text-xs text-[#2f7d5e] tracking-widest uppercase;
   }
+}
+/* Media */
+.about-box {
+  @apply md:left-8 lg:left-15 relative z-5 min-h-screen gap-10 justify-center items-center max-w-255 md:max-w-260 lg:max-w-270 xl:max-w-280 mx-auto px-12 md:px-30 xl:px-20 pt-30 lg:pt-10;
+  animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 /* Media */
