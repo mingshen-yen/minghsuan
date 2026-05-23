@@ -1,8 +1,8 @@
 export const ProjectCard = () => {
   return (
     <>
-      <div className="card border border-slate-600 rounded-xl bg-[#132b22] hover:-translate-y-px hover:shadow-[0_8px_24px_rgba(93,232,176,0.25)]">
-        <div className="frame rounded-t-xl h-50 bg-amber-800">
+      <div className="card border h-60 w-60 border-slate-600 bg-[#132b22] hover:-translate-y-px hover:shadow-[0_8px_24px_rgba(93,232,176,0.25)]">
+        <div className="frame h-30 bg-slate-800">
           <img className="object-fill" src="#" alt="img" />
         </div>
         <div className="card-label flex flex-col gap-2 p-4">
