@@ -79,9 +79,9 @@ build/Release
 node_modules/
 jspm_packages/
 
-# img
-*.jpg
-*.png
+# Private imgs
+src/assets/private/
+public/private/
 
 # Snowpack dependency directory (https://snowpack.dev/)
 web_modules/
