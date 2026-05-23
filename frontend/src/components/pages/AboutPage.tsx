@@ -21,7 +21,7 @@ export const AboutPage = () => {
               <img
                 src="/src/assets/profile-3.png"
                 alt="Minghsuan avatar"
-                className="rounded-xl w-44 h-44 md:w-110 md:h-100 object-cover"
+                className="rounded-xl w-fit  object-contain"
               />
             </div>
             <div className="p-8 flex flex-col gap-8 items-center">
