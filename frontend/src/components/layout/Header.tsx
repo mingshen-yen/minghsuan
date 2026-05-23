@@ -1,12 +1,4 @@
-import {
-  House,
-  CircleStar,
-  FolderOpenDot,
-  Contact,
-  Film,
-  Menu,
-  X,
-} from "lucide-react";
+import { House, CircleStar, Contact, Film, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Link, useLocation } from "react-router";
 import { Footer } from "./Footer";
@@ -74,7 +66,7 @@ export const Header = () => {
             </button>
 
             {/* Nav Items */}
-            {NavItems.map(({ to, label, icon: Icon }) => {
+            {NavItems.map(({ to, label }) => {
               const active = location.pathname === to;
               return (
                 <Link

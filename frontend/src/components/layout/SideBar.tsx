@@ -19,7 +19,7 @@ export const SideBar = () => {
     <>
       <div className="right_bar">
         <ul className="social_items">
-          {socialItems.map(({ to, label, icon: Icon }) => {
+          {socialItems.map(({ to, label }) => {
             return (
               <Link key={to} to={to} target="_blank" rel="noopener noreferrer">
                 {/* {Icon && <Icon className="h-4 w-4 mr-2" />} */}

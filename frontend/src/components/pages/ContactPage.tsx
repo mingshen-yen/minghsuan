@@ -1,4 +1,3 @@
-import { ContactForm } from "../layout/ContactForm";
 import { SideBar } from "../layout/SideBar";
 
 export const ContactPage = () => {
