@@ -19,7 +19,7 @@ export const AboutPage = () => {
             </div>
             <div className="avatar-visual">
               <img
-                src="example.jpg"
+                src="/example.jpg"
                 alt="Minghsuan avatar"
                 className="rounded-xl w-fit  object-contain"
               />

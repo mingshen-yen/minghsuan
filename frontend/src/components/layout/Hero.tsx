@@ -61,7 +61,7 @@ export const Hero = () => {
           <div className="avatar-frame">
             <div className="avatar-ring" />
             <div className="avatar-inner">
-              <img src="example.jpg" alt="Minghsuan avatar" />
+              <img src="/example.jpg" alt="Minghsuan avatar" />
             </div>
             <div className="stat-card">
               <div className="stat-num">8+</div>

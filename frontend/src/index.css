@@ -205,11 +205,11 @@
     /* animation: spin 30s linear infinite; */
   }
 
-  .avatar-ring::before {
+  /* .avatar-ring::before {
     content: "";
     @apply absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-[#5de8b0];
     box-shadow: 0 0 12px #5de8b0;
-  }
+  } */
 
   .avatar-inner {
     @apply absolute inset-5 rounded-full flex items-center justify-center;
