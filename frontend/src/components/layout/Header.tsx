@@ -1,4 +1,12 @@
-import { House, CircleStar, Contact, Film, Menu, X } from "lucide-react";
+import {
+  House,
+  CircleStar,
+  FolderOpenDot,
+  Contact,
+  Film,
+  Menu,
+  X,
+} from "lucide-react";
 import { useState } from "react";
 import { Link, useLocation } from "react-router";
 import { Footer } from "./Footer";
@@ -9,7 +17,7 @@ export const Header = () => {
   const NavItems = [
     { to: "/", label: "Home", icon: House },
     { to: "/about", label: "About", icon: CircleStar },
-    // { to: "/portfolio", label: "Projects", icon: FolderOpenDot },
+    { to: "/portfolio", label: "Projects", icon: FolderOpenDot },
     { to: "/media", label: "Media", icon: Film },
     { to: "/contact", label: "Contact", icon: Contact },
   ];
@@ -29,7 +37,7 @@ export const Header = () => {
                 to={to}
                 className={`nav_item ${
                   active
-                    ? "line-through decoration-7 decoration-[#5de8b0]/60 rotate-4"
+                    ? "scale-110 line-through decoration-10 decoration-[#5de8b0]/60 rotate-4"
                     : "hover:scale-110"
                 }`}
               >
@@ -75,7 +83,7 @@ export const Header = () => {
                   onClick={() => setOpen(false)}
                   className={`nav_item ${
                     active
-                      ? "line-through decoration-7 decoration-[#5de8b0]/60 rotate-4"
+                      ? "scale-110 line-through decoration-10 decoration-[#5de8b0]/60 rotate-4"
                       : "hover:scale-110"
                   }`}
                 >
