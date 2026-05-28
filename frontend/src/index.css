@@ -123,8 +123,8 @@
     @apply self-end m-4 p-2 rounded-full hover:bg-[rgba(23,26,31,0.75)];
   }
 
-  .nav_item {
-    @apply flex text-lg items-center p-2.5 lg:p-1 hover:line-through hover:decoration-10 hover:decoration-[#5de8b0]/60 hover:rotate-4 hover:scale-110;
+  .nav-item {
+    @apply flex text-lg items-center p-2.5 lg:p-1;
   }
 
   .right_bar {

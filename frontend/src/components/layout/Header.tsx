@@ -35,12 +35,12 @@ export const Header = () => {
               <Link
                 key={to}
                 to={to}
-                className={`nav_item ${
-                  active ? "scale-110 rotate-4" : "hover:scale-110"
+                className={`nav-item ${
+                  active ? "scale-110 rotate-4" : "hover:scale-115"
                 }`}
               >
                 {active && (
-                  <span className="absolute left-0 top-1/2 h-2.5 w-full -translate-y-1/2 bg-[#5de8b0]/60" />
+                  <span className="hidden lg:block absolute left-0 top-1/2 h-2.5 w-full -translate-y-1/2 bg-[#5de8b0]/60" />
                 )}
                 {Icon && (
                   <Icon
@@ -82,7 +82,7 @@ export const Header = () => {
                   key={to}
                   to={to}
                   onClick={() => setOpen(false)}
-                  className={`nav_item ${
+                  className={`nav-item ${
                     active ? "scale-110 rotate-4" : "hover:scale-110"
                   }`}
                 >
