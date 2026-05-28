@@ -18,7 +18,7 @@ export const AboutPage = () => {
             <span className="text-3xl">Hello,</span>
             <br /> I'm <em>{aboutMe.name}</em>
           </div>
-          <div className="about-avatar">
+          <div className="about-detail-box">
             <div className="avatar-visual">
               <div className="avatar-figure">
                 <img

@@ -1,6 +1,6 @@
 export const experience = [
   {
-    title: "Scientific Researcher",
+    title: "Research Scientist",
     company: "GFZ Helmholtz-Zentrum für Geoforschung, Potsdam, Germany",
     period: "2019 - 2025",
     descriptions: [
@@ -21,7 +21,7 @@ export const education = [
   {
     degree: "PhD in Geophysics",
     institution: "Universität Potsdam, Potsdam, Germany",
-    period: "2016 - 2022",
+    period: "2019 - 2024",
     descriptions: [
       "EU Marie Skłodowska-Curie Fellow. Graduated magna cum laude.",
     ],
@@ -66,7 +66,7 @@ export const skills = [
   },
   {
     category: "Databases",
-    items: ["MongoDB", "PostgreSQL"],
+    items: ["MongoDB", "PostgreSQL", "REST APIs"],
   },
   {
     category: "Tools",
