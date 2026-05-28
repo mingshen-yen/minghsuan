@@ -275,7 +275,7 @@
 }
 /* About */
 .about-box {
-  @apply md:left-8 lg:left-15 relative z-5 min-h-80 gap-10 justify-center items-center max-w-255 md:max-w-260 lg:max-w-270 xl:max-w-280 2xl:max-w-380 mx-auto px-2 md:px-30 xl:px-20 pt-30 md:pt-0;
+  @apply md:left-8 lg:left-15 relative z-5 min-h-80 gap-10 justify-center items-center max-w-255 md:max-w-260 lg:max-w-270 xl:max-w-280 2xl:max-w-300 mx-auto px-2 md:px-30 xl:px-20 pt-25 md:pt-0;
   animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
@@ -288,11 +288,11 @@
 }
 
 .text-box {
-  @apply flex flex-col items-center xl:items-start justify-start pt-12 px-4 w-full max-w-140 xl:w-140 xl:min-h-106;
+  @apply flex flex-col items-center xl:items-start justify-start pt-12 px-4 xl:w-140 2xl:w-160 xl:min-h-106 2xl:min-h-110;
 }
 
 .about-title {
-  @apply text-5xl md:text-6xl lg:text-7xl 2xl:text-[80px] font-black text-center leading-[0.8];
+  @apply font-serif text-5xl md:text-6xl lg:text-7xl 2xl:text-[80px] font-black text-center leading-[0.8];
 }
 
 .text-btn {
@@ -305,19 +305,19 @@
 }
 
 .text-company {
-  @apply italic text-[12px] lg:text-sm text-slate-400;
+  @apply italic text-sm 2xl:text-base text-slate-400;
 }
 
 .text-details {
-  @apply text-[12px] lg:text-sm;
+  @apply text-sm 2xl:text-base;
 }
 
 .about-skills {
-  @apply text-[12px] flex flex-wrap gap-2;
+  @apply text-sm flex flex-wrap gap-2;
 }
 
 .about-skill {
-  @apply bg-[rgba(34,37,40,0.75)] py-1 px-1.5 rounded-xs;
+  @apply bg-[#0b231a] py-1 px-1.5 rounded-xs;
 }
 
 /* Media */

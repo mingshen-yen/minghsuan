@@ -53,7 +53,7 @@ export const AboutSubPage = ({ section }: AboutSubPageProps) => {
                 return (
                   <div key={`${category}`} className="py-1">
                     <h4>{category}</h4>
-                    <ul className="about-skills text-details">
+                    <ul className="about-skills">
                       {items.map((item) => {
                         return (
                           <li key={item} className="about-skill">
