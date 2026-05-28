@@ -63,10 +63,10 @@
   }
 
   h1 {
-    @apply lg:py-2 font-serif font-bold text-[56px] lg:text-[60px] text-[#e8eaf2] mb-7 tracking-tight lg:tracking-normal leading-[1.05];
+    @apply lg:py-2 font-serif font-bold text-[45px] lg:text-[60px] text-[#e8eaf2] mb-7 tracking-tight lg:tracking-normal leading-[0.95] lg:leading-[1.05];
   }
 
-  h1 em {
+  em {
     @apply text-[#2fe39b];
   }
 
@@ -79,7 +79,7 @@
   }
 
   h4 {
-    @apply pt-4 text-lg md:text-xl font-bold text-[#5de8b0];
+    @apply pt-4 pb-1 text-base md:text-lg 2xl:text-xl font-bold text-[#5de8b0];
   }
 
   p {
@@ -96,7 +96,7 @@
 
   /* ── NAV ── */
   nav {
-    @apply fixed top-0 w-full md:w-fit md:left-0 md:h-full z-10 p-5 md:px-3 lg:px-4 xl:px-10 flex md:flex-col items-center justify-around md:justify-start lg:justify-between bg-[rgba(24,26,28,0.75)];
+    @apply fixed top-0 w-full md:w-fit md:left-0 md:h-full z-10 p-5 md:px-3 lg:px-4 2xl:px-10 flex md:flex-col items-center justify-around md:justify-start lg:justify-between bg-[rgba(24,26,28)];
   }
 
   .logo {
@@ -112,7 +112,7 @@
   }
 
   .md_drawer {
-    @apply fixed top-0 right-0 z-130 w-full max-h-1200 bg-[rgba(24,26,28,0.98)] shadow-lg flex flex-col justify-center items-center pb-10 overflow-hidden md:hidden transform transition-transform duration-300 ease-in-out;
+    @apply fixed top-0 right-0 z-130 w-full max-h-1200 bg-[rgba(24,26,28)] shadow-lg flex flex-col justify-center items-center pb-10 overflow-hidden md:hidden transform transition-transform duration-300 ease-in-out;
   }
 
   .burger {
@@ -124,7 +124,7 @@
   }
 
   .nav_item {
-    @apply flex text-lg items-center p-2.5 lg:p-1 hover:line-through hover:decoration-7 hover:decoration-[#5de8b0]/60 hover:rotate-4 hover:scale-110;
+    @apply flex text-lg items-center p-2.5 lg:p-1 hover:line-through hover:decoration-10 hover:decoration-[#5de8b0]/60 hover:rotate-4 hover:scale-110;
   }
 
   .right_bar {
@@ -132,12 +132,12 @@
   }
 
   .social_items {
-    @apply flex flex-col gap-15 p-5;
+    @apply flex flex-col gap-14 p-5;
   }
 
   .social_btn::before {
-    content: "";
-    @apply block w-7 h-px bg-[#ffffff];
+    content: "⎯";
+    @apply block w-4;
   }
 
   .social_btn {
@@ -152,7 +152,7 @@
 
   /* ── HERO ── */
   .hero {
-    @apply md:left-8 lg:left-15 relative z-5 min-h-screen gap-20 lg:gap-5 xl:gap-10 text-center lg:text-start items-center max-w-255 md:max-w-260 lg:max-w-270 xl:max-w-280 mx-auto px-12 md:px-30 xl:px-20 pt-20 pb-20 grid-cols-1 lg:grid lg:grid-cols-2;
+    @apply md:left-8 lg:left-15 relative z-5 min-h-screen gap-20 lg:gap-5 xl:gap-10 text-center lg:text-start items-center max-w-255 md:max-w-260 lg:max-w-270 xl:max-w-280 mx-auto px-2 md:px-30 xl:px-20 pt-25 pb-20 grid-cols-1 lg:grid lg:grid-cols-2;
     animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 
@@ -167,7 +167,7 @@
 
   /* Skills */
   .skills-label {
-    @apply text-[11px] font-medium tracking-widest uppercase text-[#b4d0c5] mb-3;
+    @apply text-[11px] font-medium tracking-widest uppercase text-[#5de8b0]/40 mb-3;
   }
 
   .skill-tags {
@@ -194,6 +194,14 @@
   /* ── HERO VISUAL ── */
   .avatar-visual {
     @apply flex justify-center items-center;
+  }
+
+  .avatar-figure {
+    @apply relative inline-block max-w-80;
+  }
+
+  .avatar-figure img {
+    @apply block max-w-full;
   }
 
   .avatar-frame {
@@ -242,19 +250,19 @@
 
   /* ── STATS STRIP ── */
   .stats-strip {
-    @apply relative z-10 border-t border-b border-[#5de8b0]/20 bg-[#07140f] backdrop-blur-md;
+    @apply border-t border-b border-[#5de8b0]/20 bg-[#07140f] backdrop-blur-md;
   }
 
   .stats-inner {
-    @apply max-w-275 mx-auto px-12 grid grid-cols-2 md:grid-cols-4;
+    @apply max-w-275 mx-auto grid grid-cols-2 md:grid-cols-4;
   }
 
   .stat-item {
-    @apply py-7 text-center md:border-r border-[#5de8b0]/20 md:last:border-r-0;
+    @apply py-4 text-center md:border-r border-[#5de8b0]/20 md:last:border-r-0;
   }
 
   .stat-item .num {
-    @apply font-sans font-medium text-3xl text-[#e8eaf2] leading-none mb-1.5;
+    @apply font-sans font-medium text-xl 2xl:text-3xl text-[#e8eaf2] leading-none mb-1.5;
   }
 
   .stat-item .num span {
@@ -262,18 +270,59 @@
   }
 
   .stat-item .lbl {
-    @apply text-xs text-[#2f7d5e] tracking-widest uppercase;
+    @apply text-[11px] text-[#2f7d5e] tracking-widest uppercase;
   }
 }
-/* Media */
+/* About */
 .about-box {
-  @apply md:left-8 lg:left-15 relative z-5 min-h-screen gap-10 justify-center items-center max-w-255 md:max-w-260 lg:max-w-270 xl:max-w-280 mx-auto px-12 md:px-30 xl:px-20 pt-30 lg:pt-10;
+  @apply md:left-8 lg:left-15 relative z-5 min-h-80 gap-10 justify-center items-center max-w-255 md:max-w-260 lg:max-w-270 xl:max-w-280 2xl:max-w-380 mx-auto px-2 md:px-30 xl:px-20 pt-30 md:pt-0;
   animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.about-avatar {
+  @apply flex flex-col xl:flex-row xl:items-end pt-6 gap-10;
+}
+
+.ref-note {
+  @apply absolute left-0 bottom-0 w-[min(100%,14rem)] -translate-x-4 -translate-y-2 p-4 italic bg-[rgba(24,26,28,0.75)] backdrop-blur-sm;
+}
+
+.text-box {
+  @apply flex flex-col items-center xl:items-start justify-start pt-12 px-4 w-full max-w-140 xl:w-140 xl:min-h-106;
+}
+
+.about-title {
+  @apply text-5xl md:text-6xl lg:text-7xl 2xl:text-[80px] font-black text-center leading-[0.8];
+}
+
+.text-btn {
+  @apply inline-flex items-center text-xs font-medium tracking-widest uppercase mb-6;
+}
+
+.text-btn::after {
+  content: "➤";
+  @apply block w-10 ml-0.5;
+}
+
+.text-company {
+  @apply italic text-[12px] lg:text-sm text-slate-400;
+}
+
+.text-details {
+  @apply text-[12px] lg:text-sm;
+}
+
+.about-skills {
+  @apply text-[12px] flex flex-wrap gap-2;
+}
+
+.about-skill {
+  @apply bg-[rgba(34,37,40,0.75)] py-1 px-1.5 rounded-xs;
 }
 
 /* Media */
 .media-box {
-  @apply md:left-8 lg:left-15 relative z-5 min-h-80 gap-10 justify-center items-center max-w-255 md:max-w-260 lg:max-w-270 xl:max-w-280 mx-auto px-12 md:px-30 xl:px-20 pt-30 lg:pt-0 grid-cols-1 lg:grid lg:grid-cols-2;
+  @apply md:left-8 lg:left-15 relative z-5 min-h-80 gap-10 justify-center items-center max-w-255 md:max-w-260 lg:max-w-270 xl:max-w-280 mx-auto px-4 md:px-30 xl:px-20 pt-30 lg:pt-0 grid-cols-1 lg:grid lg:grid-cols-2;
   animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 

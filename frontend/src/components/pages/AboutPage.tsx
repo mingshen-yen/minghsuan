@@ -1,55 +1,88 @@
+import { useState } from "react";
 import { aboutMe } from "../../data/AboutMe";
 import { SideBar } from "../layout/SideBar";
 import { StatsStrip } from "../layout/StatsStrip";
 import { AboutSubPage } from "./AboutSubPage";
 
+type AboutSection = "experience" | "education" | "skills";
+
 export const AboutPage = () => {
+  const [section, setSection] = useState<AboutSection>("experience");
+
   return (
     <>
-      <div className="mx-auto flex items-center justify-center">
+      <div className="min-h-screen mx-auto flex items-center justify-center">
         <SideBar />
         <div className="about-box">
-          <div className="text-5xl md:text-6xl lg:text-7xl xl:text-[80px] font-black text-center">
+          <div className="about-title">
             <span className="text-3xl">Hello,</span>
-            <br /> I'm <span className="text-[#2fe39b]">{aboutMe.name}</span>
+            <br /> I'm <em>{aboutMe.name}</em>
           </div>
-          <div className="justify-center items-end grid grid-cols-1 lg:grid-cols-3 px-2">
-            <div className="px-5 pb-10 w-60">
-              <p className="text-sm italic">{aboutMe.description}</p>
-            </div>
+          <div className="about-avatar">
             <div className="avatar-visual">
-              <img
-                src="/example.jpg"
-                alt="Minghsuan avatar"
-                className="rounded-xl w-fit  object-contain"
-              />
+              <div className="avatar-figure">
+                <img
+                  src="/src/assets/private/profile-3.png"
+                  alt="Minghsuan avatar"
+                  className="rounded-xl object-contain"
+                />
+                <div className="ref-note">
+                  <p className="text-lg">❝</p>
+                  <p className="text-details italic">{aboutMe.description}</p>
+                </div>
+              </div>
             </div>
-            <div className="p-8 flex flex-col gap-8 items-center">
-              <div>
-                <a href="#" className="btn-primary">
-                  Download CV
-                  <svg
-                    width="14"
-                    height="14"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.5"
-                  >
-                    <path d="M5 12h14M12 5l7 7-7 7" />
-                  </svg>
+            <div className="text-box">
+              <div className="flex gap-2">
+                <a
+                  href="#experience"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    setSection("experience");
+                  }}
+                  className={`text-btn ${
+                    section === "experience"
+                      ? "text-[#5de8b0] font-black scale-110"
+                      : "text-white hover:scale-105 hover:text-[#5de8b0]"
+                  }`}
+                >
+                  Experience
+                </a>
+                <a
+                  href="#education"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    setSection("education");
+                  }}
+                  className={`text-btn ${
+                    section === "education"
+                      ? "text-[#5de8b0] font-black scale-110"
+                      : "text-white hover:scale-105 hover:text-[#5de8b0]"
+                  }`}
+                >
+                  Education
+                </a>
+                <a
+                  href="#skills"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    setSection("skills");
+                  }}
+                  className={`text-btn ${
+                    section === "skills"
+                      ? "text-[#5de8b0] font-black scale-110"
+                      : "text-white hover:scale-105 hover:text-[#5de8b0]"
+                  }`}
+                >
+                  Skills
                 </a>
               </div>
-              <a href="#experience" className="btn-primary">
-                Experience
-              </a>
-              <a href="#eduction" className="btn-primary">
-                Eduction
-              </a>
+              <div className="flex ">
+                <AboutSubPage section={section} />
+              </div>
             </div>
           </div>
           <StatsStrip />
-          <AboutSubPage />
         </div>
       </div>
     </>

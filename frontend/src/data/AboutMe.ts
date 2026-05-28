@@ -8,7 +8,7 @@ export const experience = [
     ],
   },
   {
-    title: "Data Analyst",
+    title: "Data Research Analyst",
     company: "Academic Sinica, Taipei, Taiwan",
     period: "2016 - 2019",
     descriptions: [
@@ -20,7 +20,7 @@ export const experience = [
 export const education = [
   {
     degree: "PhD in Geophysics",
-    institution: "GFZ Helmholtz-Zentrum für Geoforschung, Potsdam, Germany",
+    institution: "Universität Potsdam, Potsdam, Germany",
     period: "2016 - 2022",
     descriptions: [
       "EU Marie Skłodowska-Curie Fellow. Graduated magna cum laude.",
@@ -52,5 +52,28 @@ export const aboutMe = {
   name: "Ming-Hsuan",
   title: "Data Scientist | Climate Risk Analyst | Sustainability Consultant",
   description:
-    "PhD in Geophysics. 8+ years building reproducible analytical workflows and translating complex datasets into actionable insights — bridging scientific rigour with business impact.",
+    "Building reproducible analytical workflows and translating complex datasets into actionable insights.",
 };
+
+export const skills = [
+  {
+    category: "Programming",
+    items: ["Python", "MATLAB", "TypeScript"],
+  },
+  {
+    category: "Frameworks",
+    items: ["React", "Node.js", "Express", "Jupter"],
+  },
+  {
+    category: "Databases",
+    items: ["MongoDB", "PostgreSQL"],
+  },
+  {
+    category: "Tools",
+    items: ["Git", "GitHub", "QGIS"],
+  },
+  {
+    category: "Languages",
+    items: ["English", "German", "Mandarin", "Taiwanese"],
+  },
+];
