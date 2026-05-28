@@ -36,11 +36,12 @@ export const Header = () => {
                 key={to}
                 to={to}
                 className={`nav_item ${
-                  active
-                    ? "scale-110 line-through decoration-10 decoration-[#5de8b0]/60 rotate-4"
-                    : "hover:scale-110"
+                  active ? "scale-110 rotate-4" : "hover:scale-110"
                 }`}
               >
+                {active && (
+                  <span className="absolute left-0 top-1/2 h-2.5 w-full -translate-y-1/2 bg-[#5de8b0]/60" />
+                )}
                 {Icon && (
                   <Icon
                     className={`hidden md:flex lg:hidden h-6 w-6 ${active ? "text-[#5de8b0]" : ""}`}
@@ -82,12 +83,13 @@ export const Header = () => {
                   to={to}
                   onClick={() => setOpen(false)}
                   className={`nav_item ${
-                    active
-                      ? "scale-110 line-through decoration-10 decoration-[#5de8b0]/60 rotate-4"
-                      : "hover:scale-110"
+                    active ? "scale-110 rotate-4" : "hover:scale-110"
                   }`}
                 >
                   {label}
+                  {active && (
+                    <span className="absolute left-0 top-1/2 h-2.5 w-full -translate-y-1/2 bg-[#5de8b0]/60" />
+                  )}
                 </Link>
               );
             })}
