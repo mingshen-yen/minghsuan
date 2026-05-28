@@ -2,7 +2,7 @@ export const StatsStrip = () => {
   const experItems = ["Python", "React", "TypeScript", "Node.js", "MongoDB"];
 
   return (
-    <div className="stats-strip">
+    <div className="stats-strip hidden md:block">
       <div className="stats-inner">
         <div className="stat-item">
           <div className="num">
