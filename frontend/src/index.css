@@ -150,6 +150,11 @@
     animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 
+  .portfo-box {
+    @apply md:left-5 lg:left-15 relative z-5 min-h-120 gap-2 text-center lg:text-start items-center max-w-255 md:max-w-260 lg:max-w-270 xl:max-w-280 mx-auto px-12 md:px-30 xl:px-20 pt-30 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4;
+    animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
   /* ── HERO ── */
   .hero {
     @apply md:left-8 lg:left-15 relative z-5 min-h-screen gap-20 lg:gap-5 xl:gap-10 text-center lg:text-start items-center max-w-255 md:max-w-260 lg:max-w-270 xl:max-w-280 mx-auto px-2 md:px-30 xl:px-20 pt-25 pb-20 grid-cols-1 lg:grid lg:grid-cols-2;
