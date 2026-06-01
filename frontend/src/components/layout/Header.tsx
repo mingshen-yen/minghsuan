@@ -6,14 +6,18 @@ import {
   Film,
   Menu,
   X,
+  Sun,
+  Moon,
 } from "lucide-react";
 import { useState } from "react";
 import { Link, useLocation } from "react-router";
 import { Footer } from "./Footer";
+import { useTheme } from "../../lib/ThemeContext";
 
 export const Header = () => {
   const [open, setOpen] = useState(false);
   const location = useLocation();
+  const { theme, toggle } = useTheme();
 
   const navItems = [
     { to: "/", label: "Home", icon: House },
@@ -45,7 +49,7 @@ export const Header = () => {
             {Icon && (
               <Icon
                 className={`hidden md:flex lg:hidden h-6 w-6 ${
-                  isActive(to) ? "text-[#5de8b0]" : ""
+                  isActive(to) ? "nav__item--active" : ""
                 }`}
               />
             )}
@@ -55,6 +59,14 @@ export const Header = () => {
             </span>
           </Link>
         ))}
+
+        <button
+          onClick={toggle}
+          className="nav__theme-toggle"
+          aria-label="Toggle theme"
+        >
+          {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+        </button>
       </div>
 
       <Footer />
@@ -85,6 +97,14 @@ export const Header = () => {
               {isActive(to) && <span className="nav__indicator" />}
             </Link>
           ))}
+
+          <button
+            onClick={toggle}
+            className="nav__theme-toggle"
+            aria-label="Toggle theme"
+          >
+            {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+          </button>
         </div>
       </div>
     </nav>

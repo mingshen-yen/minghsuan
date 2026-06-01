@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router";
-import { fetchProject, imageUrl } from "../../lib/api";
-import type { Project } from "../../data/portofolio";
+import { fetchProject, imageUrl, type Project } from "../../lib/api";
 import { ArrowLeft, ExternalLink, GitBranch } from "lucide-react";
 
 const renderBody = (body: string) =>

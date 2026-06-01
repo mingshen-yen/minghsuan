@@ -44,7 +44,7 @@ export const AboutSubPage = ({ section, data }: Props) => {
           ))}
 
         {section === "skills" && (
-          <div className="grid grid-cols-2 justify-center">
+          <div className="about__skills-box">
             {skills.map(({ category, items }) => (
               <div key={category} className="py-1">
                 <h4>{category}</h4>

@@ -45,26 +45,28 @@ export const AboutPage = () => {
               />
               <div className="about__note">
                 <p className="text-lg">❝</p>
-                <p className="about__description italic">{aboutMe.description}</p>
+                <p className="about__description italic">
+                  {aboutMe.description}
+                </p>
               </div>
             </div>
           </div>
           <div className="about__text-box">
             <div className="flex gap-2">
-              {(["experience", "education", "skills"] as AboutSection[]).map((s) => (
-                <a
-                  key={s}
-                  href={`#${s}`}
-                  onClick={handleSectionChange(s)}
-                  className={`about__cta capitalize ${
-                    isActive(s)
-                      ? "text-[#5de8b0] font-black scale-110"
-                      : "text-white hover:scale-105 hover:text-[#5de8b0]"
-                  }`}
-                >
-                  {s}
-                </a>
-              ))}
+              {(["experience", "education", "skills"] as AboutSection[]).map(
+                (s) => (
+                  <a
+                    key={s}
+                    href={`#${s}`}
+                    onClick={handleSectionChange(s)}
+                    className={`about__cta capitalize ${
+                      isActive(s) ? "about__cta-active" : ""
+                    }`}
+                  >
+                    {s}
+                  </a>
+                ),
+              )}
             </div>
             <div className="flex">
               <AboutSubPage section={section} data={data} />

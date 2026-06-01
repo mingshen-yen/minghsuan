@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
-import { fetchProjects, imageUrl } from "../../lib/api";
-import type { Project } from "../../data/portofolio";
+import { fetchProjects, imageUrl, type Project } from "../../lib/api";
 
 export const ProjectCard = () => {
   const [projects, setProjects] = useState<Project[]>([]);

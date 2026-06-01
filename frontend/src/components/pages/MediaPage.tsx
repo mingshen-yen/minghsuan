@@ -7,17 +7,18 @@ export const MediaPage = () => {
       <div className="section section--media">
         <div className="h-full">
           <div className="media-card h-full">
-            <div>
+            <div className="media-card__text">
               <div className="media-card__tag bg-red-700">YouTube</div>
               <h3>Mingshen See the world</h3>
               <p>
                 Exploring corners of the world through curious eyes. <br />
+                <br />
               </p>
             </div>
             <div className="media-card__frame media-card__frame--video">
               <iframe
                 className="media-card__embed"
-                src="https://www.youtube.com/embed/pg7PZ-fqcWY?si=aUXkCNd7tuXmz2B5"
+                src="https://www.youtube.com/embed/D4RDnNKNF6Q?si=WvGH7TV59YBBbBmz"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -27,7 +28,7 @@ export const MediaPage = () => {
         </div>
         <div className="h-full">
           <div className="media-card h-full">
-            <div>
+            <div className="media-card__text">
               <div className="media-card__tag bg-amber-600">Podcast</div>
               <h3>Huh? Germany!</h3>
               <p>
