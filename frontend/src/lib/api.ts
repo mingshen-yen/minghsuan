@@ -1,6 +1,17 @@
-import type { Project } from "../data/portofolio";
-
 const BASE = import.meta.env.VITE_API_URL ?? "http://localhost:4000";
+
+export type Project = {
+  slug: string;
+  title: string;
+  img: string;
+  tag: string;
+  description: string;
+  body?: string;
+  link?: string;
+  github?: string;
+  year?: string;
+  stack?: string[];
+};
 
 export const imageUrl = (path: string) => `${BASE}${path}`;
 
