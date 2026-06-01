@@ -15,20 +15,16 @@ export const SideBar = () => {
       icon: Mail,
     },
   ];
+
   return (
-    <>
-      <div className="right_bar">
-        <ul className="social_items">
-          {socialItems.map(({ to, label }) => {
-            return (
-              <Link key={to} to={to} target="_blank" rel="noopener noreferrer">
-                {/* {Icon && <Icon className="h-4 w-4 mr-2" />} */}
-                <li className="social_btn">{label}</li>
-              </Link>
-            );
-          })}
-        </ul>
-      </div>
-    </>
+    <div className="social-bar">
+      <ul className="social-list">
+        {socialItems.map(({ to, label }) => (
+          <Link key={to} to={to} target="_blank" rel="noopener noreferrer">
+            <li className="social-link">{label}</li>
+          </Link>
+        ))}
+      </ul>
+    </div>
   );
 };

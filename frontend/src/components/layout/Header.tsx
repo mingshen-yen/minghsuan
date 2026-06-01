@@ -14,88 +14,79 @@ import { Footer } from "./Footer";
 export const Header = () => {
   const [open, setOpen] = useState(false);
   const location = useLocation();
-  const NavItems = [
+
+  const navItems = [
     { to: "/", label: "Home", icon: House },
     { to: "/about", label: "About", icon: CircleStar },
     { to: "/portfolio", label: "Projects", icon: FolderOpenDot },
     { to: "/media", label: "Media", icon: Film },
     { to: "/contact", label: "Contact", icon: Contact },
   ];
+
+  const isActive = (path: string) => location.pathname === path;
+
   return (
-    <>
-      <nav>
-        <Link to={"/"} className="logo">
-          M✦
-        </Link>
-        {/* Desktop Nav */}
-        <div className="desk_nav">
-          {NavItems.map(({ to, label, icon: Icon }) => {
-            const active = location.pathname === to;
-            return (
-              <Link
-                key={to}
-                to={to}
-                className={`nav-item ${
-                  active ? "scale-110 rotate-4" : "hover:scale-115"
-                }`}
-              >
-                {active && (
-                  <span className="hidden lg:block absolute left-0 top-1/2 h-2.5 w-full -translate-y-1/2 bg-[#5de8b0]/60" />
-                )}
-                {Icon && (
-                  <Icon
-                    className={`hidden md:flex lg:hidden h-6 w-6 ${active ? "text-[#5de8b0]" : ""}`}
-                  />
-                )}
-                <span className="md:hidden lg:flex">{label}</span>
-                <span className="hidden md:hover:flex lg:hidden text-xs">
-                  {label}
-                </span>
-              </Link>
-            );
-          })}
-        </div>
-        <Footer />
+    <nav>
+      <Link to="/" className="nav__logo">
+        M✦
+      </Link>
 
-        {/* Mobile Nav - Burger Icon */}
-        <div className="md_nav">
-          {!open && (
-            <button onClick={() => setOpen(true)} className="burger">
-              <Menu size={28} />
-            </button>
-          )}
-
-          {/* Mobile Drawer */}
-          <div
-            className={`md_drawer ${open ? "translate-y-0" : "-translate-y-full"}`}
+      {/* Desktop Navigation */}
+      <div className="nav__desktop">
+        {navItems.map(({ to, label, icon: Icon }) => (
+          <Link
+            key={to}
+            to={to}
+            className={`nav__item ${isActive(to) ? "nav__item--active" : ""}`}
           >
-            {/* X Button inside drawer */}
-            <button onClick={() => setOpen(false)} className="xbtn">
-              <X size={24} />
-            </button>
+            {isActive(to) && (
+              <span className="nav__indicator hidden lg:block" />
+            )}
+            {Icon && (
+              <Icon
+                className={`hidden md:flex lg:hidden h-6 w-6 ${
+                  isActive(to) ? "text-[#5de8b0]" : ""
+                }`}
+              />
+            )}
+            <span className="md:hidden lg:flex">{label}</span>
+            <span className="hidden md:hover:flex lg:hidden text-xs">
+              {label}
+            </span>
+          </Link>
+        ))}
+      </div>
 
-            {/* Nav Items */}
-            {NavItems.map(({ to, label }) => {
-              const active = location.pathname === to;
-              return (
-                <Link
-                  key={to}
-                  to={to}
-                  onClick={() => setOpen(false)}
-                  className={`nav-item ${
-                    active ? "scale-110 rotate-4" : "hover:scale-110"
-                  }`}
-                >
-                  {label}
-                  {active && (
-                    <span className="absolute left-0 top-1/2 h-2.5 w-full -translate-y-1/2 bg-[#5de8b0]/60" />
-                  )}
-                </Link>
-              );
-            })}
-          </div>
+      <Footer />
+
+      {/* Mobile Navigation */}
+      <div className="nav__mobile">
+        {!open && (
+          <button onClick={() => setOpen(true)} className="nav__toggle">
+            <Menu size={28} />
+          </button>
+        )}
+
+        <div
+          className={`nav__drawer ${open ? "translate-y-0" : "-translate-y-full"}`}
+        >
+          <button onClick={() => setOpen(false)} className="nav__close">
+            <X size={24} />
+          </button>
+
+          {navItems.map(({ to, label }) => (
+            <Link
+              key={to}
+              to={to}
+              onClick={() => setOpen(false)}
+              className={`nav__item ${isActive(to) ? "nav__item--active" : ""}`}
+            >
+              {label}
+              {isActive(to) && <span className="nav__indicator" />}
+            </Link>
+          ))}
         </div>
-      </nav>
-    </>
+      </div>
+    </nav>
   );
 };
