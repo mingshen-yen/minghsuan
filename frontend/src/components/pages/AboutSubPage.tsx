@@ -1,64 +1,64 @@
-import { experience, education, skills } from "../../data/AboutMe";
+import type { AboutData } from "../../lib/api";
 
 type AboutSection = "experience" | "education" | "skills";
 
-type AboutSubPageProps = {
+type Props = {
   section: AboutSection;
+  data: AboutData;
 };
 
-export const AboutSubPage = ({ section }: AboutSubPageProps) => {
+export const AboutSubPage = ({ section, data }: Props) => {
+  const { experience, education, skills } = data;
+
   return (
     <div className="flex flex-wrap pb-8">
       <div id={section}>
-        <div>
-          {section === "experience" &&
-            experience.map(({ title, company, period, descriptions }) => (
-              <div key={title} className="py-1">
-                <h4>{title}</h4>
-                <div className="about__company">
-                  {company}
-                  {", "}
-                  <span>{period}</span>
-                </div>
-                <ul className="about__description">
-                  {descriptions.map((description) => (
-                    <li key={description}>{description}</li>
-                  ))}
-                </ul>
+        {section === "experience" &&
+          experience.map(({ title, company, period, descriptions }) => (
+            <div key={title} className="py-1">
+              <h4>{title}</h4>
+              <div className="about__company">
+                {company}, <span>{period}</span>
               </div>
-            ))}
-          {section === "education" &&
-            education.map(({ degree, institution, period, descriptions }) => (
-              <div key={degree} className="py-1">
-                <h4>{degree}</h4>
-                <div className="about__company">
-                  {institution}
-                  {", "}
-                  <span>{period}</span>
-                </div>
-                <ul className="about__description">
-                  {descriptions.map((description) => (
-                    <li key={description}>{description}</li>
-                  ))}
-                </ul>
+              <ul className="about__description">
+                {descriptions.map((d) => (
+                  <li key={d}>{d}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+
+        {section === "education" &&
+          education.map(({ degree, institution, period, descriptions }) => (
+            <div key={degree} className="py-1">
+              <h4>{degree}</h4>
+              <div className="about__company">
+                {institution}, <span>{period}</span>
               </div>
-            ))}
+              <ul className="about__description">
+                {descriptions.map((d) => (
+                  <li key={d}>{d}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+
+        {section === "skills" && (
           <div className="grid grid-cols-2 justify-center">
-            {section === "skills" &&
-              skills.map(({ category, items }) => (
-                <div key={category} className="py-1">
-                  <h4>{category}</h4>
-                  <ul className="about__skills">
-                    {items.map((item) => (
-                      <li key={item} className="about__skill">
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+            {skills.map(({ category, items }) => (
+              <div key={category} className="py-1">
+                <h4>{category}</h4>
+                <ul className="about__skills">
+                  {items.map((item) => (
+                    <li key={item} className="about__skill">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
-        </div>
+        )}
       </div>
     </div>
   );

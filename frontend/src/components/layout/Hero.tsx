@@ -1,3 +1,5 @@
+import { imageUrl } from "../../lib/api";
+
 export const Hero = () => {
   const skills = ["Python", "React", "TypeScript", "Node.js", "MongoDB"];
 
@@ -62,7 +64,7 @@ export const Hero = () => {
         <div className="avatar__frame">
           <div className="avatar__ring" />
           <div className="avatar__inner">
-            <img src="/example.jpg" alt="Minghsuan avatar" />
+            <img src={imageUrl("/images/example.jpg")} alt="Minghsuan avatar" />
           </div>
           <div className="stat-card">
             <div className="stat-card__number">8+</div>

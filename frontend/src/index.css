@@ -25,7 +25,7 @@
 
     /* Component Colors */
     --color-skill-bg: #07140f;
-    --color-skill-text: #136645;
+    --color-skill-text: #3db87a;
     --color-card-bg: rgba(24, 26, 28, 0.75);
     --color-card-border: rgba(93, 232, 176, 0.6);
     --color-nav-bg: rgba(24, 26, 28);
@@ -231,19 +231,19 @@
   }
 
   .section--portfolio {
-    @apply gap-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4;
+    @apply pt-30 gap-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 items-start;
   }
 
   /* ─────────────────────────────────────
      HERO SECTION
      ───────────────────────────────────── */
   .hero__label {
-    @apply inline-flex items-center gap-3 text-xs font-medium tracking-widest uppercase text-[#5de8b0] mb-6;
+    @apply inline-flex items-center gap-3 text-xs font-medium tracking-widest uppercase text-[#5de8b0]/80 mb-6;
   }
 
   .hero__label::before {
     content: "";
-    @apply block w-7 h-px bg-[#2fe39b];
+    @apply block w-10 h-px bg-[#2fe39b]/60;
   }
 
   .hero__cta {
@@ -262,7 +262,10 @@
   }
 
   .avatar__ring {
-    @apply absolute inset-0 rounded-full;
+    @apply absolute inset-0 rounded-full border border-[#5de8b0]/20;
+    box-shadow:
+      0 0 0 6px rgba(93, 232, 176, 0.04),
+      0 0 40px rgba(93, 232, 176, 0.08);
   }
 
   .avatar__inner {
@@ -407,15 +410,19 @@
   }
 
   .card--project {
-    @apply h-60 w-60 border-slate-600 bg-[#132b22];
+    @apply w-full border-[rgba(93,232,176,0.15)] bg-[#0d1f17] hover:border-[rgba(93,232,176,0.35)];
   }
 
   .card__image-frame {
-    @apply h-30 bg-slate-800;
+    @apply h-40 bg-slate-800 overflow-hidden;
   }
 
   .card__image {
-    @apply object-fill;
+    @apply w-full h-full object-cover transition-transform duration-300;
+  }
+
+  .card--project:hover .card__image {
+    @apply scale-105;
   }
 
   .card__content {
@@ -423,15 +430,83 @@
   }
 
   .card__title {
-    @apply text-start text-xl;
+    @apply text-start text-base font-semibold text-[#e8eaf2];
+  }
+
+  .card__description {
+    @apply text-xs text-[#8b93b0] leading-relaxed line-clamp-2;
   }
 
   .card__tag {
-    @apply w-fit italic text-sm font-bold text-white py-0.5 px-1.5 rounded-sm;
+    @apply w-fit text-[10px] font-semibold tracking-widest uppercase py-0.5 px-2 rounded-sm;
   }
 
   .card__tag--project {
-    @apply bg-cyan-400 text-slate-900 font-medium;
+    @apply bg-[rgba(93,232,176,0.1)] text-[#5de8b0] border border-[rgba(93,232,176,0.25)];
+  }
+
+  /* ─────────────────────────────────────
+     PROJECT DETAIL PAGE
+     ───────────────────────────────────── */
+  .project-detail {
+    @apply max-w-2xl mx-auto px-6 md:px-12 pt-28 md:pt-16 pb-24;
+    animation: fadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .project-detail__not-found {
+    @apply flex flex-col items-center justify-center min-h-screen text-[#8b93b0];
+  }
+
+  .project-detail__back {
+    @apply inline-flex items-center gap-1.5 text-xs tracking-widest uppercase text-[#5de8b0]/60 hover:text-[#5de8b0] transition-colors mb-10;
+  }
+
+  .project-detail__header {
+    @apply mb-10;
+  }
+
+  .project-detail__meta {
+    @apply flex items-center gap-3 mb-4;
+  }
+
+  .project-detail__year {
+    @apply text-xs text-[#4e5878] tracking-widest;
+  }
+
+  .project-detail__title {
+    @apply font-serif font-bold text-[40px] md:text-[52px] text-[#e8eaf2] leading-[1.05] mb-4 tracking-tight;
+  }
+
+  .project-detail__lead {
+    @apply text-[#8b93b0] text-base leading-relaxed mb-6;
+  }
+
+  .project-detail__actions {
+    @apply flex gap-3 flex-wrap;
+  }
+
+  .project-detail__cover {
+    @apply w-full rounded-xs overflow-hidden mb-10 border border-[rgba(93,232,176,0.1)];
+  }
+
+  .project-detail__cover img {
+    @apply w-full h-64 md:h-80 object-cover;
+  }
+
+  .project-detail__stack {
+    @apply mb-10;
+  }
+
+  .project-detail__body {
+    @apply flex flex-col gap-5 border-t border-white/[0.07] pt-8;
+  }
+
+  .project-detail__heading {
+    @apply text-lg font-bold text-[#5de8b0] mt-4;
+  }
+
+  .project-detail__para {
+    @apply text-[#8b93b0] text-sm md:text-base leading-relaxed;
   }
 }
 

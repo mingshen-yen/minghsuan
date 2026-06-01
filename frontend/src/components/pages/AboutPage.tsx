@@ -1,5 +1,6 @@
-import { useState } from "react";
-import { aboutMe } from "../../data/AboutMe";
+import { useEffect, useState } from "react";
+import { useState as useSection } from "react";
+import { fetchAbout, imageUrl, type AboutData } from "../../lib/api";
 import { SideBar } from "../layout/SideBar";
 import { StatsStrip } from "../layout/StatsStrip";
 import { AboutSubPage } from "./AboutSubPage";
@@ -7,7 +8,12 @@ import { AboutSubPage } from "./AboutSubPage";
 type AboutSection = "experience" | "education" | "skills";
 
 export const AboutPage = () => {
-  const [section, setSection] = useState<AboutSection>("experience");
+  const [data, setData] = useState<AboutData | null>(null);
+  const [section, setSection] = useSection<AboutSection>("experience");
+
+  useEffect(() => {
+    fetchAbout().then(setData);
+  }, []);
 
   const handleSectionChange =
     (newSection: AboutSection) => (e: React.MouseEvent) => {
@@ -16,6 +22,10 @@ export const AboutPage = () => {
     };
 
   const isActive = (s: AboutSection) => section === s;
+
+  if (!data) return null;
+
+  const { aboutMe } = data;
 
   return (
     <div className="min-h-screen mx-auto flex items-center justify-center">
@@ -29,56 +39,35 @@ export const AboutPage = () => {
           <div className="avatar">
             <div className="avatar__figure">
               <img
-                src="/example.jpg"
-                alt="Minghsuan avatar"
+                src={imageUrl(aboutMe.avatar)}
+                alt={`${aboutMe.name} avatar`}
                 className="rounded-xl object-contain"
               />
               <div className="about__note">
                 <p className="text-lg">❝</p>
-                <p className="about__description italic">
-                  {aboutMe.description}
-                </p>
+                <p className="about__description italic">{aboutMe.description}</p>
               </div>
             </div>
           </div>
           <div className="about__text-box">
             <div className="flex gap-2">
-              <a
-                href="#experience"
-                onClick={handleSectionChange("experience")}
-                className={`about__cta ${
-                  isActive("experience")
-                    ? "text-[#5de8b0] font-black scale-110"
-                    : "text-white hover:scale-105 hover:text-[#5de8b0]"
-                }`}
-              >
-                Experience
-              </a>
-              <a
-                href="#education"
-                onClick={handleSectionChange("education")}
-                className={`about__cta ${
-                  isActive("education")
-                    ? "text-[#5de8b0] font-black scale-110"
-                    : "text-white hover:scale-105 hover:text-[#5de8b0]"
-                }`}
-              >
-                Education
-              </a>
-              <a
-                href="#skills"
-                onClick={handleSectionChange("skills")}
-                className={`about__cta ${
-                  isActive("skills")
-                    ? "text-[#5de8b0] font-black scale-110"
-                    : "text-white hover:scale-105 hover:text-[#5de8b0]"
-                }`}
-              >
-                Skills
-              </a>
+              {(["experience", "education", "skills"] as AboutSection[]).map((s) => (
+                <a
+                  key={s}
+                  href={`#${s}`}
+                  onClick={handleSectionChange(s)}
+                  className={`about__cta capitalize ${
+                    isActive(s)
+                      ? "text-[#5de8b0] font-black scale-110"
+                      : "text-white hover:scale-105 hover:text-[#5de8b0]"
+                  }`}
+                >
+                  {s}
+                </a>
+              ))}
             </div>
             <div className="flex">
-              <AboutSubPage section={section} />
+              <AboutSubPage section={section} data={data} />
             </div>
           </div>
         </div>
