@@ -2,19 +2,46 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/app.js",
+  "type": "module",
+  "imports": {
+    "#db": {
+      "development": "./src/db/index.ts",
+      "default": "./dist/db/index.js"
+    },
+    "#controllers": {
+      "development": "./src/controllers/index.ts",
+      "default": "./dist/controllers/index.js"
+    },
+    "#middlewave": {
+      "development": "./src/middlewave/index.ts",
+      "default": "./dist/middlewave/index.js"
+    },
+    "#models": {
+      "development": "./src/models/index.ts",
+      "default": "./dist/models/index.js"
+    },
+    "#routes": {
+      "development": "./src/routes/index.ts",
+      "default": "./dist/routes/index.js"
+    },
+    "#schema": {
+      "development": "./src/schema/index.ts",
+      "default": "./dist/schema/index.js"
+    }
+  },
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "dev": "node --watch --conditions development --env-file=.env.development.local src/app.ts",
     "build": "tsc",
-    "start": "node dist/index.js"
+    "start": "node dist/app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "dependencies": {
     "cors": "^2.8.6",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "mongoose": "^9.6.3"
   },
   "devDependencies": {
     "@types/cors": "^2.8.19",
