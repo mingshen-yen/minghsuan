@@ -72,7 +72,15 @@ export const Header = () => {
       <Footer />
 
       {/* Mobile Navigation */}
+
       <div className="nav__mobile">
+        <button
+          onClick={toggle}
+          className="nav__theme-toggle"
+          aria-label="Toggle theme"
+        >
+          {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+        </button>
         {!open && (
           <button onClick={() => setOpen(true)} className="nav__toggle">
             <Menu size={28} />
@@ -97,14 +105,6 @@ export const Header = () => {
               {isActive(to) && <span className="nav__indicator" />}
             </Link>
           ))}
-
-          <button
-            onClick={toggle}
-            className="nav__theme-toggle"
-            aria-label="Toggle theme"
-          >
-            {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
-          </button>
         </div>
       </div>
     </nav>

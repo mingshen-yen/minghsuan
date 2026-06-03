@@ -171,7 +171,7 @@
   }
 
   .nav__mobile {
-    @apply md:hidden fixed items-center p-5 top-0 right-0;
+    @apply md:hidden fixed flex gap-2 items-center p-5 top-0 right-0;
   }
 
   .nav__drawer {
