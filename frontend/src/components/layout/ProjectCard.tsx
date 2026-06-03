@@ -4,14 +4,11 @@ import { getProjects } from "../../api/projects";
 
 export const ProjectCard = () => {
   const [projects, setProjects] = useState<any[]>([]);
-  const [error, setErrors] = useState();
 
   useEffect(() => {
     getProjects().then(setProjects).catch(console.error);
   }, []);
 
-  if (error)
-    return <p className="text-[#8b93b0] text-sm">Failed to load projects.</p>;
   if (!projects.length)
     return <p className="text-[#8b93b0] text-sm">Loading…</p>;
 
