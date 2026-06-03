@@ -10,7 +10,7 @@ export const AboutSubPage = ({ section, data }: Props) => {
   const { experience, education, skills } = data;
 
   return (
-    <div className="flex flex-wrap pb-8">
+    <div className="flex flex-wrap pb-6">
       <div id={section}>
         {section === "experience" &&
           experience.map(({ title, company, period, descriptions }) => (

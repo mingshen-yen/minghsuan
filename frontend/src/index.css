@@ -261,7 +261,7 @@
      SECTION CONTAINERS
      ───────────────────────────────────── */
   .section {
-    @apply z-(--z-base) md:left-8 lg:left-15 px-12 md:px-30 xl:px-20 pt-30 md:pt-0 gap-10 md:gap-0 min-h-screen relative justify-center text-center lg:text-start items-center max-w-255 md:max-w-260 lg:max-w-270 xl:max-w-280 2xl:max-w-7xl mx-auto grid-cols-1 lg:grid lg:grid-cols-2;
+    @apply z-(--z-base) md:left-8 lg:left-15 px-12 md:px-30 xl:px-20 pt-30 md:pt-0 pb-10 md:pb-0 gap-10 md:gap-0 min-h-screen relative justify-center text-center lg:text-start items-center max-w-255 md:max-w-260 lg:max-w-270 xl:max-w-280 2xl:max-w-7xl mx-auto grid-cols-1 lg:grid lg:grid-cols-2;
     animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 
@@ -319,11 +319,11 @@
     @apply w-full rounded-full;
   }
 
-  .avatar__figure {
-    @apply relative inline-block max-w-80;
+  .about__figure {
+    @apply relative inline-block max-w-75;
   }
 
-  .avatar__figure img {
+  .about__figure img {
     @apply block max-w-full;
   }
 

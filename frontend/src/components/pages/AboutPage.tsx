@@ -49,11 +49,11 @@ export const AboutPage = () => {
         </div>
         <div className="about__detail">
           <div className="avatar">
-            <div className="avatar__figure">
+            <div className="about__figure">
               <img
                 src={aboutMe.image_url}
                 alt={`${aboutMe.name} avatar`}
-                className="rounded-xl object-contain"
+                className="rounded-xl object-contain w-fit"
               />
               <div className="about__note">
                 <p className="text-lg">❝</p>
