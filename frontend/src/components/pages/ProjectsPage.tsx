@@ -1,7 +1,7 @@
 import { ProjectCard } from "../layout/ProjectCard";
 import { SideBar } from "../layout/SideBar";
 
-export const PortfoPage = () => {
+export const ProjectsPage = () => {
   return (
     <div className="min-h-screen mx-auto flex items-center justify-center">
       <SideBar />

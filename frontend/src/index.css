@@ -512,7 +512,7 @@
   }
 
   .project-detail__back {
-    @apply inline-flex items-center gap-1.5 text-xs tracking-widest uppercase transition-colors mb-10 text-(--color-accent-soft) hover:text-(--color-accent);
+    @apply inline-flex items-center gap-1.5 text-xs tracking-widest uppercase transition-colors mb-10 text-(--color-accent-bright) hover:text-(--color-accent);
   }
 
   .project-detail__header {
