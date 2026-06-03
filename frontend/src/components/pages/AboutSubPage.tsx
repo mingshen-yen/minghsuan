@@ -1,5 +1,4 @@
-import type { AboutData } from "../../lib/api";
-
+import type { AboutData } from "../../lib/type";
 type AboutSection = "experience" | "education" | "skills";
 
 type Props = {
@@ -29,17 +28,13 @@ export const AboutSubPage = ({ section, data }: Props) => {
           ))}
 
         {section === "education" &&
-          education.map(({ degree, institution, period, descriptions }) => (
+          education.map(({ degree, uni, period, description }) => (
             <div key={degree} className="py-1">
               <h4>{degree}</h4>
               <div className="about__company">
-                {institution}, <span>{period}</span>
+                {uni}, <span>{period}</span>
               </div>
-              <ul className="about__description">
-                {descriptions.map((d) => (
-                  <li key={d}>{d}</li>
-                ))}
-              </ul>
+              <ul className="about__description">{description}</ul>
             </div>
           ))}
 

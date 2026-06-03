@@ -1,6 +1,18 @@
 import { supabase } from "../lib/supabase";
 
-export async function getProjects() {
+export async function getProjects(slug?: string) {
+  if (slug) {
+    const { data, error } = await supabase
+      .from("projects")
+      .select("*")
+      .eq("slug", slug)
+      .maybeSingle();
+
+    if (error) throw error;
+
+    return data;
+  }
+
   const { data, error } = await supabase
     .from("projects")
     .select("*")

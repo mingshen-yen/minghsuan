@@ -1,18 +1,23 @@
 import { useEffect, useState } from "react";
-import { useState as useSection } from "react";
-import { fetchAbout, imageUrl, type AboutData } from "../../lib/api";
 import { SideBar } from "../layout/SideBar";
 import { StatsStrip } from "../layout/StatsStrip";
+import { getAbout } from "../../api/aboutMe";
 import { AboutSubPage } from "./AboutSubPage";
 
 type AboutSection = "experience" | "education" | "skills";
 
 export const AboutPage = () => {
-  const [data, setData] = useState<AboutData | null>(null);
-  const [section, setSection] = useSection<AboutSection>("experience");
+  const [data, setData] = useState<any | null>(null);
+  const [section, setSection] = useState<AboutSection>("experience");
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetchAbout().then(setData);
+    getAbout()
+      .then(setData)
+      .catch((err) => {
+        console.error("Failed to fetch about data:", err);
+        setError(err?.message ?? "Failed to load page");
+      });
   }, []);
 
   const handleSectionChange =
@@ -23,9 +28,16 @@ export const AboutPage = () => {
 
   const isActive = (s: AboutSection) => section === s;
 
+  if (error)
+    return (
+      <div className="project-detail__not-found">
+        <p>{error}</p>
+      </div>
+    );
   if (!data) return null;
 
   const { aboutMe } = data;
+  console.log(aboutMe);
 
   return (
     <div className="min-h-screen mx-auto flex items-center justify-center">
@@ -39,7 +51,7 @@ export const AboutPage = () => {
           <div className="avatar">
             <div className="avatar__figure">
               <img
-                src={imageUrl(aboutMe.avatar)}
+                src={aboutMe.image_url}
                 alt={`${aboutMe.name} avatar`}
                 className="rounded-xl object-contain"
               />

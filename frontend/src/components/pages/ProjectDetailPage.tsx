@@ -59,9 +59,7 @@ export const ProjectDetailPage = () => {
 
       <header className="project-detail__header">
         <div className="project-detail__meta">
-          <span className="card__tag card__tag--project">
-            {project.tech_stack}
-          </span>
+          <span className="card__tag card__tag--project">{project.tag}</span>
           {/* {project.year && (
             <span className="project-detail__year">{project.year}</span>
           )} */}
