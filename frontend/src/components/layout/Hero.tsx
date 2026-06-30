@@ -1,5 +1,5 @@
 export const Hero = () => {
-  const skills = ["Python", "React", "TypeScript", "Node.js", "MongoDB"];
+  const skills = ["Earth Science", "Data Analysis", "Web Dev"];
 
   return (
     <section className="section">
@@ -13,7 +13,7 @@ export const Hero = () => {
           <em>content</em> about it.
         </h1>
         <div>
-          <div className="skill-label">Experience with</div>
+          <div className="skill-label">Expertise on</div>
           <div className="skill-list">
             {skills.map((skill) => (
               <span key={skill} className="skill-tag">

@@ -65,7 +65,6 @@ export const ProjectDetailPage = () => {
           )} */}
         </div>
         <h1 className="project-detail__title">{project.title}</h1>
-        <p className="project-detail__lead">{project.description}</p>
 
         <div className="project-detail__actions">
           {project.live_url && project.live_url !== "#" && (
@@ -79,9 +78,9 @@ export const ProjectDetailPage = () => {
               <ExternalLink size={13} />
             </a>
           )}
-          {project.github_url && (
+          {project.source && (
             <a
-              href={project.github_url}
+              href={project.source}
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn--ghost"

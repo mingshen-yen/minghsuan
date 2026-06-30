@@ -27,6 +27,7 @@ export type AboutData = {
 export type ExperienceItem = {
   title: string;
   company: string;
+  location: string;
   period: string;
   descriptions: string[];
 };
@@ -34,6 +35,7 @@ export type ExperienceItem = {
 export type EducationItem = {
   degree: string;
   uni: string;
+  location: string;
   period: string;
   description: string;
 };

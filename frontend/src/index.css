@@ -140,7 +140,7 @@
   }
 
   h4 {
-    @apply pt-4 pb-1 text-base md:text-lg 2xl:text-xl font-bold text-(--color-accent);
+    @apply pt-2 pb-1 text-base md:text-lg 2xl:text-xl font-bold text-(--color-accent);
   }
 
   p {
@@ -250,7 +250,7 @@
   }
 
   .skill-tag {
-    @apply px-2.5 py-1.5 rounded-xs text-xs tracking-wide transition-all duration-200 bg-(--bg-skill-tag) border border-(--border-subtle) text-(--color-skill-text) hover:border-(--color-accent-soft) hover:text-(--color-accent) hover:bg-(--color-accent-dim);
+    @apply px-2.5 py-1.5 rounded-sm text-xs tracking-wide transition-all duration-200 bg-(--bg-skill-tag) border border-(--border-subtle) text-(--color-skill-text) hover:border-(--color-accent-soft) hover:text-(--color-accent) hover:bg-(--color-accent-dim);
   }
 
   .skill-label {
@@ -410,11 +410,15 @@
   }
 
   .about__company {
-    @apply italic text-[13px] 2xl:text-base text-(--text-body) pb-2;
+    @apply font-bold text-sm 2xl:text-base text-(--text-body);
+  }
+
+  .about__experience_description {
+    @apply text-[13px] 2xl:text-base text-(--text-body) list-disc list-outside ps-4;
   }
 
   .about__description {
-    @apply text-sm 2xl:text-base text-(--text-body);
+    @apply text-[13px] 2xl:text-base text-(--text-body);
   }
 
   .about__skills-box {
@@ -484,7 +488,7 @@
   }
 
   .card__title {
-    @apply text-start text-base font-semibold text-(--text-heading);
+    @apply text-start text-base font-semibold text-(--text-heading) h-12;
   }
 
   .card__description {
@@ -503,7 +507,7 @@
      PROJECT DETAIL PAGE
      ───────────────────────────────────── */
   .project-detail {
-    @apply max-w-2xl mx-auto px-6 md:px-12 pt-28 md:pt-16 pb-24;
+    @apply z-(--z-base) relative md:left-8 lg:left-15 max-w-4xl mx-auto px-6 md:px-12 pt-28 md:pt-16 pb-24;
     animation: fadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 
@@ -544,7 +548,7 @@
   }
 
   .project-detail__cover img {
-    @apply w-full h-64 md:h-80 object-cover;
+    @apply w-full;
   }
 
   .project-detail__stack {
