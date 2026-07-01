@@ -8,8 +8,6 @@ export const LandingPage = () => {
     <div className="max-h-screen mx-auto">
       <SideBar />
       <Hero />
-      <ProjectsPage />
-      <MediaPage />
     </div>
   );
 };
