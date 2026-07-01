@@ -2,22 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router";
 import { getProjectById } from "../../api/projects";
 import { ArrowLeft, ExternalLink, GitBranch } from "lucide-react";
-
-const renderBody = (body: string) =>
-  body.split("\n\n").map((block, i) => {
-    if (block.startsWith("## ")) {
-      return (
-        <h3 key={i} className="project-detail__heading">
-          {block.slice(3)}
-        </h3>
-      );
-    }
-    return (
-      <p key={i} className="project-detail__para">
-        {block}
-      </p>
-    );
-  });
+import ReactMarkdown from "react-markdown";
 
 export const ProjectDetailPage = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -114,7 +99,7 @@ export const ProjectDetailPage = () => {
 
       {project.description && (
         <div className="project-detail__body">
-          {renderBody(project.description)}
+          <ReactMarkdown>{project.description}</ReactMarkdown>
         </div>
       )}
     </article>
