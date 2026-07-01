@@ -488,7 +488,7 @@
   }
 
   .card__title {
-    @apply text-start text-base font-semibold text-(--text-heading) h-12 2xl:h-15;
+    @apply text-start text-base font-semibold text-(--text-heading) h-12;
   }
 
   .card__description {

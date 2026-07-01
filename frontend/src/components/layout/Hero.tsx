@@ -13,7 +13,7 @@ export const Hero = () => {
           <em>content</em> about it.
         </h1>
         <div>
-          <div className="skill-label">Expertise on</div>
+          <div className="skill-label">Expertise in</div>
           <div className="skill-list">
             {skills.map((skill) => (
               <span key={skill} className="skill-tag">
