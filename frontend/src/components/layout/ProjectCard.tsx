@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
 import { getProjects } from "../../api/projects";
-import { marked } from "marked";
 
 export const ProjectCard = () => {
   const [projects, setProjects] = useState<any[]>([]);
