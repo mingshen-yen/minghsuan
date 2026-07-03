@@ -19,7 +19,7 @@ export const AboutSubPage = ({ section, data }: Props) => {
               <div key={title} className="py-1">
                 <h4>{title}</h4>
                 <div className="about__company">{company}</div>
-                <div className="flex gap-3 text-xs pb-1">
+                <div className="flex gap-3 text-xs pb-1 justify-center lg:justify-start">
                   <div className="flex items-center gap-1">
                     <CalendarDays size={14} />
                     <span>{period}</span>
@@ -43,7 +43,7 @@ export const AboutSubPage = ({ section, data }: Props) => {
             <div key={degree} className="py-1">
               <h4>{degree}</h4>
               <div className="about__company">{uni}</div>
-              <div className="flex gap-3 text-xs pb-1">
+              <div className="flex gap-3 text-xs pb-1 justify-center lg:justify-start">
                 <div className="flex items-center gap-1">
                   <CalendarDays size={14} />
                   <span>{period}</span>
