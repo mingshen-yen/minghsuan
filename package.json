@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.106.2",
+    "cloudflare": "^6.5.0",
     "lucide-react": "^1.14.0",
     "marked": "^18.0.5",
     "react": "^19.2.6",
