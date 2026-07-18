@@ -262,7 +262,7 @@
   }
 
   .section--hero {
-    @apply bg-(--bg-nav)/40 z-(--z-base) md:pb-6 pt-20 min-h-80 relative justify-center text-center items-center mx-auto;
+    @apply bg-(--bg-nav)/50 z-(--z-base) md:pb-15 pt-28 min-h-80 relative justify-center text-center items-center mx-auto;
   }
 
   .section--about {
@@ -277,7 +277,7 @@
      HERO SECTION
      ───────────────────────────────────── */
   .hero__label {
-    @apply inline-flex items-center gap-3 text-xs font-medium tracking-widest uppercase mb-2 text-(--color-accent-bright);
+    @apply inline-flex items-center gap-3 text-xs font-medium tracking-widest uppercase mb-6 text-(--color-accent-bright);
   }
 
   .hero__label::before {
