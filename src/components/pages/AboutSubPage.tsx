@@ -11,15 +11,15 @@ export const AboutSubPage = ({ section, data }: Props) => {
   const { experience, education, skills } = data;
 
   return (
-    <div className="flex flex-wrap pb-4">
+    <div>
       <div id={section}>
         {section === "experience" &&
           experience.map(
             ({ title, company, location, period, descriptions }) => (
-              <div key={title} className="py-1">
+              <div key={title} className="py-0.5">
                 <h4>{title}</h4>
                 <div className="about__company">{company}</div>
-                <div className="flex gap-3 text-xs pb-1 justify-center lg:justify-start">
+                <div className="flex gap-3 text-xs pb-1 justify-center">
                   <div className="flex items-center gap-1">
                     <CalendarDays size={14} />
                     <span>{period}</span>
@@ -40,10 +40,10 @@ export const AboutSubPage = ({ section, data }: Props) => {
 
         {section === "education" &&
           education.map(({ degree, uni, location, period, description }) => (
-            <div key={degree} className="py-1">
+            <div key={degree} className="py-0.5">
               <h4>{degree}</h4>
               <div className="about__company">{uni}</div>
-              <div className="flex gap-3 text-xs pb-1 justify-center lg:justify-start">
+              <div className="flex gap-3 text-xs pb-1 justify-center">
                 <div className="flex items-center gap-1">
                   <CalendarDays size={14} />
                   <span>{period}</span>

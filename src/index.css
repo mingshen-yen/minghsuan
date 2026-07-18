@@ -148,34 +148,30 @@
   }
 
   footer {
-    @apply hidden lg:flex relative z-10 bottom-0 text-[10px] text-center text-(--text-dim);
-  }
-
-  .footer--mobile {
-    @apply md:hidden flex items-center bottom-0 text-(--text-dim);
+    @apply p-10 relative z-10 text-xs text-center text-(--text-dim);
   }
 
   /* ─────────────────────────────────────
      NAVIGATION BLOCK
      ───────────────────────────────────── */
   nav {
-    @apply fixed top-0 w-full md:w-fit md:left-0 md:h-full z-10 p-5 md:px-3 lg:px-4 2xl:px-10 flex md:flex-col items-center justify-around md:justify-start lg:justify-between transition-colors duration-300 bg-(--bg-nav);
+    @apply fixed w-full z-10 p-3 flex items-center justify-between transition-colors duration-300 bg-(--bg-nav);
   }
 
   .nav__logo {
-    @apply md:flex text-2xl font-black tracking-tighter not-italic text-(--text-body);
+    @apply md:flex px-3 md:px-10 text-2xl font-black tracking-tighter not-italic text-(--text-body);
   }
 
   .nav__desktop {
-    @apply hidden text-base md:flex md:flex-col md:gap-5 md:pt-10 lg:pb-30 items-center;
+    @apply hidden text-base md:flex items-center md:gap-5;
   }
 
   .nav__mobile {
-    @apply md:hidden fixed flex gap-2 items-center p-5 top-0 right-0;
+    @apply md:hidden fixed flex gap-2 items-center right-5;
   }
 
   .nav__drawer {
-    @apply z-(--z-dropdown) fixed top-0 right-0 w-full shadow-lg flex flex-col justify-center items-center pb-10 overflow-hidden md:hidden transform transition-transform duration-300 ease-in-out bg-(--bg-nav);
+    @apply z-(--z-dropdown) fixed top-0 right-0 w-50 rounded-bl-lg shadow-lg flex flex-col justify-center items-center pb-10 overflow-hidden md:hidden transform transition-transform duration-300 ease-in-out bg-(--bg-nav);
   }
 
   .nav__theme-toggle {
@@ -183,7 +179,7 @@
   }
 
   .nav__item {
-    @apply flex text-lg items-center p-2.5 lg:p-1 text-(--text-body);
+    @apply flex text-base items-center p-2 text-(--text-body);
   }
 
   .nav__item--active {
@@ -210,7 +206,7 @@
      SOCIAL SIDEBAR BLOCK
      ───────────────────────────────────── */
   .social-bar {
-    @apply hidden md:flex fixed right-0 top-0 z-10 w-15 h-full justify-center items-center;
+    @apply hidden md:flex fixed right-0 top-0 z-5 w-15 h-full justify-center items-center;
   }
 
   .social-list {
@@ -261,27 +257,27 @@
      SECTION CONTAINERS
      ───────────────────────────────────── */
   .section {
-    @apply z-(--z-base) md:left-8 lg:left-15 px-12 md:px-30 xl:px-20 pt-30 md:pt-0 pb-10 md:pb-0 gap-10 md:gap-0 min-h-screen relative justify-center text-center lg:text-start items-center max-w-255 md:max-w-260 lg:max-w-270 xl:max-w-280 2xl:max-w-7xl mx-auto grid-cols-1 lg:grid lg:grid-cols-2;
+    @apply z-(--z-base) px-12 md:pl-15 pt-25 gap-10 md:gap-0 min-h-80 relative justify-center text-center lg:text-start items-center max-w-255 md:max-w-260 lg:max-w-270 xl:max-w-280 2xl:max-w-7xl mx-auto grid-cols-1 lg:grid lg:grid-cols-2;
     animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 
   .section--about {
-    @apply min-h-80 grid-cols-1;
+    @apply pt-15 grid-cols-1 2xl:min-h-120;
   }
 
   .section--media {
-    @apply min-h-80 gap-6;
+    @apply gap-6;
   }
 
   .section--portfolio {
-    @apply min-h-100 gap-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 items-start;
+    @apply gap-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 items-start;
   }
 
   /* ─────────────────────────────────────
      HERO SECTION
      ───────────────────────────────────── */
   .hero__label {
-    @apply inline-flex items-center gap-3 text-xs font-medium tracking-widest uppercase mb-6 text-(--color-accent-bright);
+    @apply inline-flex items-center gap-3 text-xs font-medium tracking-widest uppercase mb-4 text-(--color-accent-bright);
   }
 
   .hero__label::before {
@@ -290,7 +286,7 @@
   }
 
   .hero__cta {
-    @apply flex gap-3.5 items-center pb-20 lg:pb-0 justify-center lg:justify-start;
+    @apply flex gap-3.5 items-center pb-20 lg:pb-10 justify-center lg:justify-start;
   }
 
   /* ─────────────────────────────────────
@@ -324,7 +320,7 @@
   }
 
   .about__figure img {
-    @apply block max-w-full;
+    @apply block max-w-full object-contain w-fit;
   }
 
   /* ─────────────────────────────────────
@@ -381,7 +377,7 @@
      ABOUT SECTION
      ───────────────────────────────────── */
   .about__detail {
-    @apply flex flex-col xl:flex-row xl:items-end pt-5 xl:pt-0 xl:gap-5;
+    @apply flex flex-col items-center justify-center md:flex-row pt-5 xl:pt-0 xl:gap-5;
   }
 
   .about__note {
@@ -389,15 +385,15 @@
   }
 
   .about__text-box {
-    @apply flex flex-col items-center xl:items-start justify-start pt-12 px-4 xl:w-140 2xl:w-160 xl:min-h-106 2xl:min-h-110;
+    @apply flex flex-col items-center justify-start pt-8 px-4 md:w-150 2xl:w-160 md:min-h-102 2xl:min-h-110;
   }
 
   .about__title {
-    @apply font-serif text-5xl md:text-6xl lg:text-7xl 2xl:text-[80px] font-black text-center leading-[0.8];
+    @apply font-serif text-5xl lg:text-6xl 2xl:text-[80px] font-black text-center leading-[0.8];
   }
 
   .about__cta {
-    @apply inline-flex items-center text-xs font-medium tracking-widest uppercase mb-6;
+    @apply inline-flex items-center text-xs font-medium tracking-widest uppercase mb-2;
   }
 
   .about__cta::after {
@@ -410,7 +406,7 @@
   }
 
   .about__company {
-    @apply font-bold text-sm 2xl:text-base text-(--text-body);
+    @apply flex justify-center font-bold text-sm 2xl:text-base text-(--text-body);
   }
 
   .about__experience_description {
@@ -426,7 +422,7 @@
   }
 
   .about__skills {
-    @apply text-sm flex flex-wrap gap-1 justify-center lg:justify-start;
+    @apply text-sm flex flex-wrap gap-1 justify-center;
   }
 
   .about__skill {

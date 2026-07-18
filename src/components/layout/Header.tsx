@@ -46,30 +46,27 @@ export const Header = () => {
             {isActive(to) && (
               <span className="nav__indicator hidden lg:block" />
             )}
-            {Icon && (
+            {/* {Icon && (
               <Icon
-                className={`hidden md:flex lg:hidden h-6 w-6 ${
+                className={`hidden md:flex h-4 w-4 mr-0.5 ${
                   isActive(to) ? "nav__item--active" : ""
                 }`}
               />
-            )}
-            <span className="md:hidden lg:flex">{label}</span>
+            )} */}
+            <span className="lg:flex">{label}</span>
             <span className="hidden md:hover:flex lg:hidden text-xs">
               {label}
             </span>
           </Link>
         ))}
-
-        <button
-          onClick={toggle}
-          className="nav__theme-toggle"
-          aria-label="Toggle theme"
-        >
-          {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
-        </button>
       </div>
-
-      <Footer />
+      <button
+        onClick={toggle}
+        className="nav__theme-toggle hidden md:flex"
+        aria-label="Toggle theme"
+      >
+        {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+      </button>
 
       {/* Mobile Navigation */}
 

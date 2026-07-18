@@ -14,6 +14,7 @@ export const SideBar = () => {
       label: "YouTube",
       icon: Mail,
     },
+    { to: "mailto:minghsuanyen@gmail.com", label: "Contact", icon: Mail },
   ];
 
   return (

@@ -3,7 +3,7 @@ import { SideBar } from "../layout/SideBar";
 export const ContactPage = () => {
   return (
     <div className="max-h-screen mx-auto flex items-center justify-center">
-      <SideBar />
+      {/* <SideBar /> */}
       <div className="section">
         <div className="flex flex-col gap-8 pb-10 lg:pb-30 h-fit">
           <h2>Reach out me</h2>

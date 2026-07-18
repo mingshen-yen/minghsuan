@@ -3,7 +3,7 @@ import { SideBar } from "../layout/SideBar";
 export const MediaPage = () => {
   return (
     <div className="min-h-screen mx-auto flex items-center justify-center">
-      <SideBar />
+      {/* <SideBar /> */}
       <div className="section section--media">
         <div className="h-full">
           <div className="media-card h-full">

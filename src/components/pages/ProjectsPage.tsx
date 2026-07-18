@@ -4,7 +4,7 @@ import { SideBar } from "../layout/SideBar";
 export const ProjectsPage = () => {
   return (
     <div className="min-h-screen mx-auto flex items-center justify-center">
-      <SideBar />
+      {/* <SideBar /> */}
       <div className="section section--portfolio">
         <ProjectCard />
       </div>

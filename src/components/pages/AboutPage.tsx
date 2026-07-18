@@ -40,8 +40,8 @@ export const AboutPage = () => {
   console.log(aboutMe);
 
   return (
-    <div className="min-h-screen mx-auto flex items-center justify-center">
-      <SideBar />
+    <>
+      {/* <SideBar /> */}
       <div className="section section--about">
         <div className="about__title">
           <span className="text-3xl">Hello,</span>
@@ -50,11 +50,7 @@ export const AboutPage = () => {
         <div className="about__detail">
           <div className="avatar">
             <div className="about__figure">
-              <img
-                src={aboutMe.image_url}
-                alt={`${aboutMe.name} avatar`}
-                className="rounded-xl object-contain w-fit"
-              />
+              <img src={aboutMe.image_url} alt={`${aboutMe.name} avatar`} />
               <div className="about__note">
                 <p className="text-lg">❝</p>
                 <p className="about__description italic">
@@ -87,6 +83,6 @@ export const AboutPage = () => {
         </div>
         <StatsStrip />
       </div>
-    </div>
+    </>
   );
 };
