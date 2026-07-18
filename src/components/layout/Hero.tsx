@@ -21,8 +21,8 @@ export const Hero = () => {
         </div>
 
         <div className="hero__cta">
-          <a href="mailto:minghsuanyen@gmail.com" className="btn btn--primary">
-            Contact Me
+          <a href="/about" className="btn btn--primary">
+            About Me
             <svg
               width="14"
               height="14"

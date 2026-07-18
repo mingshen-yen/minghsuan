@@ -124,7 +124,7 @@
      TYPOGRAPHY
      ───────────────────────────────────── */
   h1 {
-    @apply py-2 font-serif font-bold text-[45px] lg:text-[56px] mb-3 tracking-tight lg:tracking-normal leading-[1.05] text-(--text-heading);
+    @apply py-2 font-serif font-bold text-[45px] md:text-[56px] mb-3 tracking-tight md:tracking-normal leading-[1.05] text-(--text-heading);
   }
 
   em {
@@ -148,7 +148,7 @@
   }
 
   footer {
-    @apply p-10 relative z-10 text-xs text-center text-(--text-dim);
+    @apply relative z-10 h-30 flex flex-col justify-center text-[13px] text-center text-(--text-dim) bg-(--bg-nav);
   }
 
   /* ─────────────────────────────────────
@@ -159,11 +159,11 @@
   }
 
   .nav__logo {
-    @apply md:flex px-3 md:px-10 text-2xl font-black tracking-tighter not-italic text-(--text-body);
+    @apply md:flex ml-2 text-2xl font-black tracking-tighter not-italic text-(--text-body);
   }
 
   .nav__desktop {
-    @apply hidden text-base md:flex items-center md:gap-5 lg:gap-10 xl:gap-12;
+    @apply hidden text-base md:flex items-center md:gap-12 lg:gap-16;
   }
 
   .nav__mobile {
@@ -179,7 +179,7 @@
   }
 
   .nav__item {
-    @apply flex text-base items-center p-2 text-(--text-body);
+    @apply flex text-base items-center text-(--text-body);
   }
 
   .nav__item--active {
@@ -262,7 +262,7 @@
   }
 
   .section--hero {
-    @apply bg-(--bg-nav)/50 z-(--z-base) md:pb-15 pt-28 min-h-80 relative justify-center text-center items-center mx-auto;
+    @apply bg-(--bg-nav)/40 z-(--z-base) pb-10 md:pb-15 pt-26 relative justify-center text-center mx-auto;
   }
 
   .section--about {
@@ -285,8 +285,13 @@
     @apply block w-10 h-px bg-(--color-accent-soft);
   }
 
+  .hero__label::after {
+    content: "";
+    @apply block w-10 h-px bg-(--color-accent-soft);
+  }
+
   .hero__cta {
-    @apply flex gap-2 items-center pb-20 md:pb-5 justify-center;
+    @apply pt-2 flex gap-2 items-center justify-center;
   }
 
   /* ─────────────────────────────────────
@@ -503,7 +508,7 @@
      PROJECT DETAIL PAGE
      ───────────────────────────────────── */
   .project-detail {
-    @apply z-(--z-base) relative md:left-8 lg:left-15 max-w-4xl mx-auto px-6 md:px-12 pt-28 md:pt-16 pb-24;
+    @apply z-(--z-base) relative max-w-5xl mx-auto px-6 pt-20 md:pt-25 pb-24;
     animation: fadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 
@@ -549,6 +554,10 @@
 
   .project-detail__stack {
     @apply mb-10;
+  }
+
+  .project-detail__skill {
+    @apply flex flex-wrap gap-2 mb-5 justify-start;
   }
 
   .project-detail__body {

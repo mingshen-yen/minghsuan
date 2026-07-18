@@ -6,7 +6,7 @@ export const StatsStrip = () => {
       <div className="stats-strip__inner">
         <div className="stats-strip__item">
           <div className="stats-strip__number">
-            8<span>+</span>
+            9<span></span>
           </div>
           <div className="stats-strip__label">Years Experience</div>
         </div>

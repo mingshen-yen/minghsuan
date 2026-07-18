@@ -1,8 +1,8 @@
 import {
+  House,
   CircleStar,
   FolderOpenDot,
   Contact,
-  Film,
   Menu,
   X,
   Sun,
@@ -18,10 +18,10 @@ export const Header = () => {
   const { theme, toggle } = useTheme();
 
   const navItems = [
-    // { to: "/", label: "Home", icon: House },
+    { to: "/", label: "Home", icon: House },
     { to: "/about", label: "About", icon: CircleStar },
     { to: "/portfolio", label: "Projects", icon: FolderOpenDot },
-    { to: "/media", label: "Media", icon: Film },
+    // { to: "/media", label: "Media", icon: Film },
     { to: "/contact", label: "Contact", icon: Contact },
   ];
 
