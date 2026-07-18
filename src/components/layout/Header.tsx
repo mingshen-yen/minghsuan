@@ -11,7 +11,6 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import { Link, useLocation } from "react-router";
-import { Footer } from "./Footer";
 import { useTheme } from "../../lib/ThemeContext";
 
 export const Header = () => {
@@ -37,14 +36,14 @@ export const Header = () => {
 
       {/* Desktop Navigation */}
       <div className="nav__desktop">
-        {navItems.map(({ to, label, icon: Icon }) => (
+        {navItems.map(({ to, label }) => (
           <Link
             key={to}
             to={to}
             className={`nav__item ${isActive(to) ? "nav__item--active" : ""}`}
           >
             {isActive(to) && (
-              <span className="nav__indicator hidden lg:block" />
+              <span className="nav__indicator hidden md:block" />
             )}
             {/* {Icon && (
               <Icon
@@ -54,9 +53,6 @@ export const Header = () => {
               />
             )} */}
             <span className="lg:flex">{label}</span>
-            <span className="hidden md:hover:flex lg:hidden text-xs">
-              {label}
-            </span>
           </Link>
         ))}
       </div>

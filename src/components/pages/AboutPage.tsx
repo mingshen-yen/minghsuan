@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { SideBar } from "../layout/SideBar";
 import { StatsStrip } from "../layout/StatsStrip";
 import { getAbout } from "../../api/aboutMe";
 import { AboutSubPage } from "./AboutSubPage";
@@ -60,7 +59,7 @@ export const AboutPage = () => {
             </div>
           </div>
           <div className="about__text-box">
-            <div className="flex gap-2">
+            <div>
               {(["experience", "education", "skills"] as AboutSection[]).map(
                 (s) => (
                   <a
@@ -76,7 +75,7 @@ export const AboutPage = () => {
                 ),
               )}
             </div>
-            <div className="flex">
+            <div>
               <AboutSubPage section={section} data={data} />
             </div>
           </div>

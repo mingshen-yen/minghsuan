@@ -2,7 +2,6 @@ import { Footer } from "../layout/Footer";
 import { Hero } from "../layout/Hero";
 import { SideBar } from "../layout/SideBar";
 import { AboutPage } from "./AboutPage";
-import { ContactPage } from "./ContactPage";
 import { MediaPage } from "./MediaPage";
 import { ProjectsPage } from "./ProjectsPage";
 
