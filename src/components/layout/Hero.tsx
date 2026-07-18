@@ -2,15 +2,12 @@ export const Hero = () => {
   const skills = ["Earth Science", "Data Analysis", "Web Dev"];
 
   return (
-    <section className="section">
+    <section className="section--hero">
       <div id="hero-text">
-        <div className="hero__label">Data Scientist & Web Developer</div>
+        <div className="hero__label">Data Scientist & Content Creator</div>
         <h1>
-          I do <em>research</em>
-          <br />
-          and make
-          <br />
-          <em>content</em> about it.
+          Doing research about <br /> <em>Natural Hazards</em> <br />
+          and make content about it.
         </h1>
         <div>
           <div className="skill-label">Expertise in</div>
@@ -58,7 +55,7 @@ export const Hero = () => {
         </div>
       </div>
 
-      <div className="avatar">
+      {/* <div className="avatar">
         <div className="avatar__frame">
           <div className="avatar__ring" />
           <div className="avatar__inner">
@@ -73,7 +70,7 @@ export const Hero = () => {
             <div className="stat-card__label">Geophysics</div>
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

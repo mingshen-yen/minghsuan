@@ -124,7 +124,7 @@
      TYPOGRAPHY
      ───────────────────────────────────── */
   h1 {
-    @apply lg:py-2 font-serif font-bold text-[45px] lg:text-[60px] mb-7 tracking-tight lg:tracking-normal leading-[0.95] lg:leading-[1.05] text-(--text-heading);
+    @apply py-2 font-serif font-bold text-[45px] lg:text-[56px] mb-3 tracking-tight lg:tracking-normal leading-[1.05] text-(--text-heading);
   }
 
   em {
@@ -206,7 +206,7 @@
      SOCIAL SIDEBAR BLOCK
      ───────────────────────────────────── */
   .social-bar {
-    @apply hidden md:flex fixed right-0 top-0 z-5 w-15 h-full justify-center items-center;
+    @apply hidden md:flex fixed right-0 top-0 z-8 w-15 h-full justify-center items-center;
   }
 
   .social-list {
@@ -242,7 +242,7 @@
      SKILL TAG BLOCK
      ───────────────────────────────────── */
   .skill-list {
-    @apply flex flex-wrap gap-2 mb-10 justify-center lg:justify-start;
+    @apply flex flex-wrap gap-2 mb-5 justify-center;
   }
 
   .skill-tag {
@@ -261,6 +261,10 @@
     animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 
+  .section--hero {
+    @apply bg-(--bg-nav)/40 z-(--z-base) md:pb-6 pt-20 min-h-80 relative justify-center text-center items-center mx-auto;
+  }
+
   .section--about {
     @apply pt-15 grid-cols-1 2xl:min-h-120;
   }
@@ -273,7 +277,7 @@
      HERO SECTION
      ───────────────────────────────────── */
   .hero__label {
-    @apply inline-flex items-center gap-3 text-xs font-medium tracking-widest uppercase mb-4 text-(--color-accent-bright);
+    @apply inline-flex items-center gap-3 text-xs font-medium tracking-widest uppercase mb-2 text-(--color-accent-bright);
   }
 
   .hero__label::before {
@@ -282,7 +286,7 @@
   }
 
   .hero__cta {
-    @apply flex gap-3.5 items-center pb-20 lg:pb-10 justify-center lg:justify-start;
+    @apply flex gap-2 items-center pb-20 md:pb-5 justify-center;
   }
 
   /* ─────────────────────────────────────
