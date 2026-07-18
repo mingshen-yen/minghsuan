@@ -1,5 +1,3 @@
-import { SideBar } from "../layout/SideBar";
-
 export const ContactPage = () => {
   return (
     <div className="max-h-screen mx-auto flex items-center justify-center">

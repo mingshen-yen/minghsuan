@@ -1,5 +1,4 @@
 import { ProjectCard } from "../layout/ProjectCard";
-import { SideBar } from "../layout/SideBar";
 
 export const ProjectsPage = () => {
   return (

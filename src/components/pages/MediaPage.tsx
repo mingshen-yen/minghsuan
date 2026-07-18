@@ -1,5 +1,3 @@
-import { SideBar } from "../layout/SideBar";
-
 export const MediaPage = () => {
   return (
     <div className="min-h-screen mx-auto flex items-center justify-center">
