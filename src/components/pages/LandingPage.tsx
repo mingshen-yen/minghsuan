@@ -9,7 +9,9 @@ export const LandingPage = () => {
   return (
     <div className="max-h-screen mx-auto">
       <SideBar />
-      <Hero />
+      <div>
+        <Hero />
+      </div>
       <AboutPage />
       <ProjectsPage />
       <MediaPage />

@@ -132,7 +132,7 @@
   }
 
   h2 {
-    @apply text-5xl md:text-6xl font-black uppercase text-(--text-heading);
+    @apply text-4xl md:text-5xl font-black uppercase text-(--text-heading);
   }
 
   h3 {
@@ -257,16 +257,12 @@
      SECTION CONTAINERS
      ───────────────────────────────────── */
   .section {
-    @apply z-(--z-base) px-12 md:pl-15 pt-25 gap-10 md:gap-0 min-h-80 relative justify-center text-center lg:text-start items-center max-w-255 md:max-w-260 lg:max-w-270 xl:max-w-280 2xl:max-w-7xl mx-auto grid-cols-1 lg:grid lg:grid-cols-2;
+    @apply z-(--z-base) px-4 md:px-0 pt-25 gap-10 md:gap-0 min-h-80 relative justify-center text-center lg:text-start items-center max-w-255 md:max-w-260 lg:max-w-270 xl:max-w-280 2xl:max-w-7xl mx-auto grid-cols-1 lg:grid lg:grid-cols-2;
     animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 
   .section--about {
     @apply pt-15 grid-cols-1 2xl:min-h-120;
-  }
-
-  .section--media {
-    @apply gap-6;
   }
 
   .section--portfolio {
@@ -433,7 +429,7 @@
      MEDIA SECTION
      ───────────────────────────────────── */
   .media-card {
-    @apply z-(--z-elevated) relative mb-8 p-8 rounded-xs flex flex-col gap-8 items-center lg:items-start shadow-2xl hover:-translate-y-px hover:shadow-(--shadow-accent) bg-(--bg-media-card) border border-(--color-accent-dim) transition-colors duration-300;
+    @apply z-(--z-elevated) relative mb-4 p-6 rounded-xs flex flex-col gap-6 items-center h-full lg:items-start shadow-2xl hover:-translate-y-px hover:shadow-(--shadow-accent) bg-(--bg-media-card) border border-(--color-accent-dim) transition-colors duration-300;
   }
 
   .media-card__text {
@@ -484,11 +480,11 @@
   }
 
   .card__title {
-    @apply text-start text-base font-semibold text-(--text-heading) h-12;
+    @apply text-start text-base font-semibold text-(--text-heading) h-6;
   }
 
   .card__description {
-    @apply text-xs leading-relaxed line-clamp-2 text-(--text-muted);
+    @apply text-xs text-start leading-relaxed line-clamp-2 text-(--text-muted);
   }
 
   .card__tag {

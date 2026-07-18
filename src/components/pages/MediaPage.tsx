@@ -1,10 +1,9 @@
 export const MediaPage = () => {
   return (
-    <div className="min-h-screen mx-auto flex items-center justify-center">
-      {/* <SideBar /> */}
-      <div className="section section--media">
+    <>
+      <div className="section gap-4">
         <div className="h-full">
-          <div className="media-card h-full">
+          <div className="media-card">
             <div className="media-card__text">
               <div className="media-card__tag bg-red-700">YouTube</div>
               <h3>Mingshen See the world</h3>
@@ -45,6 +44,6 @@ export const MediaPage = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
