@@ -1,5 +1,4 @@
 import {
-  House,
   CircleStar,
   FolderOpenDot,
   Contact,
