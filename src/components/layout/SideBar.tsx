@@ -1,22 +1,7 @@
-import { Mail } from "lucide-react";
 import { Link } from "react-router";
+import { socialItems } from "../../lib/data";
 
 export const SideBar = () => {
-  const socialItems = [
-    {
-      to: "https://www.linkedin.com/in/ming-hsuan-yen/",
-      label: "LinkedIn",
-      icon: Mail,
-    },
-    { to: "https://github.com/mingshen-yen", label: "GitHub", icon: Mail },
-    {
-      to: "http://www.youtube.com/@mingshenworld",
-      label: "YouTube",
-      icon: Mail,
-    },
-    { to: "mailto:minghsuanyen@gmail.com", label: "Contact", icon: Mail },
-  ];
-
   return (
     <div className="social-bar">
       <ul className="social-list">

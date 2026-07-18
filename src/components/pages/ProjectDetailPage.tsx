@@ -84,7 +84,7 @@ export const ProjectDetailPage = () => {
       {project.tech_stack && (
         <div className="project-detail__stack">
           <span className="skill-label">Built with</span>
-          <div className="skill-list">
+          <div className="project-detail__skill">
             {(Array.isArray(project.tech_stack)
               ? project.tech_stack
               : [project.tech_stack]
