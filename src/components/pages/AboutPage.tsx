@@ -36,7 +36,6 @@ export const AboutPage = () => {
   if (!data) return null;
 
   const { aboutMe } = data;
-  console.log(aboutMe);
 
   return (
     <>

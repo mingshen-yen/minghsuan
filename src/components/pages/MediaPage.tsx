@@ -19,6 +19,7 @@ export const MediaPage = () => {
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
+                loading="lazy"
               />
             </div>
           </div>
@@ -39,6 +40,7 @@ export const MediaPage = () => {
                 title="Firstory Podcast"
                 src="https://open.firstory.me/embed/user/cmdthrpjf01ra01umdz514uwp"
                 scrolling="no"
+                loading="lazy"
               />
             </div>
           </div>

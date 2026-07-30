@@ -1,13 +1,4 @@
-import {
-  House,
-  CircleStar,
-  FolderOpenDot,
-  Contact,
-  Menu,
-  X,
-  Sun,
-  Moon,
-} from "lucide-react";
+import { Menu, X, Sun, Moon } from "lucide-react";
 import { useState } from "react";
 import { Link, useLocation } from "react-router";
 import { useTheme } from "../../lib/ThemeContext";
@@ -18,11 +9,10 @@ export const Header = () => {
   const { theme, toggle } = useTheme();
 
   const navItems = [
-    { to: "/", label: "Home", icon: House },
-    { to: "/about", label: "About", icon: CircleStar },
-    { to: "/portfolio", label: "Projects", icon: FolderOpenDot },
-    // { to: "/media", label: "Media", icon: Film },
-    { to: "/contact", label: "Contact", icon: Contact },
+    { to: "/", label: "Home" },
+    { to: "/about", label: "About" },
+    { to: "/portfolio", label: "Projects" },
+    { to: "/contact", label: "Contact" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -44,13 +34,6 @@ export const Header = () => {
             {isActive(to) && (
               <span className="nav__indicator hidden md:block" />
             )}
-            {/* {Icon && (
-              <Icon
-                className={`hidden md:flex h-4 w-4 mr-0.5 ${
-                  isActive(to) ? "nav__item--active" : ""
-                }`}
-              />
-            )} */}
             <span className="lg:flex">{label}</span>
           </Link>
         ))}

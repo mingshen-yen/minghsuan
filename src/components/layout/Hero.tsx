@@ -54,23 +54,6 @@ export const Hero = () => {
           </a>
         </div>
       </div>
-
-      {/* <div className="avatar">
-        <div className="avatar__frame">
-          <div className="avatar__ring" />
-          <div className="avatar__inner">
-            <img src={"/example.jpg"} alt="Minghsuan avatar" />
-          </div>
-          <div className="stat-card">
-            <div className="stat-card__number">8+</div>
-            <div className="stat-card__label">Years exp.</div>
-          </div>
-          <div className="stat-card">
-            <div className="stat-card__number">PhD</div>
-            <div className="stat-card__label">Geophysics</div>
-          </div>
-        </div>
-      </div> */}
     </section>
   );
 };
