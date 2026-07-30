@@ -9,9 +9,11 @@ export const LandingPage = () => {
     <div className="max-h-screen mx-auto">
       <SideBar />
       <Hero />
-      <div className="flex flex-col gap-10 md:px-15 pb-10">
+      <div className="flex flex-col gap-10 xl:gap-4 md:px-15 pb-10">
         <ProjectsPage />
-        <MediaPage />
+        <div className="xl:-mt-16">
+          <MediaPage />
+        </div>
       </div>
       <Footer />
     </div>
