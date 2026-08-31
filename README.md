@@ -57,45 +57,56 @@ npm run preview
 
 ```text
 .
-├── public/             # Static assets (images, icons, etc.)
+├── public/
+│   ├── images/         # Content images, referenced as /images/<file>
+│   └── _redirects      # SPA fallback for Cloudflare Pages
 ├── src/
-│   ├── components/     # Reusable UI components
-│   ├── sections/       # Portfolio sections (Hero, About, Projects, Contact, etc.)
-│   ├── assets/         # Local images and resources
+│   ├── api/            # Loads content from src/content/ at build time
+│   ├── components/
+│   │   ├── layout/     # Header, Footer, Hero, cards, etc.
+│   │   └── pages/      # One component per route
+│   ├── content/        # All site content — see src/content/README.md
+│   ├── lib/            # Types, theme context, frontmatter parser
+│   ├── router.tsx
 │   └── main.tsx        # App entry point
 ├── index.html
 └── vite.config.ts
 ```
 
-## Customization
+## Editing content
 
-To personalize this portfolio:
+All content lives in [`src/content/`](src/content/) as plain files — there is no
+database and no runtime fetch. See [`src/content/README.md`](src/content/README.md)
+for the field reference.
 
-- Update profile details (name, bio, role)
-- Add/edit projects (title, description, tech stack, links)
-- Update skills and experience content
-- Replace social/contact links
-- Customize theme, colors, and typography
+- **Projects** — one markdown file per project in `src/content/projects/`. The
+  filename is the URL slug. Add a project by dropping in a new `.md` file; no
+  code change needed.
+- **Profile, experience, education, skills** — `src/content/about.json`.
+- **Social and footer links** — `src/lib/data.ts`.
+- **Images** — put them in `public/images/` and reference `/images/<file>`.
+  Keep them under ~1600px on the long edge; they ship to every visitor.
+
+Content is bundled at build time, so changes go live by committing and pushing
+to `main`.
 
 ## Deployment
 
-You can deploy this site on platforms like:
+The site is hosted on **Cloudflare Pages** (project `minghsuan`, live at
+<https://minghsuan.pages.dev>) and builds automatically from the `main` branch.
 
-- GitHub Pages
-- Vercel
-- Netlify
+**To deploy: push to `main`.** There is no manual deploy command — `npm run
+deploy` only prints this reminder and exits.
 
-Build command:
+Cloudflare Pages build settings:
 
-```bash
-npm run build
-```
+| Setting          | Value           |
+| ---------------- | --------------- |
+| Build command    | `npm run build` |
+| Output directory | `dist`          |
 
-Output directory:
-
-```text
-dist
-```
+`public/_redirects` routes every unmatched path to `index.html` so client-side
+routes like `/portfolio/data-2` resolve on a hard refresh.
 
 ## Roadmap
 
