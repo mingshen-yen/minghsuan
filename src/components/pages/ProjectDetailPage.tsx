@@ -1,36 +1,19 @@
-import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router";
-import { getProjectById } from "../../api/projects";
+import { getProjectBySlug } from "../../api/projects";
 import { ArrowLeft, ExternalLink, GitBranch } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 
 export const ProjectDetailPage = () => {
   const { slug } = useParams<{ slug: string }>();
-  const [project, setProject] = useState<any | null>(null);
-  const [error, setError] = useState(false);
+  const project = slug ? getProjectBySlug(slug) : null;
 
-  useEffect(() => {
-    if (!slug) return;
-    getProjectById(slug)
-      .then(setProject)
-      .catch(() => setError(true));
-  }, [slug]);
-
-  if (error) {
+  if (!project) {
     return (
       <div className="project-detail__not-found">
         <p>Project not found.</p>
         <Link to="/portfolio" className="btn btn--ghost mt-6">
           ← Back to projects
         </Link>
-      </div>
-    );
-  }
-
-  if (!project) {
-    return (
-      <div className="project-detail__not-found">
-        <p className="text-[#8b93b0] text-sm">Loading…</p>
       </div>
     );
   }
@@ -45,16 +28,13 @@ export const ProjectDetailPage = () => {
       <header className="project-detail__header">
         <div className="project-detail__meta">
           <span className="card__tag card__tag--project">{project.tag}</span>
-          {/* {project.year && (
-            <span className="project-detail__year">{project.year}</span>
-          )} */}
         </div>
         <h1 className="project-detail__title">{project.title}</h1>
 
         <div className="project-detail__actions">
-          {project.live_url && project.live_url !== "#" && (
+          {project.liveUrl && (
             <a
-              href={project.live_url}
+              href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn--primary"
@@ -63,9 +43,9 @@ export const ProjectDetailPage = () => {
               <ExternalLink size={13} />
             </a>
           )}
-          {project.source && (
+          {project.sourceUrl && (
             <a
-              href={project.source}
+              href={project.sourceUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn--ghost"
@@ -78,17 +58,14 @@ export const ProjectDetailPage = () => {
       </header>
 
       <div className="project-detail__cover">
-        <img src={project.image_url} alt={project.title} />
+        <img src={project.image} alt={project.title} />
       </div>
 
-      {project.tech_stack && (
+      {project.stack.length > 0 && (
         <div className="project-detail__stack">
           <span className="skill-label">Built with</span>
           <div className="project-detail__skill">
-            {(Array.isArray(project.tech_stack)
-              ? project.tech_stack
-              : [project.tech_stack]
-            ).map((stack: string) => (
+            {project.stack.map((stack) => (
               <span key={stack} className="skill-tag">
                 {stack}
               </span>
@@ -97,9 +74,9 @@ export const ProjectDetailPage = () => {
         </div>
       )}
 
-      {project.description && (
+      {project.body && (
         <div className="project-detail__body">
-          <ReactMarkdown>{project.description}</ReactMarkdown>
+          <ReactMarkdown>{project.body}</ReactMarkdown>
         </div>
       )}
     </article>

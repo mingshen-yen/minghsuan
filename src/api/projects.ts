@@ -1,36 +1,39 @@
-import { supabase } from "../lib/supabase";
+import { firstParagraph, parseFrontmatter } from "../lib/frontmatter";
+import type { Project } from "../lib/type";
 
-export async function getProjects(slug?: string) {
-  if (slug) {
-    const { data, error } = await supabase
-      .from("projects")
-      .select("*")
-      .eq("slug", slug)
-      .maybeSingle();
+const files = import.meta.glob("../content/projects/*.md", {
+  eager: true,
+  query: "?raw",
+  import: "default",
+}) as Record<string, string>;
 
-    if (error) throw error;
+function toProject(path: string, source: string): Project {
+  const { data, body } = parseFrontmatter(source);
+  const slug = path.split("/").pop()!.replace(/\.md$/, "");
 
-    return data;
-  }
-
-  const { data, error } = await supabase
-    .from("projects")
-    .select("*")
-    .order("sort_order", { ascending: true });
-
-  if (error) throw error;
-
-  return data;
+  return {
+    slug,
+    title: String(data.title ?? slug),
+    tag: String(data.tag ?? ""),
+    image: String(data.image ?? ""),
+    summary: firstParagraph(body),
+    body,
+    stack: Array.isArray(data.stack) ? data.stack.map(String) : [],
+    sourceUrl: data.sourceUrl ? String(data.sourceUrl) : undefined,
+    liveUrl: data.liveUrl ? String(data.liveUrl) : undefined,
+    featured: data.featured === true,
+    order: Number(data.order ?? Number.MAX_SAFE_INTEGER),
+  };
 }
 
-export async function getProjectById(slug: string) {
-  const { data, error } = await supabase
-    .from("projects")
-    .select("*")
-    .eq("slug", slug)
-    .single();
+const projects: Project[] = Object.entries(files)
+  .map(([path, source]) => toProject(path, source))
+  .sort((a, b) => a.order - b.order || a.title.localeCompare(b.title));
 
-  if (error) throw error;
+export function getProjects() {
+  return projects;
+}
 
-  return data;
+export function getProjectBySlug(slug: string) {
+  return projects.find((project) => project.slug === slug) ?? null;
 }

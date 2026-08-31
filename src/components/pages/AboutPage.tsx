@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { StatsStrip } from "../layout/StatsStrip";
 import { getAbout } from "../../api/aboutMe";
 import { AboutSubPage } from "./AboutSubPage";
@@ -6,18 +6,8 @@ import { AboutSubPage } from "./AboutSubPage";
 type AboutSection = "experience" | "education" | "skills";
 
 export const AboutPage = () => {
-  const [data, setData] = useState<any | null>(null);
+  const data = getAbout();
   const [section, setSection] = useState<AboutSection>("experience");
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    getAbout()
-      .then(setData)
-      .catch((err) => {
-        console.error("Failed to fetch about data:", err);
-        setError(err?.message ?? "Failed to load page");
-      });
-  }, []);
 
   const handleSectionChange =
     (newSection: AboutSection) => (e: React.MouseEvent) => {
@@ -27,19 +17,10 @@ export const AboutPage = () => {
 
   const isActive = (s: AboutSection) => section === s;
 
-  if (error)
-    return (
-      <div className="project-detail__not-found">
-        <p>{error}</p>
-      </div>
-    );
-  if (!data) return null;
-
   const { aboutMe } = data;
 
   return (
     <>
-      {/* <SideBar /> */}
       <div className="section section--about">
         <div className="about__title">
           <span className="text-3xl">Hello,</span>
@@ -48,7 +29,7 @@ export const AboutPage = () => {
         <div className="about__detail">
           <div className="avatar">
             <div className="about__figure">
-              <img src={aboutMe.image_url} alt={`${aboutMe.name} avatar`} />
+              <img src={aboutMe.image} alt={`${aboutMe.name} avatar`} />
               <div className="about__note">
                 <p className="text-lg">❝</p>
                 <p className="about__description italic">

@@ -1,27 +1,28 @@
 export type Project = {
   slug: string;
   title: string;
-  img: string;
   tag: string;
-  description: string;
-  body?: string;
-  link?: string;
-  github?: string;
-  year?: string;
-  stack?: string[];
+  image: string;
+  summary: string;
+  body: string;
+  stack: string[];
+  sourceUrl?: string;
+  liveUrl?: string;
+  featured: boolean;
+  order: number;
 };
 
 export type AboutData = {
   aboutMe: {
     name: string;
     title: string;
-    descriptions: string;
-    avatar: string;
+    description: string;
+    image: string;
+    skills: string[];
   };
   experience: ExperienceItem[];
   education: EducationItem[];
   skills: SkillCategory[];
-  experItems: string[];
 };
 
 export type ExperienceItem = {
