@@ -327,8 +327,9 @@
       0 0 40px var(--color-accent-dim);
   }
 
+  /* The wordmark's face: this is the same name the header carries. */
   .link-hub__name {
-    @apply mt-6 text-3xl font-bold text-(--text-heading);
+    @apply mt-6 font-display text-3xl font-semibold tracking-tight text-(--text-heading);
   }
 
   .link-hub__tagline {
