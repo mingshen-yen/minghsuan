@@ -1,14 +1,16 @@
 import { Link } from "react-router";
 import { getProjects } from "../../api/projects";
+import { localizePath, useLang } from "../../lib/i18n";
 
 export const ProjectCard = () => {
   const projects = getProjects();
+  const lang = useLang();
 
   return (
     <>
       {projects.map((project) => (
         <Link
-          to={`/portfolio/${project.slug}`}
+          to={localizePath(`/portfolio/${project.slug}`, lang)}
           key={project.slug}
           className="card card--project"
         >

@@ -1,17 +1,14 @@
-import { footerItems } from "../../lib/data";
-import { Link } from "react-router";
+import { getUi } from "../../api/ui";
+import { useLang } from "../../lib/i18n";
+import { SocialRow } from "./SocialRow";
 
 export const Footer = () => {
+  const ui = getUi(useLang());
+
   return (
     <footer>
-      <ul className="flex flex-row justify-center gap-5 p-5">
-        {footerItems.map(({ to, label }) => (
-          <Link key={to} to={to} target="_blank" rel="noopener noreferrer">
-            <li className="underline">{label}</li>
-          </Link>
-        ))}
-      </ul>
-      <div>© 2026 MINGSHEN. All rights reserved.</div>
+      <SocialRow withEmail />
+      <div className="pt-4">{ui.footer.rights}</div>
     </footer>
   );
 };

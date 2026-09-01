@@ -1,25 +1,33 @@
 import { Menu, X, Sun, Moon } from "lucide-react";
 import { useState } from "react";
 import { Link, useLocation } from "react-router";
+import { getUi } from "../../api/ui";
+import { localizePath, switchLangPath, useLang } from "../../lib/i18n";
 import { useTheme } from "../../lib/useTheme";
 
 export const Header = () => {
   const [open, setOpen] = useState(false);
   const location = useLocation();
   const { theme, toggle } = useTheme();
+  const lang = useLang();
+  const ui = getUi(lang);
 
   const navItems = [
-    { to: "/", label: "Home" },
-    { to: "/about", label: "About" },
-    { to: "/portfolio", label: "Projects" },
-    { to: "/contact", label: "Contact" },
+    { to: "/", label: ui.nav.home },
+    { to: "/about", label: ui.nav.about },
+    { to: "/portfolio", label: ui.nav.projects },
+    { to: "/contact", label: ui.nav.contact },
   ];
 
-  const isActive = (path: string) => location.pathname === path;
+  const isActive = (path: string) =>
+    location.pathname === localizePath(path, lang);
+
+  const otherLang = lang === "en" ? "zh" : "en";
+  const langHref = switchLangPath(location.pathname, otherLang);
 
   return (
     <nav>
-      <Link to="/" className="nav__logo">
+      <Link to={localizePath("/", lang)} className="nav__logo">
         M✦
       </Link>
 
@@ -28,7 +36,7 @@ export const Header = () => {
         {navItems.map(({ to, label }) => (
           <Link
             key={to}
-            to={to}
+            to={localizePath(to, lang)}
             className={`nav__item ${isActive(to) ? "nav__item--active" : ""}`}
           >
             {isActive(to) && (
@@ -38,17 +46,25 @@ export const Header = () => {
           </Link>
         ))}
       </div>
-      <button
-        onClick={toggle}
-        className="nav__theme-toggle hidden md:flex"
-        aria-label="Toggle theme"
-      >
-        {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
-      </button>
+      <div className="hidden md:flex items-center">
+        <Link to={langHref} className="nav__lang" aria-label={ui.langSwitch.aria}>
+          {ui.langSwitch.label}
+        </Link>
+        <button
+          onClick={toggle}
+          className="nav__theme-toggle"
+          aria-label="Toggle theme"
+        >
+          {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+        </button>
+      </div>
 
       {/* Mobile Navigation */}
 
       <div className="nav__mobile">
+        <Link to={langHref} className="nav__lang" aria-label={ui.langSwitch.aria}>
+          {ui.langSwitch.label}
+        </Link>
         <button
           onClick={toggle}
           className="nav__theme-toggle"
@@ -72,7 +88,7 @@ export const Header = () => {
           {navItems.map(({ to, label }) => (
             <Link
               key={to}
-              to={to}
+              to={localizePath(to, lang)}
               onClick={() => setOpen(false)}
               className={`nav__item ${isActive(to) ? "nav__item--active" : ""}`}
             >

@@ -1,0 +1,31 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "about": {
+    "greeting": "Hello,",
+    "iam": "I'm",
+    "experience": "experience",
+    "education": "education",
+    "skills": "skills"
+  },
+  "stats": {
+    "years": "Years Experience",
+    "geophysics": "Geophysics",
+    "tech": "Core Technologies",
+    "curiosity": "Curiosity"
+  },
+  "links": {
+    "viewPortfolio": "View my portfolio"
+  },
+  "footer": {
+    "rights": "© 2026 MINGSHEN. All rights reserved."
+  },
+  "langSwitch": {
+    "label": "中文",
+    "aria": "切換至中文"
+  }
+}

@@ -1,14 +1,27 @@
 {
   "profile": {
     "name": "Mingshen",
-    "tagline": "A Taiwanese living in Germany for six years 🇹🇼 — in love with travel, books and films, and prone to overthinking 💭 life's big and small questions.",
-    "image": "/images/socialmedia.png"
+    "tagline": "旅居德國6年的台灣人🇹🇼，愛旅行、愛看書、愛電影，也愛胡思亂想💭人生大小事。",
+    "image": "/images/socialmedia.png",
+    "email": "minghsuanyen@gmail.com"
   },
+  "social": [
+    {
+      "icon": "linkedin",
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/ming-hsuan-yen/"
+    },
+    {
+      "icon": "github",
+      "label": "GitHub",
+      "url": "https://github.com/mingshen-yen"
+    }
+  ],
   "links": [
     {
       "icon": "youtube",
       "label": "YouTube",
-      "description": "Mingshen",
+      "description": "Mingshen看世界",
       "url": "https://www.youtube.com/@mingshenworld"
     },
     {
@@ -26,19 +39,19 @@
     {
       "icon": "podcast",
       "label": "Apple Podcasts",
-      "description": "Huh? Germany!",
+      "description": "Huh? Germany! 德國生活的真實樣貌",
       "url": "https://podcasts.apple.com/us/podcast/huh-germany/id1821219131"
     },
     {
       "icon": "spotify",
       "label": "Spotify",
-      "description": "Huh? Germany!",
+      "description": "Huh? Germany! 德國生活的真實樣貌",
       "url": "https://open.spotify.com/show/7BLedCETH8biaAsuuAs1I8"
     },
     {
       "icon": "kofi",
       "label": "Ko-fi",
-      "description": "Support my work",
+      "description": "請我喝杯咖啡",
       "url": "https://ko-fi.com/mxyen"
     }
   ]

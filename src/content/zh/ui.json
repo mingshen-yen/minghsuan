@@ -1,0 +1,31 @@
+{
+  "nav": {
+    "home": "首頁",
+    "about": "關於我",
+    "projects": "作品",
+    "contact": "聯絡"
+  },
+  "about": {
+    "greeting": "你好，",
+    "iam": "我是",
+    "experience": "經歷",
+    "education": "學歷",
+    "skills": "技能"
+  },
+  "stats": {
+    "years": "年資",
+    "geophysics": "地球物理",
+    "tech": "核心技術",
+    "curiosity": "好奇心"
+  },
+  "links": {
+    "viewPortfolio": "看我的作品集"
+  },
+  "footer": {
+    "rights": "© 2026 MINGSHEN. 版權所有。"
+  },
+  "langSwitch": {
+    "label": "EN",
+    "aria": "Switch to English"
+  }
+}

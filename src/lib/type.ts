@@ -53,11 +53,41 @@ export type LinkItem = {
   url: string;
 };
 
+export type SocialItem = {
+  icon: string;
+  label: string;
+  url: string;
+};
+
 export type LinksData = {
   profile: {
     name: string;
     tagline: string;
     image: string;
+    email: string;
   };
+  /** Profile-wide accounts shown as the icon row on the landing page. */
+  social: SocialItem[];
+  /** The Linktree-style list shown on /links. */
   links: LinkItem[];
+};
+
+export type UiStrings = {
+  nav: { home: string; about: string; projects: string; contact: string };
+  about: {
+    greeting: string;
+    iam: string;
+    experience: string;
+    education: string;
+    skills: string;
+  };
+  stats: {
+    years: string;
+    geophysics: string;
+    tech: string;
+    curiosity: string;
+  };
+  links: { viewPortfolio: string };
+  footer: { rights: string };
+  langSwitch: { label: string; aria: string };
 };

@@ -1,5 +1,20 @@
 @import "tailwindcss";
 
+/*
+ * LXGW WenKai TC sits at the end of each stack, so Latin text keeps the system
+ * face it already used and only CJK glyphs fall through to the webfont. The
+ * family ships as unicode-range subsets, so English-only visitors never
+ * download the Chinese slices.
+ */
+@theme {
+  --font-sans:
+    ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "LXGW WenKai TC", sans-serif;
+  --font-serif:
+    ui-serif, Georgia, Cambria, "Times New Roman", Times, "LXGW WenKai TC",
+    serif;
+}
+
 @layer base {
   *,
   *::before,
@@ -83,7 +98,7 @@
   }
 
   body {
-    @apply min-h-screen overflow-x-hidden transition-colors duration-300;
+    @apply min-h-screen overflow-x-hidden font-sans transition-colors duration-300;
     background-color: var(--bg-body);
     color: var(--text-body);
   }
@@ -148,7 +163,7 @@
   }
 
   footer {
-    @apply relative z-10 h-30 flex flex-col justify-center text-[13px] text-center text-(--text-dim) bg-(--bg-nav);
+    @apply relative z-10 py-8 flex flex-col justify-center items-center text-[13px] text-center text-(--text-dim) bg-(--bg-nav);
   }
 
   /* ─────────────────────────────────────
@@ -205,22 +220,21 @@
   /* ─────────────────────────────────────
      SOCIAL SIDEBAR BLOCK
      ───────────────────────────────────── */
-  .social-bar {
-    @apply hidden md:flex fixed right-0 top-0 z-8 w-15 h-full justify-center items-center;
-  }
-
-  .social-list {
-    @apply flex flex-col gap-14 p-5;
-  }
-
-  .social-link {
-    @apply py-2 rotate-270 flex text-sm items-center justify-center hover:scale-95 transition-colors duration-200 text-(--text-body) hover:text-(--color-accent);
+  .social-row {
+    @apply flex flex-wrap gap-2 justify-center items-center list-none;
     animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 
-  .social-link::before {
-    content: "⎯";
-    @apply block w-4;
+  .social-row__link {
+    @apply flex items-center justify-center w-9 h-9 rounded-xs transition-all duration-200 text-(--text-muted) border border-transparent hover:-translate-y-px hover:text-(--color-accent-bright) hover:border-(--color-accent-soft) hover:bg-(--color-accent-dim);
+  }
+
+  .social-row__link svg {
+    @apply w-4.5 h-4.5;
+  }
+
+  .nav__lang {
+    @apply px-2 py-1 text-xs font-bold tracking-wide rounded-xs transition-colors duration-200 text-(--text-muted) hover:text-(--color-accent-bright);
   }
 
   /* ─────────────────────────────────────

@@ -1,11 +1,15 @@
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router";
 import { getLinks } from "../../api/links";
+import { getUi } from "../../api/ui";
+import { localizePath, useLang } from "../../lib/i18n";
 import { Footer } from "../layout/Footer";
 import { LinkIcon } from "../layout/LinkIcon";
 
 export const LinksPage = () => {
-  const { profile, links } = getLinks();
+  const lang = useLang();
+  const { profile, links } = getLinks(lang);
+  const ui = getUi(lang);
 
   return (
     <div className="max-h-screen mx-auto">
@@ -40,8 +44,11 @@ export const LinksPage = () => {
           ))}
         </ul>
 
-        <Link to="/" className="btn btn--ghost link-hub__portfolio">
-          View my portfolio
+        <Link
+          to={localizePath("/", lang)}
+          className="btn btn--ghost link-hub__portfolio"
+        >
+          {ui.links.viewPortfolio}
           <ArrowUpRight size={14} />
         </Link>
       </section>
