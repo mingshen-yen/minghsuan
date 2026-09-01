@@ -29,8 +29,16 @@ export const Header = () => {
     { to: "/links", label: ui.nav.links },
   ];
 
-  const isActive = (path: string) =>
-    location.pathname === localizePath(path, lang);
+  /* A project detail page is still "Projects", so a nav entry matches its own
+     path and anything under it. Home stays an exact match, or it would claim
+     every page — and under /zh, every Chinese page. */
+  const isActive = (path: string) => {
+    const target = localizePath(path, lang);
+    if (path === "/") return location.pathname === target;
+    return (
+      location.pathname === target || location.pathname.startsWith(`${target}/`)
+    );
+  };
 
   const otherLang = lang === "en" ? "zh" : "en";
   const langHref = switchLangPath(location.pathname, otherLang);

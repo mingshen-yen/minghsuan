@@ -163,11 +163,11 @@
   }
 
   p {
-    @apply text-base md:text-sm md:text-base text-(--text-muted);
+    @apply text-base text-(--text-muted);
   }
 
   footer {
-    @apply relative z-10 py-8 flex flex-col justify-center items-center gap-2 text-sm md:text-[13px] text-center text-(--text-dim) bg-(--bg-nav);
+    @apply relative z-10 py-8 flex flex-col justify-center items-center gap-2 text-sm text-center text-(--text-dim) bg-(--bg-nav);
   }
 
   /* ─────────────────────────────────────
@@ -226,13 +226,13 @@
 
   /* One shape and hit area for every control in the bar. */
   .nav__control {
-    @apply flex shrink-0 items-center justify-center w-14 h-14 md:w-11 md:h-11 rounded-full cursor-pointer transition-colors duration-200 text-(--text-muted) hover:text-(--color-accent-bright) hover:bg-(--color-accent-dim);
+    @apply flex shrink-0 items-center justify-center w-14 h-14 md:w-9 md:h-9 rounded-full cursor-pointer transition-colors duration-200 text-(--text-muted) hover:text-(--color-accent-bright) hover:bg-(--color-accent-dim);
   }
 
   /* The icon size is a prop, which cannot be responsive, so desktop is dialled
      back here to the size it had before the phone icons grew. */
   .nav__control svg {
-    @apply md:w-6 md:h-6;
+    @apply md:w-4.5 md:h-4.5;
   }
 
   /* `relative` keeps .nav__indicator sized to the item; without it the marker
@@ -259,8 +259,10 @@
     @apply self-end m-3 flex items-center justify-center w-14 h-14 rounded-full cursor-pointer text-(--text-body) hover:bg-(--border-subtle);
   }
 
+  /* An underline rather than a highlighter behind the label: a line does not
+     sit over the text, and the cue stays positional as well as coloured. */
   .nav__indicator {
-    @apply absolute left-0 top-1/2 h-2.5 w-full -translate-y-1/2 rounded-xs bg-(--color-accent-dim);
+    @apply absolute left-0 -bottom-0.5 h-0.5 w-full rounded-full bg-(--color-accent-bright);
   }
 
   /* ─────────────────────────────────────
@@ -307,7 +309,7 @@
   }
 
   .contact__note {
-    @apply mt-8 text-sm md:text-xs text-(--text-dim);
+    @apply mt-8 text-sm text-(--text-dim);
   }
 
   /* ─────────────────────────────────────
@@ -330,7 +332,7 @@
   }
 
   .link-hub__tagline {
-    @apply mt-4 text-base md:text-sm leading-relaxed text-(--text-muted);
+    @apply mt-4 text-base leading-relaxed text-(--text-muted);
   }
 
   .link-hub__list {
@@ -362,7 +364,7 @@
   }
 
   .link-card__description {
-    @apply text-sm md:text-xs text-(--text-muted) truncate;
+    @apply text-sm text-(--text-muted) truncate;
   }
 
   .link-card__arrow {
@@ -390,7 +392,7 @@
      BUTTON BLOCK
      ───────────────────────────────────── */
   .btn {
-    @apply inline-flex items-center gap-1.5 px-5 py-3.5 md:px-4 md:py-2.5 w-fit rounded-xs text-base md:text-sm font-bold whitespace-nowrap cursor-pointer transition-all duration-200 hover:-translate-y-px;
+    @apply inline-flex items-center gap-1.5 px-5 py-3.5 md:px-4 md:py-2.5 w-fit rounded-xs text-base font-bold whitespace-nowrap cursor-pointer transition-all duration-200 hover:-translate-y-px;
   }
 
   .btn--primary {
@@ -409,11 +411,11 @@
   }
 
   .skill-tag {
-    @apply px-2.5 py-1.5 rounded-sm text-sm md:text-xs tracking-wide transition-all duration-200 bg-(--bg-skill-tag) border border-(--border-subtle) text-(--color-skill-text) hover:border-(--color-accent-soft) hover:text-(--color-accent) hover:bg-(--color-accent-dim);
+    @apply px-2.5 py-1.5 rounded-sm text-sm tracking-wide transition-all duration-200 bg-(--bg-skill-tag) border border-(--border-subtle) text-(--color-skill-text) hover:border-(--color-accent-soft) hover:text-(--color-accent) hover:bg-(--color-accent-dim);
   }
 
   .skill-label {
-    @apply text-xs md:text-[11px] font-medium tracking-widest uppercase mb-3 text-(--color-accent-bright);
+    @apply text-xs font-medium tracking-widest uppercase mb-3 text-(--color-accent-bright);
   }
 
   /* ─────────────────────────────────────
@@ -448,7 +450,7 @@
   }
 
   .filter {
-    @apply inline-flex items-center gap-2 rounded-sm border px-3.5 py-1.5 text-sm md:text-xs font-bold tracking-widest uppercase cursor-pointer transition-colors duration-200 border-(--border-subtle) text-(--text-muted) hover:border-(--color-accent-soft) hover:text-(--color-accent-bright);
+    @apply inline-flex items-center gap-2 rounded-sm border px-3.5 py-1.5 text-sm font-bold tracking-widest uppercase cursor-pointer transition-colors duration-200 border-(--border-subtle) text-(--text-muted) hover:border-(--color-accent-soft) hover:text-(--color-accent-bright);
   }
 
   .filter--active {
@@ -456,7 +458,7 @@
   }
 
   .filter__count {
-    @apply text-xs md:text-[10px] font-medium opacity-60;
+    @apply text-xs font-medium opacity-60;
   }
 
   /* ─────────────────────────────────────
@@ -473,7 +475,7 @@
   }
 
   .divider__label {
-    @apply shrink-0 text-sm md:text-xs font-bold tracking-[0.2em] uppercase text-(--color-accent-bright);
+    @apply shrink-0 text-sm font-bold tracking-[0.2em] uppercase text-(--color-accent-bright);
   }
 
   /* Follows the divider, which already spent the gap announcing it. */
@@ -500,7 +502,7 @@
   }
 
   .section-head__label {
-    @apply text-xs md:text-[11px] font-medium tracking-widest uppercase text-(--color-accent-bright);
+    @apply text-xs font-medium tracking-widest uppercase text-(--color-accent-bright);
   }
 
   .section-head__title {
@@ -519,7 +521,7 @@
      HERO SECTION
      ───────────────────────────────────── */
   .hero__label {
-    @apply inline-flex items-center gap-3 text-sm md:text-xs font-medium tracking-widest uppercase mb-6 text-(--color-accent-bright);
+    @apply inline-flex items-center gap-3 text-sm font-medium tracking-widest uppercase mb-6 text-(--color-accent-bright);
   }
 
   .hero__label::before {
@@ -554,7 +556,7 @@
   }
 
   .hero__subtitle {
-    @apply mx-auto mt-5 max-w-160 text-sm md:text-base leading-relaxed text-(--text-muted);
+    @apply mx-auto mt-5 max-w-160 text-base leading-relaxed text-(--text-muted);
   }
 
   /* Hard breaks only where there is room for them. */
@@ -614,7 +616,7 @@
   }
 
   .cv-item__meta {
-    @apply mt-1.5 flex flex-wrap justify-center gap-x-4 gap-y-1 text-sm md:text-xs text-(--text-muted);
+    @apply mt-1.5 flex flex-wrap justify-center gap-x-4 gap-y-1 text-sm text-(--text-muted);
   }
 
   .cv-item__meta span {
@@ -622,11 +624,11 @@
   }
 
   .cv-item__points {
-    @apply mt-3 flex flex-col gap-1.5 text-sm md:text-base list-none text-(--text-body);
+    @apply mt-3 flex flex-col gap-1.5 text-base list-none text-(--text-body);
   }
 
   .cv-item__note {
-    @apply mt-2 text-sm md:text-base text-(--text-body);
+    @apply mt-2 text-base text-(--text-body);
   }
 
   .skills-grid {
@@ -634,7 +636,7 @@
   }
 
   .skills-group__name {
-    @apply mb-2.5 text-sm md:text-xs font-bold tracking-widest uppercase text-(--color-accent-bright);
+    @apply mb-2.5 text-sm font-bold tracking-widest uppercase text-(--color-accent-bright);
   }
 
   .skills-list {
@@ -657,17 +659,17 @@
   }
 
   .about__greeting {
-    @apply text-xs md:text-[11px] font-medium tracking-widest uppercase text-(--color-accent-bright);
+    @apply text-xs font-medium tracking-widest uppercase text-(--color-accent-bright);
   }
 
   .about__role {
-    @apply text-sm md:text-base lg:whitespace-nowrap text-(--text-muted);
+    @apply text-base lg:whitespace-nowrap text-(--text-muted);
   }
 
   /* nowrap only from lg, where there is room; below that it must be allowed to
      wrap rather than overflow. */
   .about__quote {
-    @apply max-w-190 text-base md:text-sm italic lg:whitespace-nowrap text-(--text-muted);
+    @apply max-w-190 text-base italic lg:whitespace-nowrap text-(--text-muted);
   }
 
   /* ─────────────────────────────────────
@@ -684,7 +686,7 @@
   }
 
   .story__text {
-    @apply mx-auto w-full max-w-190 mb-4 text-base md:text-base md:text-base leading-loose text-(--text-body);
+    @apply mx-auto w-full max-w-190 mb-4 text-base md:text-base leading-loose text-(--text-body);
   }
 
   .story__image {
@@ -736,11 +738,11 @@
   }
 
   .media-card__blurb {
-    @apply text-base md:text-sm text-(--text-muted);
+    @apply text-base text-(--text-muted);
   }
 
   .media-card__link {
-    @apply mt-1 inline-flex items-center gap-1 text-sm md:text-xs font-bold tracking-wide transition-colors duration-200 text-(--color-accent-bright) hover:text-(--color-accent);
+    @apply mt-1 inline-flex items-center gap-1 text-sm font-bold tracking-wide transition-colors duration-200 text-(--color-accent-bright) hover:text-(--color-accent);
   }
 
   .media-card__tag {
@@ -796,11 +798,11 @@
   }
 
   .card__description {
-    @apply text-base md:text-sm text-start leading-relaxed line-clamp-3 text-(--text-muted);
+    @apply text-base text-start leading-relaxed line-clamp-3 text-(--text-muted);
   }
 
   .card__tag {
-    @apply w-fit text-xs md:text-[10px] font-semibold tracking-widest uppercase py-0.5 px-2 rounded-sm;
+    @apply w-fit text-xs font-semibold tracking-widest uppercase py-0.5 px-2 rounded-sm;
   }
 
   .card__tag--data,
@@ -825,7 +827,7 @@
   }
 
   .project-detail__back {
-    @apply inline-flex items-center gap-1.5 text-sm md:text-xs tracking-widest uppercase transition-colors mb-10 text-(--color-accent-bright) hover:text-(--color-accent);
+    @apply inline-flex items-center gap-1.5 text-sm tracking-widest uppercase transition-colors mb-10 text-(--color-accent-bright) hover:text-(--color-accent);
   }
 
   .project-detail__header {
@@ -868,7 +870,7 @@
      visible markers until they were given their indent back. */
   .project-detail__body ul,
   .project-detail__body ol {
-    @apply flex flex-col gap-2 ps-6 text-sm md:text-base text-(--text-body);
+    @apply flex flex-col gap-2 ps-6 text-base text-(--text-body);
   }
 
   .project-detail__body ul {
@@ -880,7 +882,7 @@
   }
 
   .project-detail__body p {
-    @apply text-sm md:text-base leading-relaxed text-(--text-body);
+    @apply text-base leading-relaxed text-(--text-body);
   }
 
 }
