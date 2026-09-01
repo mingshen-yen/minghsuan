@@ -175,7 +175,7 @@
   }
 
   footer {
-    @apply relative z-10 py-8 flex flex-col justify-center items-center text-[13px] text-center text-(--text-dim) bg-(--bg-nav);
+    @apply relative z-10 py-8 flex flex-col justify-center items-center gap-2 text-[13px] text-center text-(--text-dim) bg-(--bg-nav);
   }
 
   /* ─────────────────────────────────────
