@@ -73,7 +73,13 @@ export type LinksData = {
 };
 
 export type UiStrings = {
-  nav: { home: string; about: string; projects: string; contact: string };
+  nav: {
+    home: string;
+    about: string;
+    projects: string;
+    links: string;
+    contact: string;
+  };
   about: {
     greeting: string;
     iam: string;

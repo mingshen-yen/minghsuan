@@ -14,6 +14,9 @@
      the body text instead of dropping into a Ming/serif style. */
   --font-serif:
     ui-serif, Georgia, Cambria, "Times New Roman", Times, "Noto Sans TC", serif;
+  /* Wordmark only. Fredoka has no ✦ (U+2726), so the star still comes from the
+     system symbol font, exactly as it did before. */
+  --font-display: "Fredoka", ui-rounded, "Noto Sans TC", sans-serif;
 }
 
 @layer base {
@@ -171,15 +174,21 @@
      NAVIGATION BLOCK
      ───────────────────────────────────── */
   nav {
-    @apply fixed w-full z-10 p-3 flex items-center justify-between transition-colors duration-300 bg-(--bg-nav);
+    @apply fixed w-full z-10 p-3 flex items-center justify-between backdrop-blur-md border-b border-(--border-subtle) transition-colors duration-300 bg-(--bg-nav)/85;
   }
 
   .nav__logo {
-    @apply md:flex ml-2 text-2xl font-black tracking-tighter not-italic text-(--text-body);
+    @apply md:flex items-center ml-2 font-display text-2xl font-semibold tracking-tight not-italic text-(--text-body);
+  }
+
+  /* Inherits the monogram's size, weight and colour; hidden on the narrowest
+     screens, where the monogram alone has to do. */
+  .nav__logo-name {
+    @apply hidden sm:inline ml-1;
   }
 
   .nav__desktop {
-    @apply hidden text-base md:flex items-center md:gap-12 lg:gap-16;
+    @apply hidden text-base md:flex items-center md:gap-8 lg:gap-10;
   }
 
   .nav__mobile {
@@ -194,16 +203,18 @@
     @apply p-2 rounded-full transition-all duration-200 hover:scale-110 text-(--text-muted) hover:text-(--color-accent);
   }
 
+  /* `relative` keeps .nav__indicator sized to the item; without it the marker
+     resolves against the fixed <nav> and stretches the whole bar. */
   .nav__item {
-    @apply flex text-base items-center text-(--text-body);
+    @apply relative flex text-base items-center transition-colors duration-200 text-(--text-body);
   }
 
   .nav__item--active {
-    @apply scale-110 rotate-4 text-(--color-accent-bright);
+    @apply font-semibold text-(--color-accent-bright);
   }
 
   .nav__item:hover:not(.nav__item--active) {
-    @apply scale-110 md:scale-115;
+    @apply text-(--color-accent-bright);
   }
 
   .nav__toggle {
@@ -215,7 +226,7 @@
   }
 
   .nav__indicator {
-    @apply absolute left-0 top-1/2 h-2.5 w-full -translate-y-1/2 bg-(--color-accent-soft);
+    @apply absolute left-0 top-1/2 h-2.5 w-full -translate-y-1/2 rounded-xs bg-(--color-accent-dim);
   }
 
   /* ─────────────────────────────────────

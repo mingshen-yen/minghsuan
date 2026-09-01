@@ -16,6 +16,7 @@ export const Header = () => {
     { to: "/", label: ui.nav.home },
     { to: "/about", label: ui.nav.about },
     { to: "/portfolio", label: ui.nav.projects },
+    { to: "/links", label: ui.nav.links },
     { to: "/contact", label: ui.nav.contact },
   ];
 
@@ -28,7 +29,7 @@ export const Header = () => {
   return (
     <nav>
       <Link to={localizePath("/", lang)} className="nav__logo">
-        M✦
+        M✦<span className="nav__logo-name">Mingshen</span>
       </Link>
 
       {/* Desktop Navigation */}
@@ -42,7 +43,7 @@ export const Header = () => {
             {isActive(to) && (
               <span className="nav__indicator hidden md:block" />
             )}
-            <span className="lg:flex">{label}</span>
+            <span className="relative lg:flex">{label}</span>
           </Link>
         ))}
       </div>
@@ -92,8 +93,8 @@ export const Header = () => {
               onClick={() => setOpen(false)}
               className={`nav__item ${isActive(to) ? "nav__item--active" : ""}`}
             >
-              {label}
               {isActive(to) && <span className="nav__indicator" />}
+              <span className="relative">{label}</span>
             </Link>
           ))}
         </div>
