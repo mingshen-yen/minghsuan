@@ -18,5 +18,14 @@
     "description": "A foreigners share life abroad and travel stories.",
     "url": "https://open.firstory.me/user/cmdthrpjf01ra01umdz514uwp",
     "linkLabel": "All episodes"
+  },
+  {
+    "tone": "writing",
+    "tag": "Medium",
+    "icon": "medium",
+    "title": "Writing and notes",
+    "description": "Longer pieces on data, research, and whatever I am working through at the time.",
+    "url": "https://medium.com/@minghsuanyen",
+    "linkLabel": "Read on Medium"
   }
 ]

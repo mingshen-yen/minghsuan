@@ -40,6 +40,7 @@
     /* Component Colors */
     --color-tag-web: #7aa2f7;
     --color-tag-web-bg: rgba(122, 162, 247, 0.12);
+    --color-tag-writing: #33404d;
     --color-tag-video: #b4232a;
     --color-tag-audio: #8f5a0a;
     --color-skill-text: #3db87a;
@@ -76,6 +77,7 @@
     --color-accent-soft: rgba(13, 158, 107, 0.3);
     --color-tag-web: #3059b8;
     --color-tag-web-bg: rgba(48, 89, 184, 0.1);
+    --color-tag-writing: #2f3d4a;
     --color-tag-video: #a41b22;
     --color-tag-audio: #9a610a;
     --color-skill-text: #0a7d55;
@@ -688,6 +690,17 @@
     @apply w-32 md:w-40 shrink-0 aspect-square rounded-xs object-cover border border-(--color-accent-dim);
   }
 
+  /* Stands in for cover art on a platform that has none of its own. Filled
+     with the page colour rather than the green-tinted card colour: it has to
+     be opaque, or the fixed grid lines behind the page show through the mark. */
+  .media-card__brand {
+    @apply flex w-32 md:w-40 shrink-0 aspect-square items-center justify-center rounded-xs border border-(--color-accent-dim) bg-(--bg-body) text-(--text-heading);
+  }
+
+  .media-card__brand svg {
+    @apply w-10 md:w-12;
+  }
+
   .media-card__title {
     @apply pb-0 text-xl md:text-2xl font-black text-(--text-heading);
   }
@@ -710,6 +723,10 @@
 
   .media-card__tag--audio {
     @apply bg-(--color-tag-audio);
+  }
+
+  .media-card__tag--writing {
+    @apply bg-(--color-tag-writing);
   }
 
   /* ─────────────────────────────────────

@@ -119,11 +119,14 @@ export type UiStrings = {
 
 export type MediaItem = {
   /** Drives the tag colour; see .media-card__tag--*. */
-  tone: "video" | "audio";
+  tone: "video" | "audio" | "writing";
   tag: string;
-  image: string;
+  /** Cover art, or `icon` for a platform with none of its own. */
+  image?: string;
   /** Which edge the crop keeps; portraits need "top" to keep the face. */
-  imagePosition: "top" | "center";
+  imagePosition?: "top" | "center";
+  /** A LinkIcon key, drawn on a tile in place of cover art. */
+  icon?: string;
   title: string;
   description: string;
   url: string;

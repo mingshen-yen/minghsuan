@@ -2,6 +2,7 @@ import { ArrowUpRight } from "lucide-react";
 import { getMedia } from "../../api/media";
 import { getUi } from "../../api/ui";
 import { useLang } from "../../lib/i18n";
+import { LinkIcon } from "../layout/LinkIcon";
 import { SectionHead } from "../layout/SectionHead";
 
 export const MediaPage = () => {
@@ -18,14 +19,22 @@ export const MediaPage = () => {
       <div className="section section--flush flex flex-col items-center gap-14 lg:grid lg:grid-cols-2 lg:gap-12">
         {items.map((item) => (
           <article key={item.url} className="media-card">
-            <img
-              className={`media-card__image ${
-                item.imagePosition === "top" ? "object-top" : "object-center"
-              }`}
-              src={item.image}
-              alt={item.title}
-              loading="lazy"
-            />
+            {item.image ? (
+              <img
+                className={`media-card__image ${
+                  item.imagePosition === "top" ? "object-top" : "object-center"
+                }`}
+                src={item.image}
+                alt={item.title}
+                loading="lazy"
+              />
+            ) : (
+              item.icon && (
+                <span className="media-card__brand" aria-hidden="true">
+                  <LinkIcon name={item.icon} />
+                </span>
+              )
+            )}
             <div className="media-card__body">
               <span className={`media-card__tag media-card__tag--${item.tone}`}>
                 {item.tag}

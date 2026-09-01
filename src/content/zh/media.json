@@ -18,5 +18,14 @@
     "description": "一個台灣人在德國 —— 聊旅居生活、旅行故事，以及日常縫隙裡的觀察。",
     "url": "https://open.firstory.me/user/cmdthrpjf01ra01umdz514uwp",
     "linkLabel": "所有集數"
+  },
+  {
+    "tone": "writing",
+    "tag": "Medium",
+    "icon": "medium",
+    "title": "文章與筆記",
+    "description": "關於資料、研究，以及當下正在想清楚的事的長篇紀錄。",
+    "url": "https://medium.com/@minghsuanyen",
+    "linkLabel": "在 Medium 閱讀"
   }
 ]
