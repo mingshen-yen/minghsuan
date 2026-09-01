@@ -163,11 +163,11 @@
   }
 
   p {
-    @apply text-sm md:text-base text-(--text-muted);
+    @apply text-base md:text-sm md:text-base text-(--text-muted);
   }
 
   footer {
-    @apply relative z-10 py-8 flex flex-col justify-center items-center gap-2 text-[13px] text-center text-(--text-dim) bg-(--bg-nav);
+    @apply relative z-10 py-8 flex flex-col justify-center items-center gap-2 text-sm md:text-[13px] text-center text-(--text-dim) bg-(--bg-nav);
   }
 
   /* ─────────────────────────────────────
@@ -307,7 +307,7 @@
   }
 
   .contact__note {
-    @apply mt-8 text-xs text-(--text-dim);
+    @apply mt-8 text-sm md:text-xs text-(--text-dim);
   }
 
   /* ─────────────────────────────────────
@@ -330,7 +330,7 @@
   }
 
   .link-hub__tagline {
-    @apply mt-4 text-sm leading-relaxed text-(--text-muted);
+    @apply mt-4 text-base md:text-sm leading-relaxed text-(--text-muted);
   }
 
   .link-hub__list {
@@ -362,7 +362,7 @@
   }
 
   .link-card__description {
-    @apply text-xs text-(--text-muted) truncate;
+    @apply text-sm md:text-xs text-(--text-muted) truncate;
   }
 
   .link-card__arrow {
@@ -409,11 +409,11 @@
   }
 
   .skill-tag {
-    @apply px-2.5 py-1.5 rounded-sm text-xs tracking-wide transition-all duration-200 bg-(--bg-skill-tag) border border-(--border-subtle) text-(--color-skill-text) hover:border-(--color-accent-soft) hover:text-(--color-accent) hover:bg-(--color-accent-dim);
+    @apply px-2.5 py-1.5 rounded-sm text-sm md:text-xs tracking-wide transition-all duration-200 bg-(--bg-skill-tag) border border-(--border-subtle) text-(--color-skill-text) hover:border-(--color-accent-soft) hover:text-(--color-accent) hover:bg-(--color-accent-dim);
   }
 
   .skill-label {
-    @apply text-[11px] font-medium tracking-widest uppercase mb-3 text-(--color-accent-bright);
+    @apply text-xs md:text-[11px] font-medium tracking-widest uppercase mb-3 text-(--color-accent-bright);
   }
 
   /* ─────────────────────────────────────
@@ -448,7 +448,7 @@
   }
 
   .filter {
-    @apply inline-flex items-center gap-2 rounded-sm border px-3.5 py-1.5 text-xs font-bold tracking-widest uppercase cursor-pointer transition-colors duration-200 border-(--border-subtle) text-(--text-muted) hover:border-(--color-accent-soft) hover:text-(--color-accent-bright);
+    @apply inline-flex items-center gap-2 rounded-sm border px-3.5 py-1.5 text-sm md:text-xs font-bold tracking-widest uppercase cursor-pointer transition-colors duration-200 border-(--border-subtle) text-(--text-muted) hover:border-(--color-accent-soft) hover:text-(--color-accent-bright);
   }
 
   .filter--active {
@@ -456,7 +456,7 @@
   }
 
   .filter__count {
-    @apply text-[10px] font-medium opacity-60;
+    @apply text-xs md:text-[10px] font-medium opacity-60;
   }
 
   /* ─────────────────────────────────────
@@ -473,7 +473,7 @@
   }
 
   .divider__label {
-    @apply shrink-0 text-xs font-bold tracking-[0.2em] uppercase text-(--color-accent-bright);
+    @apply shrink-0 text-sm md:text-xs font-bold tracking-[0.2em] uppercase text-(--color-accent-bright);
   }
 
   /* Follows the divider, which already spent the gap announcing it. */
@@ -500,7 +500,7 @@
   }
 
   .section-head__label {
-    @apply text-[11px] font-medium tracking-widest uppercase text-(--color-accent-bright);
+    @apply text-xs md:text-[11px] font-medium tracking-widest uppercase text-(--color-accent-bright);
   }
 
   .section-head__title {
@@ -519,7 +519,7 @@
      HERO SECTION
      ───────────────────────────────────── */
   .hero__label {
-    @apply inline-flex items-center gap-3 text-xs font-medium tracking-widest uppercase mb-6 text-(--color-accent-bright);
+    @apply inline-flex items-center gap-3 text-sm md:text-xs font-medium tracking-widest uppercase mb-6 text-(--color-accent-bright);
   }
 
   .hero__label::before {
@@ -574,25 +574,9 @@
   /* ─────────────────────────────────────
      STAT CARD BLOCK
      ───────────────────────────────────── */
-  .stat-card {
-    @apply absolute backdrop-blur-xl rounded-sm px-4 py-3 whitespace-nowrap bg-(--bg-card) border border-(--color-card-border);
-  }
 
-  .stat-card:nth-child(3) {
-    @apply bottom-8 -left-8;
-  }
 
-  .stat-card:nth-child(4) {
-    @apply top-10 -right-5;
-  }
 
-  .stat-card__number {
-    @apply font-sans mb-0.5 text-2xl leading-none font-medium text-center text-(--color-accent);
-  }
-
-  .stat-card__label {
-    @apply text-xs tracking-wider uppercase text-(--text-body);
-  }
 
   /* ─────────────────────────────────────
      STATS STRIP BLOCK
@@ -630,7 +614,7 @@
   }
 
   .cv-item__meta {
-    @apply mt-1.5 flex flex-wrap justify-center gap-x-4 gap-y-1 text-xs text-(--text-muted);
+    @apply mt-1.5 flex flex-wrap justify-center gap-x-4 gap-y-1 text-sm md:text-xs text-(--text-muted);
   }
 
   .cv-item__meta span {
@@ -638,11 +622,11 @@
   }
 
   .cv-item__points {
-    @apply mt-3 flex flex-col gap-1.5 text-[13px] md:text-sm list-none text-(--text-body);
+    @apply mt-3 flex flex-col gap-1.5 text-sm md:text-base list-none text-(--text-body);
   }
 
   .cv-item__note {
-    @apply mt-2 text-[13px] md:text-sm text-(--text-body);
+    @apply mt-2 text-sm md:text-base text-(--text-body);
   }
 
   .skills-grid {
@@ -650,7 +634,7 @@
   }
 
   .skills-group__name {
-    @apply mb-2.5 text-xs font-bold tracking-widest uppercase text-(--color-accent-bright);
+    @apply mb-2.5 text-sm md:text-xs font-bold tracking-widest uppercase text-(--color-accent-bright);
   }
 
   .skills-list {
@@ -673,7 +657,7 @@
   }
 
   .about__greeting {
-    @apply text-[11px] font-medium tracking-widest uppercase text-(--color-accent-bright);
+    @apply text-xs md:text-[11px] font-medium tracking-widest uppercase text-(--color-accent-bright);
   }
 
   .about__role {
@@ -683,7 +667,7 @@
   /* nowrap only from lg, where there is room; below that it must be allowed to
      wrap rather than overflow. */
   .about__quote {
-    @apply max-w-190 text-sm italic lg:whitespace-nowrap text-(--text-muted);
+    @apply max-w-190 text-base md:text-sm italic lg:whitespace-nowrap text-(--text-muted);
   }
 
   /* ─────────────────────────────────────
@@ -700,7 +684,7 @@
   }
 
   .story__text {
-    @apply mx-auto w-full max-w-190 mb-4 text-sm md:text-base leading-loose text-(--text-body);
+    @apply mx-auto w-full max-w-190 mb-4 text-base md:text-base md:text-base leading-loose text-(--text-body);
   }
 
   .story__image {
@@ -752,11 +736,11 @@
   }
 
   .media-card__blurb {
-    @apply text-sm text-(--text-muted);
+    @apply text-base md:text-sm text-(--text-muted);
   }
 
   .media-card__link {
-    @apply mt-1 inline-flex items-center gap-1 text-xs font-bold tracking-wide transition-colors duration-200 text-(--color-accent-bright) hover:text-(--color-accent);
+    @apply mt-1 inline-flex items-center gap-1 text-sm md:text-xs font-bold tracking-wide transition-colors duration-200 text-(--color-accent-bright) hover:text-(--color-accent);
   }
 
   .media-card__tag {
@@ -812,11 +796,11 @@
   }
 
   .card__description {
-    @apply text-sm text-start leading-relaxed line-clamp-3 text-(--text-muted);
+    @apply text-base md:text-sm text-start leading-relaxed line-clamp-3 text-(--text-muted);
   }
 
   .card__tag {
-    @apply w-fit text-[10px] font-semibold tracking-widest uppercase py-0.5 px-2 rounded-sm;
+    @apply w-fit text-xs md:text-[10px] font-semibold tracking-widest uppercase py-0.5 px-2 rounded-sm;
   }
 
   .card__tag--data,
@@ -841,7 +825,7 @@
   }
 
   .project-detail__back {
-    @apply inline-flex items-center gap-1.5 text-xs tracking-widest uppercase transition-colors mb-10 text-(--color-accent-bright) hover:text-(--color-accent);
+    @apply inline-flex items-center gap-1.5 text-sm md:text-xs tracking-widest uppercase transition-colors mb-10 text-(--color-accent-bright) hover:text-(--color-accent);
   }
 
   .project-detail__header {
