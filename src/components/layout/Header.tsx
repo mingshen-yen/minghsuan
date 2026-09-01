@@ -49,7 +49,7 @@ export const Header = () => {
         className="nav__control"
         aria-label="Toggle theme"
       >
-        {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+        {theme === "dark" ? <Sun size={22} /> : <Moon size={22} />}
       </button>
     </>
   );
@@ -79,17 +79,19 @@ export const Header = () => {
         <div className="nav__controls">{controls}</div>
 
         {/* Mobile Navigation */}
+        {/* Always mounted: unmounting it while the drawer is open shrank the row
+            to the height of the controls left behind, moving the wordmark. The
+            drawer covers it instead. */}
         <div className="nav__mobile">
           {controls}
-          {!open && (
-            <button
-              onClick={() => setOpen(true)}
-              className="nav__control"
-              aria-label="Open menu"
-            >
-              <Menu size={28} />
-            </button>
-          )}
+          <button
+            onClick={() => setOpen(true)}
+            className="nav__control"
+            aria-label="Open menu"
+            aria-expanded={open}
+          >
+            <Menu size={30} />
+          </button>
         </div>
       </div>
 
@@ -101,7 +103,7 @@ export const Header = () => {
           className="nav__close"
           aria-label="Close menu"
         >
-          <X size={26} />
+          <X size={28} />
         </button>
 
         {navItems.map(({ to, label }) => (

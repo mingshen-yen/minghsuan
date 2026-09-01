@@ -222,7 +222,7 @@
 
   /* One shape and hit area for every control in the bar. */
   .nav__control {
-    @apply flex shrink-0 items-center justify-center w-11 h-11 md:w-9 md:h-9 rounded-full cursor-pointer transition-colors duration-200 text-(--text-muted) hover:text-(--color-accent-bright) hover:bg-(--color-accent-dim);
+    @apply flex shrink-0 items-center justify-center w-13 h-13 md:w-11 md:h-11 rounded-full cursor-pointer transition-colors duration-200 text-(--text-muted) hover:text-(--color-accent-bright) hover:bg-(--color-accent-dim);
   }
 
   /* `relative` keeps .nav__indicator sized to the item; without it the marker
@@ -240,7 +240,7 @@
   }
 
   .nav__close {
-    @apply self-end m-3 flex items-center justify-center w-11 h-11 rounded-full cursor-pointer text-(--text-body) hover:bg-(--border-subtle);
+    @apply self-end m-3 flex items-center justify-center w-13 h-13 rounded-full cursor-pointer text-(--text-body) hover:bg-(--border-subtle);
   }
 
   .nav__indicator {
@@ -264,7 +264,7 @@
   }
 
   .nav__lang {
-    @apply text-xs font-bold tracking-wide;
+    @apply text-sm font-bold tracking-wide;
   }
 
   /* ─────────────────────────────────────
