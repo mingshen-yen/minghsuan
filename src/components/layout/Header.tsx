@@ -58,7 +58,8 @@ export const Header = () => {
     <nav className={scrolled ? "nav--scrolled" : ""}>
       <div className="nav__inner">
         <Link to={localizePath("/", lang)} className="nav__logo">
-          M✦<span className="nav__logo-name">Mingshen</span>
+          <span className="nav__logo-short">M</span>
+          <span className="nav__logo-name">Mingshen</span>✦
         </Link>
 
         {/* Desktop Navigation */}

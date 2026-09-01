@@ -197,10 +197,14 @@
     @apply md:flex items-center ml-2 font-display text-2xl font-semibold tracking-tight not-italic text-(--text-body);
   }
 
-  /* Inherits the monogram's size, weight and colour; hidden on the narrowest
-     screens, where the monogram alone has to do. */
+  /* The full name from sm up; below that the monogram stands in, so the bar
+     never has to fit a wordmark beside the controls. */
   .nav__logo-name {
-    @apply hidden sm:inline ml-1;
+    @apply hidden sm:inline;
+  }
+
+  .nav__logo-short {
+    @apply sm:hidden;
   }
 
   /* `ml-auto` collapses the gap after the wordmark, so the nav and the controls
