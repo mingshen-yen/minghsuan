@@ -5,7 +5,14 @@ import { SocialRow } from "./SocialRow";
 /** Where the content lives on the first row; the professional profiles, support
  *  and contact on the second, so the nine icons read as two groups rather than
  *  one long run. */
-const CHANNELS = ["youtube", "facebook", "instagram", "podcast", "spotify"];
+const CHANNELS = [
+  "youtube",
+  "facebook",
+  "instagram",
+  "podcast",
+  "spotify",
+  "medium",
+];
 const CONTACT = ["linkedin", "github", "kofi"];
 
 export const Footer = () => {

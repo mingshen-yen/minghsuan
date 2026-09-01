@@ -49,6 +49,12 @@
       "url": "https://open.spotify.com/show/7BLedCETH8biaAsuuAs1I8"
     },
     {
+      "icon": "medium",
+      "label": "Medium",
+      "description": "關於資料、研究與生活的文章",
+      "url": "https://medium.com/@minghsuanyen"
+    },
+    {
       "icon": "kofi",
       "label": "Ko-fi",
       "description": "請我喝杯咖啡",

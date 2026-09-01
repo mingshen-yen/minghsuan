@@ -49,6 +49,12 @@
       "url": "https://open.spotify.com/show/7BLedCETH8biaAsuuAs1I8"
     },
     {
+      "icon": "medium",
+      "label": "Medium",
+      "description": "Writing on data, research and life",
+      "url": "https://medium.com/@minghsuanyen"
+    },
+    {
       "icon": "kofi",
       "label": "Ko-fi",
       "description": "Support my work",
