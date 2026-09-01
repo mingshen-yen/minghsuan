@@ -1,4 +1,25 @@
 {
+  "hero": {
+    "label": "資料科學家 × 內容創作者",
+    "title": [
+      [
+        {
+          "text": "研究"
+        },
+        {
+          "text": "自然災害",
+          "em": true
+        },
+        {
+          "text": "，讓科學更容易被理解。"
+        }
+      ]
+    ],
+    "subtitle": "研究自然災害，並創作連結科學、風險與日常生活的內容。",
+    "projects": "看作品",
+    "links": "我的連結",
+    "about": "關於我"
+  },
   "nav": {
     "home": "首頁",
     "about": "關於我",
@@ -7,7 +28,7 @@
   },
   "sections": {
     "projectsLabel": "精選作品",
-    "projectsTitle": "作品",
+    "projectsTitle": "作品集",
     "mediaLabel": "研究之外",
     "mediaTitle": "社群媒體"
   },

@@ -516,12 +516,38 @@
     @apply block w-10 h-px bg-(--color-accent-soft);
   }
 
+  /* Wraps on its own now that the line breaks are gone: the forced breaks fell
+     in the wrong places once the sentence was translated. */
   .hero__title {
-    @apply font-sans font-black;
+    @apply mx-auto max-w-190 font-sans font-black;
+  }
+
+  /* The Chinese line is 15 full-width characters. On a phone one line would
+     cap the type at about 22px — smaller than the heading should be — so it
+     wraps there at the normal size and only holds one line from md up, where
+     scaling the type with the viewport keeps it inside the column. */
+  :lang(zh) .hero__title {
+    @apply max-w-none;
+  }
+
+  @media (width >= 48rem) {
+    :lang(zh) .hero__title {
+      white-space: nowrap;
+      font-size: min(3.5rem, 5.6vw);
+    }
+  }
+
+  .hero__subtitle {
+    @apply mx-auto mt-5 max-w-160 text-sm md:text-base leading-relaxed text-(--text-muted);
+  }
+
+  /* Hard breaks only where there is room for them. */
+  .hero__break {
+    @apply hidden md:inline;
   }
 
   .hero__cta {
-    @apply pt-2 flex gap-2 items-center justify-center;
+    @apply pt-8 md:pt-10 flex gap-3 items-center justify-center;
   }
 
   /* ─────────────────────────────────────

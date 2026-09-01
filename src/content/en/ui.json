@@ -1,4 +1,29 @@
 {
+  "hero": {
+    "label": "Data Scientist & Content Creator",
+    "title": [
+      [
+        {
+          "text": "Understanding "
+        }
+      ],
+      [
+        {
+          "text": "Natural Hazards. ",
+          "em": true
+        }
+      ],
+      [
+        {
+          "text": "Making Science Accessible."
+        }
+      ]
+    ],
+    "subtitle": "Researching natural hazards and creating content that connects science, risk, and everyday life.",
+    "projects": "Projects",
+    "links": "My Links",
+    "about": "About Me"
+  },
   "nav": {
     "home": "Home",
     "about": "About",

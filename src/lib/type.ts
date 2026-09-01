@@ -81,6 +81,17 @@ export type LinksData = {
 };
 
 export type UiStrings = {
+  hero: {
+    label: string;
+    /** Lines of segments: the outer array sets the line breaks, which apply
+     *  from md up, and `em` marks the accented phrase. Spacing lives in the
+     *  strings, since Chinese wants none between segments. */
+    title: { text: string; em?: boolean }[][];
+    subtitle: string;
+    projects: string;
+    links: string;
+    about: string;
+  };
   nav: { home: string; about: string; projects: string; links: string };
   sections: {
     projectsLabel: string;
