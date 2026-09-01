@@ -275,7 +275,7 @@
      CONTACT BLOCK
      ───────────────────────────────────── */
   .contact {
-    @apply z-(--z-base) scroll-mt-24 flex flex-col items-center text-center px-6 pt-20 mx-auto max-w-140 w-full;
+    @apply z-(--z-base) scroll-mt-24 flex flex-col items-center text-center px-6 pt-28 md:pt-40 mx-auto max-w-140 w-full;
     animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 
@@ -401,13 +401,13 @@
      switched off inside them with --flush. Horizontal padding matches the
      header's, so the bar and the content share one left edge. */
   .section-block {
-    @apply mx-auto w-full max-w-280 2xl:max-w-7xl px-6 md:px-12 pt-14 md:pt-20;
+    @apply mx-auto w-full max-w-280 2xl:max-w-7xl px-6 md:px-12 pt-28 md:pt-40;
   }
 
   /* First block on a page sits under the fixed bar. */
   main > *:first-child > .section-block:first-child,
   main > .section-block:first-child {
-    @apply pt-28 md:pt-32;
+    @apply pt-32 md:pt-42;
   }
 
   /* min-h-0 matters: .section forces a 320px floor, which a short block like
@@ -453,7 +453,7 @@
   }
 
   .section--hero {
-    @apply z-(--z-base) px-6 pt-32 md:pt-42 pb-14 md:pb-20 relative justify-center text-center mx-auto;
+    @apply z-(--z-base) px-6 pt-32 md:pt-42 pb-2 md:pb-4 relative justify-center text-center mx-auto;
   }
 
   .section--portfolio {
