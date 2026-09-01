@@ -213,11 +213,15 @@
 
   /* Sits in the bar's own flow, so it keeps the container's padding. */
   .nav__mobile {
-    @apply md:hidden flex gap-1 items-center;
+    @apply md:hidden flex items-center;
+  }
+
+  .nav__pair {
+    @apply flex items-center;
   }
 
   .nav__drawer {
-    @apply z-(--z-dropdown) fixed top-0 right-0 w-52 rounded-bl-lg shadow-lg flex flex-col items-center gap-4 pb-8 overflow-hidden md:hidden transform transition-transform duration-300 ease-in-out bg-(--bg-nav);
+    @apply z-(--z-dropdown) fixed top-0 right-0 w-52 rounded-bl-lg shadow-lg flex flex-col items-center gap-8 pb-12 overflow-hidden md:hidden transform transition-transform duration-300 ease-in-out bg-(--bg-nav);
   }
 
   /* One shape and hit area for every control in the bar. */
@@ -225,10 +229,22 @@
     @apply flex shrink-0 items-center justify-center w-14 h-14 md:w-11 md:h-11 rounded-full cursor-pointer transition-colors duration-200 text-(--text-muted) hover:text-(--color-accent-bright) hover:bg-(--color-accent-dim);
   }
 
+  /* The icon size is a prop, which cannot be responsive, so desktop is dialled
+     back here to the size it had before the phone icons grew. */
+  .nav__control svg {
+    @apply md:w-6 md:h-6;
+  }
+
   /* `relative` keeps .nav__indicator sized to the item; without it the marker
      resolves against the fixed <nav> and stretches the whole bar. */
   .nav__item {
     @apply relative flex text-base items-center transition-colors duration-200 text-(--text-body);
+  }
+
+  /* Scoped to the drawer: .nav__item is shared with the desktop bar, which
+     keeps its size. */
+  .nav__drawer .nav__item {
+    @apply text-xl;
   }
 
   .nav__item--active {
@@ -256,11 +272,11 @@
   }
 
   .social-row__link {
-    @apply flex items-center justify-center w-9 h-9 transition-colors duration-200 text-(--text-muted) hover:text-(--color-accent-bright);
+    @apply flex items-center justify-center w-11 h-11 md:w-9 md:h-9 transition-colors duration-200 text-(--text-muted) hover:text-(--color-accent-bright);
   }
 
   .social-row__link svg {
-    @apply w-4.5 h-4.5;
+    @apply w-6 h-6 md:w-4.5 md:h-4.5;
   }
 
   .nav__lang {

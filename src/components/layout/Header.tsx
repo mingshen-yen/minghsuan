@@ -49,7 +49,7 @@ export const Header = () => {
         className="nav__control"
         aria-label="Toggle theme"
       >
-        {theme === "dark" ? <Sun size={24} /> : <Moon size={24} />}
+        {theme === "dark" ? <Sun size={28} /> : <Moon size={28} />}
       </button>
     </>
   );
@@ -83,7 +83,7 @@ export const Header = () => {
             to the height of the controls left behind, moving the wordmark. The
             drawer covers it instead. */}
         <div className="nav__mobile">
-          {controls}
+          <div className="nav__pair">{controls}</div>
           <button
             onClick={() => setOpen(true)}
             className="nav__control"
