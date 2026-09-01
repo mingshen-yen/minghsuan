@@ -16,7 +16,7 @@ function toProject(path: string, source: string): Project {
     title: String(data.title ?? slug),
     tag: String(data.tag ?? ""),
     image: String(data.image ?? ""),
-    summary: firstParagraph(body),
+    summary: data.summary ? String(data.summary) : firstParagraph(body),
     body,
     stack: Array.isArray(data.stack) ? data.stack.map(String) : [],
     sourceUrl: data.sourceUrl ? String(data.sourceUrl) : undefined,
@@ -36,4 +36,15 @@ export function getProjects() {
 
 export function getProjectBySlug(slug: string) {
   return projects.find((project) => project.slug === slug) ?? null;
+}
+
+/**
+ * The landing page selection: everything marked `featured`, topped up in
+ * `order` with whatever else is needed to reach `count`, so the grid is never
+ * left short when few projects carry the flag.
+ */
+export function getFeaturedProjects(count = 3) {
+  const featured = projects.filter((project) => project.featured);
+  const rest = projects.filter((project) => !project.featured);
+  return [...featured, ...rest].slice(0, count);
 }

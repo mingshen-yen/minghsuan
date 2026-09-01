@@ -7,7 +7,7 @@ export const LandingPage = () => {
   return (
     <div className="mx-auto">
       <Hero />
-      <ProjectsPage />
+      <ProjectsPage featuredOnly />
       <MediaPage />
       <ContactSection />
     </div>

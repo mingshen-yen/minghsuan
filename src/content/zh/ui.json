@@ -11,6 +11,14 @@
     "mediaLabel": "研究之外",
     "mediaTitle": "影片與 Podcast"
   },
+  "project": {
+    "back": "所有作品",
+    "live": "線上展示",
+    "source": "原始碼",
+    "builtWith": "使用技術",
+    "notFound": "找不到這個作品。",
+    "viewAll": "看所有作品"
+  },
   "about": {
     "greeting": "你好，",
     "iam": "我是",

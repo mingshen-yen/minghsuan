@@ -1,5 +1,6 @@
 ---
 title: NextUp Live
+summary: "A React and TypeScript app for tracking what is playing next, built with TailwindCSS."
 tag: Web
 image: /images/nextup-live.jpg
 stack: [React, TypeScript, TailwindCSS]

@@ -41,7 +41,7 @@ featured: false
 order: 4
 ---
 
-The first paragraph doubles as the card blurb on the portfolio page.
+The first paragraph doubles as the card blurb when no `summary` is set.
 
 #### ***A heading***
 
@@ -51,12 +51,16 @@ The rest of the body renders as markdown on the project detail page.
 | Field       | Required | Notes                                              |
 | ----------- | -------- | -------------------------------------------------- |
 | `title`     | yes      |                                                    |
-| `tag`       | yes      | Badge on the card, e.g. `Web` / `Data`             |
+| `tag`       | yes      | Badge on the card, e.g. `Web` / `Data`; the value  |
+|             |          | lowercased picks the badge colour                  |
+| `summary`   | no       | Card blurb. Without it the first paragraph is used,|
+|             |          | which a long opening paragraph truncates mid-line  |
 | `image`     | yes      | Path under `public/`, e.g. `/images/foo.jpg`       |
 | `stack`     | no       | Comma-separated list in brackets                   |
 | `sourceUrl` | no       | Shows the "Source" button                          |
 | `liveUrl`   | no       | Shows the "Live demo" button                       |
-| `featured`  | no       | `true` / `false`                                   |
+| `featured`  | no       | `true` puts it on the landing page, which shows    |
+|             |          | featured first and tops up to three by `order`     |
 | `order`     | no       | Ascending; files without it sort last              |
 
 Adding a project is just dropping a new `.md` file in `projects/` — no code

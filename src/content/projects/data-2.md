@@ -1,5 +1,6 @@
 ---
 title: Seismic Stress Drop Scaling Study
+summary: "A study of how seismic stress drop scales with magnitude, and what that implies for hazard estimates."
 tag: Data
 image: /images/stress-drop-fig8b.jpg
 stack: [Python, SQL]

@@ -1,18 +1,24 @@
 import { useParams, Link } from "react-router";
-import { getProjectBySlug } from "../../api/projects";
 import { ArrowLeft, ExternalLink, GitBranch } from "lucide-react";
 import ReactMarkdown from "react-markdown";
+import { getProjectBySlug } from "../../api/projects";
+import { getUi } from "../../api/ui";
+import { localizePath, useLang } from "../../lib/i18n";
 
 export const ProjectDetailPage = () => {
   const { slug } = useParams<{ slug: string }>();
+  const lang = useLang();
+  const ui = getUi(lang);
   const project = slug ? getProjectBySlug(slug) : null;
+  const backHref = localizePath("/portfolio", lang);
 
   if (!project) {
     return (
       <div className="project-detail__not-found">
-        <p>Project not found.</p>
-        <Link to="/portfolio" className="btn btn--ghost mt-6">
-          ← Back to projects
+        <p>{ui.project.notFound}</p>
+        <Link to={backHref} className="btn btn--ghost mt-6">
+          <ArrowLeft size={14} />
+          {ui.project.back}
         </Link>
       </div>
     );
@@ -20,9 +26,9 @@ export const ProjectDetailPage = () => {
 
   return (
     <article className="project-detail">
-      <Link to="/portfolio" className="project-detail__back">
+      <Link to={backHref} className="project-detail__back">
         <ArrowLeft size={14} />
-        All projects
+        {ui.project.back}
       </Link>
 
       <header className="project-detail__header">
@@ -39,7 +45,7 @@ export const ProjectDetailPage = () => {
               rel="noopener noreferrer"
               className="btn btn--primary"
             >
-              Live demo
+              {ui.project.live}
               <ExternalLink size={13} />
             </a>
           )}
@@ -51,7 +57,7 @@ export const ProjectDetailPage = () => {
               className="btn btn--ghost"
             >
               <GitBranch size={13} />
-              Source
+              {ui.project.source}
             </a>
           )}
         </div>
@@ -63,7 +69,7 @@ export const ProjectDetailPage = () => {
 
       {project.stack.length > 0 && (
         <div className="project-detail__stack">
-          <span className="skill-label">Built with</span>
+          <span className="skill-label">{ui.project.builtWith}</span>
           <div className="project-detail__skill">
             {project.stack.map((stack) => (
               <span key={stack} className="skill-tag">

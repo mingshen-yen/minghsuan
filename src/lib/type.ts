@@ -93,6 +93,14 @@ export type UiStrings = {
     tech: string;
     curiosity: string;
   };
+  project: {
+    viewAll: string;
+    back: string;
+    live: string;
+    source: string;
+    builtWith: string;
+    notFound: string;
+  };
   contact: {
     title: string;
     intro: string;

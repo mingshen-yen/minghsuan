@@ -11,6 +11,14 @@
     "mediaLabel": "Beyond the research",
     "mediaTitle": "Video & podcast"
   },
+  "project": {
+    "back": "All projects",
+    "live": "Live demo",
+    "source": "Source",
+    "builtWith": "Built with",
+    "notFound": "Project not found.",
+    "viewAll": "View all projects"
+  },
   "about": {
     "greeting": "Hello,",
     "iam": "I'm",

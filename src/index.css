@@ -43,6 +43,8 @@
     --color-border: rgba(255, 255, 255, 0.07);
 
     /* Component Colors */
+    --color-tag-web: #7aa2f7;
+    --color-tag-web-bg: rgba(122, 162, 247, 0.12);
     --color-tag-video: #b4232a;
     --color-tag-audio: #b4730f;
     --color-skill-bg: #07140f;
@@ -81,6 +83,8 @@
     --color-accent-bright: #0a7d55;
     --color-accent-dim: rgba(13, 158, 107, 0.1);
     --color-accent-soft: rgba(13, 158, 107, 0.3);
+    --color-tag-web: #3059b8;
+    --color-tag-web-bg: rgba(48, 89, 184, 0.1);
     --color-tag-video: #a41b22;
     --color-tag-audio: #9a610a;
     --color-skill-text: #0a7d55;
@@ -409,6 +413,10 @@
   /* min-h-0 matters: .section forces a 320px floor, which a short block like
      the media rows would otherwise sit inside, centred, with dead space above
      and below that no padding rule accounts for. */
+  .section-block__more {
+    @apply mt-8 flex justify-center;
+  }
+
   .section--flush {
     @apply w-full max-w-none min-h-0 px-0 pt-0;
   }
@@ -430,7 +438,7 @@
   }
 
   .section--portfolio {
-    @apply gap-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 items-start;
+    @apply gap-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 items-stretch;
   }
 
   /* ─────────────────────────────────────
@@ -669,7 +677,7 @@
   }
 
   .card--project {
-    @apply w-full bg-(--bg-project-card) border-(--color-accent-dim) hover:border-(--color-accent-soft);
+    @apply flex h-full w-full flex-col bg-(--bg-project-card) border-(--color-accent-dim) hover:border-(--color-accent-soft);
   }
 
   .card__image-frame {
@@ -685,11 +693,12 @@
   }
 
   .card__content {
-    @apply flex flex-col gap-2 p-4;
+    @apply flex grow flex-col gap-2 p-4;
   }
 
+  /* h-6 used to clip any title that wrapped, which all four of them do. */
   .card__title {
-    @apply text-start text-base font-semibold text-(--text-heading) h-6;
+    @apply text-start text-base font-semibold text-(--text-heading);
   }
 
   .card__description {
@@ -700,15 +709,20 @@
     @apply w-fit text-[10px] font-semibold tracking-widest uppercase py-0.5 px-2 rounded-sm;
   }
 
+  .card__tag--data,
   .card__tag--project {
     @apply bg-(--color-accent-dim) text-(--color-accent) border border-(--color-accent-soft);
+  }
+
+  .card__tag--web {
+    @apply bg-(--color-tag-web-bg) text-(--color-tag-web) border border-(--color-tag-web);
   }
 
   /* ─────────────────────────────────────
      PROJECT DETAIL PAGE
      ───────────────────────────────────── */
   .project-detail {
-    @apply z-(--z-base) relative max-w-5xl mx-auto px-6 pt-20 md:pt-25 pb-24;
+    @apply z-(--z-base) relative mx-auto w-full max-w-190 px-6 md:px-12 pt-28 md:pt-32 pb-24;
     animation: fadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 
@@ -728,16 +742,8 @@
     @apply flex items-center gap-3 mb-4;
   }
 
-  .project-detail__year {
-    @apply text-xs tracking-widest text-(--text-dim);
-  }
-
   .project-detail__title {
-    @apply font-serif font-bold text-[40px] md:text-[52px] leading-[1.05] mb-4 tracking-tight text-(--text-heading);
-  }
-
-  .project-detail__lead {
-    @apply text-base leading-relaxed mb-6 text-(--text-muted);
+    @apply font-sans font-black text-3xl md:text-4xl leading-tight mb-4 tracking-tight text-(--text-heading);
   }
 
   .project-detail__actions {
@@ -757,20 +763,32 @@
   }
 
   .project-detail__skill {
-    @apply flex flex-wrap gap-2 mb-5 justify-start;
+    @apply flex flex-wrap gap-2 justify-start;
   }
 
   .project-detail__body {
     @apply flex flex-col gap-5 pt-8 border-t border-(--border-subtle);
   }
 
-  .project-detail__heading {
-    @apply text-lg font-bold mt-4 text-(--color-accent);
+  /* The base reset zeroes list padding, so markdown lists rendered without
+     visible markers until they were given their indent back. */
+  .project-detail__body ul,
+  .project-detail__body ol {
+    @apply flex flex-col gap-2 ps-6 text-sm md:text-base text-(--text-body);
   }
 
-  .project-detail__para {
-    @apply text-sm md:text-base leading-relaxed text-(--text-muted);
+  .project-detail__body ul {
+    @apply list-disc;
   }
+
+  .project-detail__body ol {
+    @apply list-decimal;
+  }
+
+  .project-detail__body p {
+    @apply text-sm md:text-base leading-relaxed text-(--text-body);
+  }
+
 }
 
 @layer utilities {

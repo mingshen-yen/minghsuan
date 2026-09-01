@@ -1,5 +1,6 @@
 ---
 title: Velocity Pulse in Large Earthquakes
+summary: "Near-fault pulse behaviour in large earthquakes, mapped across station networks."
 tag: Data
 image: /images/nearfault-stations.jpg
 stack: [Python, Matlab]
