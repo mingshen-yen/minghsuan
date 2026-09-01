@@ -49,7 +49,7 @@ export const Header = () => {
         className="nav__control"
         aria-label="Toggle theme"
       >
-        {theme === "dark" ? <Sun size={22} /> : <Moon size={22} />}
+        {theme === "dark" ? <Sun size={24} /> : <Moon size={24} />}
       </button>
     </>
   );
@@ -90,7 +90,7 @@ export const Header = () => {
             aria-label="Open menu"
             aria-expanded={open}
           >
-            <Menu size={30} />
+            <Menu size={32} />
           </button>
         </div>
       </div>
@@ -103,7 +103,7 @@ export const Header = () => {
           className="nav__close"
           aria-label="Close menu"
         >
-          <X size={28} />
+          <X size={30} />
         </button>
 
         {navItems.map(({ to, label }) => (

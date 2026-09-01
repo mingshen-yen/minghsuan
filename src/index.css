@@ -222,7 +222,7 @@
 
   /* One shape and hit area for every control in the bar. */
   .nav__control {
-    @apply flex shrink-0 items-center justify-center w-13 h-13 md:w-11 md:h-11 rounded-full cursor-pointer transition-colors duration-200 text-(--text-muted) hover:text-(--color-accent-bright) hover:bg-(--color-accent-dim);
+    @apply flex shrink-0 items-center justify-center w-14 h-14 md:w-11 md:h-11 rounded-full cursor-pointer transition-colors duration-200 text-(--text-muted) hover:text-(--color-accent-bright) hover:bg-(--color-accent-dim);
   }
 
   /* `relative` keeps .nav__indicator sized to the item; without it the marker
@@ -240,7 +240,7 @@
   }
 
   .nav__close {
-    @apply self-end m-3 flex items-center justify-center w-13 h-13 rounded-full cursor-pointer text-(--text-body) hover:bg-(--border-subtle);
+    @apply self-end m-3 flex items-center justify-center w-14 h-14 rounded-full cursor-pointer text-(--text-body) hover:bg-(--border-subtle);
   }
 
   .nav__indicator {
@@ -264,7 +264,7 @@
   }
 
   .nav__lang {
-    @apply text-sm font-bold tracking-wide;
+    @apply text-base md:text-sm font-bold tracking-wide;
   }
 
   /* ─────────────────────────────────────
@@ -374,7 +374,7 @@
      BUTTON BLOCK
      ───────────────────────────────────── */
   .btn {
-    @apply inline-flex items-center gap-1 px-4 py-2.5 w-fit rounded-xs text-sm font-bold whitespace-nowrap cursor-pointer transition-all duration-200 hover:-translate-y-px;
+    @apply inline-flex items-center gap-1.5 px-5 py-3.5 md:px-4 md:py-2.5 w-fit rounded-xs text-base md:text-sm font-bold whitespace-nowrap cursor-pointer transition-all duration-200 hover:-translate-y-px;
   }
 
   .btn--primary {
