@@ -4,19 +4,13 @@
     "title": "研究資料科學家｜自然災害風險分析｜學術計算",
     "description": "打造可重現的分析流程，把複雜的資料轉譯成可以行動的洞察。",
     "image": "/images/profile-photo.png",
-    "skills": ["Python", "資料分析", "網頁開發"]
+    "skills": [
+      "Python",
+      "資料分析",
+      "網頁開發"
+    ]
   },
   "experience": [
-    {
-      "title": "研究資料分析師",
-      "company": "國立中央大學",
-      "location": "台灣桃園",
-      "period": "2016-2019",
-      "descriptions": [
-        "為地震危害度評估建立地震時間序列模型，並以實測資料驗證結果，找出地震行為的規律。",
-        "撰寫分析報告，比對模型輸出與實測資料，供政府風險規劃參考。"
-      ]
-    },
     {
       "title": "研究資料科學家",
       "company": "GFZ Helmholtz-Zentrum für Geoforschung",
@@ -25,6 +19,16 @@
       "descriptions": [
         "在歐盟補助的計畫中與國際團隊協作，並將研究成果傳達給學界與非專業聽眾。",
         "開發並維護以 Python 為基礎、可重現的科學工作流程，處理地理空間與時間序列資料。"
+      ]
+    },
+    {
+      "title": "研究資料分析師",
+      "company": "國立中央大學",
+      "location": "台灣桃園",
+      "period": "2016-2019",
+      "descriptions": [
+        "為地震危害度評估建立地震時間序列模型，並以實測資料驗證結果，找出地震行為的規律。",
+        "撰寫分析報告，比對模型輸出與實測資料，供政府風險規劃參考。"
       ]
     }
   ],
@@ -52,10 +56,47 @@
     }
   ],
   "skills": [
-    { "category": "程式語言", "items": ["Python", "MATLAB", "TypeScript"] },
-    { "category": "框架", "items": ["React", "Node.js", "Express", "Jupyter"] },
-    { "category": "資料庫", "items": ["MongoDB", "PostgreSQL", "REST APIs"] },
-    { "category": "工具", "items": ["Git", "GitHub", "QGIS"] },
-    { "category": "語言", "items": ["英文", "德文", "中文", "台語"] }
+    {
+      "category": "程式語言",
+      "items": [
+        "Python",
+        "MATLAB",
+        "TypeScript"
+      ]
+    },
+    {
+      "category": "框架",
+      "items": [
+        "React",
+        "Node.js",
+        "Express",
+        "Jupyter"
+      ]
+    },
+    {
+      "category": "資料庫",
+      "items": [
+        "MongoDB",
+        "PostgreSQL",
+        "REST APIs"
+      ]
+    },
+    {
+      "category": "工具",
+      "items": [
+        "Git",
+        "GitHub",
+        "QGIS"
+      ]
+    },
+    {
+      "category": "語言",
+      "items": [
+        "英文",
+        "德文",
+        "中文",
+        "台語"
+      ]
+    }
   ]
 }

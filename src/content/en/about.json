@@ -4,19 +4,13 @@
     "title": "Data Scientist | Natural Hazard & Risk Analyst | Scientific Computing",
     "description": "Building reproducible analytical workflows and translating complex datasets into actionable insights.",
     "image": "/images/profile-photo.png",
-    "skills": ["Python", "Data Analysis", "Web Dev"]
+    "skills": [
+      "Python",
+      "Data Analysis",
+      "Web Dev"
+    ]
   },
   "experience": [
-    {
-      "title": "Research Data Analyst",
-      "company": "National Central University",
-      "location": "Taoyuan, Taiwan",
-      "period": "2016-2019",
-      "descriptions": [
-        "Modelled seismic time-series data for seismic hazard assessments and validated results against empirical datasets to identify behavioural patterns.",
-        "Produced analytical reports comparing modelled seismic outputs to empirical data for government risk planning."
-      ]
-    },
     {
       "title": "Research Data Scientist",
       "company": "GFZ Helmholtz-Zentrum für Geoforschung",
@@ -25,6 +19,16 @@
       "descriptions": [
         "Coordinated with international teams in EU-funded projects and communicated results to scientific and non-specialist audiences.",
         "Developed and maintained reproducible Python-based scientific workflows for geospatial and time-series data analysis."
+      ]
+    },
+    {
+      "title": "Research Data Analyst",
+      "company": "National Central University",
+      "location": "Taoyuan, Taiwan",
+      "period": "2016-2019",
+      "descriptions": [
+        "Modelled seismic time-series data for seismic hazard assessments and validated results against empirical datasets to identify behavioural patterns.",
+        "Produced analytical reports comparing modelled seismic outputs to empirical data for government risk planning."
       ]
     }
   ],
@@ -52,19 +56,47 @@
     }
   ],
   "skills": [
-    { "category": "Programming", "items": ["Python", "MATLAB", "TypeScript"] },
+    {
+      "category": "Programming",
+      "items": [
+        "Python",
+        "MATLAB",
+        "TypeScript"
+      ]
+    },
     {
       "category": "Frameworks",
-      "items": ["React", "Node.js", "Express", "Jupyter"]
+      "items": [
+        "React",
+        "Node.js",
+        "Express",
+        "Jupyter"
+      ]
     },
     {
       "category": "Databases",
-      "items": ["MongoDB", "PostgreSQL", "REST APIs"]
+      "items": [
+        "MongoDB",
+        "PostgreSQL",
+        "REST APIs"
+      ]
     },
-    { "category": "Tools", "items": ["Git", "GitHub", "QGIS"] },
+    {
+      "category": "Tools",
+      "items": [
+        "Git",
+        "GitHub",
+        "QGIS"
+      ]
+    },
     {
       "category": "Languages",
-      "items": ["English", "German", "Mandarin", "Taiwanese"]
+      "items": [
+        "English",
+        "German",
+        "Mandarin",
+        "Taiwanese"
+      ]
     }
   ]
 }

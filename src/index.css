@@ -143,7 +143,7 @@
      TYPOGRAPHY
      ───────────────────────────────────── */
   h1 {
-    @apply py-2 font-serif font-bold text-[45px] md:text-[56px] mb-3 tracking-tight md:tracking-normal leading-[1.05] text-(--text-heading);
+    @apply font-serif font-bold text-[45px] md:text-[56px] mb-3 tracking-tight md:tracking-normal leading-[1.05] text-(--text-heading);
   }
 
   em {
@@ -422,10 +422,6 @@
     @apply bg-(--bg-nav)/40 z-(--z-base) px-6 pb-10 md:pb-15 pt-26 relative justify-center text-center mx-auto;
   }
 
-  .section--about {
-    @apply grid-cols-1 2xl:min-h-120;
-  }
-
   .section--portfolio {
     @apply gap-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 items-start;
   }
@@ -458,37 +454,6 @@
   /* ─────────────────────────────────────
      AVATAR VISUAL BLOCK
      ───────────────────────────────────── */
-  .avatar {
-    @apply flex justify-center items-center;
-  }
-
-  .avatar__frame {
-    @apply relative w-88 h-88 lg:w-94 lg:h-94 xl:w-100 xl:h-100;
-  }
-
-  .avatar__ring {
-    @apply absolute inset-0 rounded-full border border-(--color-accent-dim);
-    box-shadow:
-      0 0 0 6px var(--color-accent-dim),
-      0 0 40px var(--color-accent-dim);
-  }
-
-  .avatar__inner {
-    @apply absolute inset-5 rounded-full flex items-center justify-center;
-  }
-
-  .avatar__inner img {
-    @apply w-full rounded-full;
-  }
-
-  .about__figure {
-    @apply relative inline-block max-w-75;
-  }
-
-  .about__figure img {
-    @apply block max-w-full object-contain w-fit;
-  }
-
   /* ─────────────────────────────────────
      STAT CARD BLOCK
      ───────────────────────────────────── */
@@ -524,7 +489,17 @@
   }
 
   .stats-strip__item {
-    @apply py-4 text-center md:border-r md:last:border-r-0 border-(--color-accent-dim);
+    @apply py-4 text-center border-(--color-accent-dim) md:border-r md:last:border-r-0;
+  }
+
+  /* Phones lay the strip out as 2x2, so it needs a divider between the columns
+     and one between the rows, not just the column rules the 4-up row uses. */
+  .stats-strip__item:nth-child(odd) {
+    @apply border-r;
+  }
+
+  .stats-strip__item:nth-child(-n + 2) {
+    @apply border-b md:border-b-0;
   }
 
   .stats-strip__number {
@@ -542,20 +517,74 @@
   /* ─────────────────────────────────────
      ABOUT SECTION
      ───────────────────────────────────── */
-  .about__detail {
-    @apply flex flex-col items-center justify-center md:flex-row pt-5 xl:pt-0 gap-10 md:gap-12 lg:gap-16;
-  }
-
-  .about__note {
-    @apply absolute left-0 bottom-0 w-[min(100%,14rem)] -translate-x-4 -translate-y-2 p-4 italic backdrop-blur-sm bg-(--bg-card) text-(--text-body);
-  }
-
-  .about__text-box {
-    @apply flex flex-col items-start justify-start text-left pt-6 w-full md:w-150 2xl:w-160;
-  }
-
+  /* Wider than the CV column below, so the role line has room to stay on one
+     line; the two therefore no longer share a left edge. */
   .about__intro {
-    @apply flex flex-col items-center gap-3 text-center mb-4;
+    @apply mx-auto flex w-full max-w-230 flex-col md:flex-row items-center gap-8 pb-10 md:pb-0 md:gap-14;
+  }
+
+  /* The source is 497x700; object-cover only crops once a shorter box is
+     imposed, and object-top keeps the head and takes the trim off the bottom. */
+  .about__portrait {
+    @apply w-52 md:w-60 aspect-[4/5] shrink-0 rounded-sm object-cover object-top;
+  }
+
+  /* `grow` matters: as a plain flex item this is only as wide as its content,
+     so the short Chinese text centred inside a narrow box and read as
+     left-shifted. */
+  .about__identity {
+    @apply flex grow flex-col items-center gap-3 text-center;
+  }
+
+  .about__quote {
+    @apply max-w-160 text-sm italic text-(--text-muted);
+  }
+
+  /* ─────────────────────────────────────
+     CV BLOCK
+     ───────────────────────────────────── */
+  .cv-list {
+    @apply mx-auto flex w-full max-w-160 flex-col gap-9;
+  }
+
+  .cv-item {
+    @apply text-center;
+  }
+
+  .cv-item__role {
+    @apply text-base md:text-lg font-bold text-(--text-heading);
+  }
+
+  .cv-item__org {
+    @apply mt-0.5 text-sm font-medium text-(--color-accent-bright);
+  }
+
+  .cv-item__meta {
+    @apply mt-1.5 flex flex-wrap justify-center gap-x-4 gap-y-1 text-xs text-(--text-muted);
+  }
+
+  .cv-item__meta span {
+    @apply inline-flex items-center gap-1.5;
+  }
+
+  .cv-item__points {
+    @apply mt-3 flex flex-col gap-1.5 text-[13px] md:text-sm list-none text-(--text-body);
+  }
+
+  .cv-item__note {
+    @apply mt-2 text-[13px] md:text-sm text-(--text-body);
+  }
+
+  .skills-grid {
+    @apply mx-auto grid w-full max-w-160 grid-cols-1 sm:grid-cols-2 gap-7 text-center;
+  }
+
+  .skills-group__name {
+    @apply mb-2.5 text-xs font-bold tracking-widest uppercase text-(--color-accent-bright);
+  }
+
+  .skills-list {
+    @apply flex flex-wrap justify-center gap-1.5 list-none;
   }
 
   .about__greeting {
@@ -569,54 +598,7 @@
   }
 
   .about__role {
-    @apply max-w-160 text-sm md:text-base text-(--text-muted);
-  }
-
-  .about__tabs {
-    @apply flex flex-wrap gap-6 w-full pb-5 mb-5 border-b border-(--border-subtle);
-  }
-
-  .about__cta {
-    @apply relative inline-flex items-center pb-1 text-xs font-medium tracking-widest uppercase cursor-pointer transition-colors duration-200 text-(--text-muted) hover:text-(--color-accent-bright);
-  }
-
-  /* Underline instead of scale: the nav gave up text scaling for the same
-     reason — it nudges the neighbours and blurs mid-transition. */
-  .about__cta-active {
-    @apply font-bold text-(--color-accent-bright);
-  }
-
-  .about__cta-active::after {
-    content: "";
-    @apply absolute left-0 -bottom-[21px] h-0.5 w-full bg-(--color-accent-bright);
-  }
-
-  /* A fixed panel: switching tabs must not resize the page. Anything taller
-     than this scrolls inside it rather than pushing the layout around. */
-  .about__panel {
-    @apply w-full h-100 md:h-102 2xl:h-110 overflow-y-auto pr-2;
-    scrollbar-width: thin;
-    scrollbar-color: var(--color-accent-dim) transparent;
-  }
-
-  .about__company {
-    @apply flex justify-start font-bold text-sm 2xl:text-base text-(--text-muted);
-  }
-
-  .about__experience_description {
-    @apply text-[13px] 2xl:text-base text-(--text-body) list-disc list-outside ps-4;
-  }
-
-  .about__description {
-    @apply text-[13px] 2xl:text-base text-(--text-body);
-  }
-
-  .about__skills-box {
-    @apply grid grid-cols-1 md:grid-cols-2 justify-center;
-  }
-
-  .about__skills {
-    @apply text-sm flex flex-wrap gap-1 justify-start;
+    @apply text-sm md:text-base lg:whitespace-nowrap text-(--text-muted);
   }
 
   .about__skill {

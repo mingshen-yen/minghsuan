@@ -14,9 +14,9 @@
   "about": {
     "greeting": "Hello,",
     "iam": "I'm",
-    "experience": "experience",
-    "education": "education",
-    "skills": "skills"
+    "experience": "Experience",
+    "education": "Education",
+    "skills": "Skills"
   },
   "stats": {
     "years": "Years Experience",

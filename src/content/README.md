@@ -68,7 +68,10 @@ The frontmatter parser (`src/lib/frontmatter.ts`) understands `key: value` and
 ## About page
 
 `en/about.json` and `zh/about.json` hold the profile, experience, education, and
-skills. Array order is display order.
+skills. Array order is display order, and nothing sorts by date at runtime —
+periods are free text like `2019-2026`, so parsing them would break the moment
+one says `present`. **List experience and education newest first**, and keep the
+two languages in the same order.
 
 ## Images
 
