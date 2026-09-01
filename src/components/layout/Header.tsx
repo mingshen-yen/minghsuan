@@ -84,7 +84,7 @@ export const Header = () => {
           {!open && (
             <button
               onClick={() => setOpen(true)}
-              className="nav__control nav__control--menu"
+              className="nav__control"
               aria-label="Open menu"
             >
               <Menu size={28} />

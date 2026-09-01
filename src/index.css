@@ -213,7 +213,7 @@
 
   /* Sits in the bar's own flow, so it keeps the container's padding. */
   .nav__mobile {
-    @apply md:hidden flex gap-0.5 items-center;
+    @apply md:hidden flex gap-1 items-center;
   }
 
   .nav__drawer {
@@ -222,7 +222,7 @@
 
   /* One shape and hit area for every control in the bar. */
   .nav__control {
-    @apply flex shrink-0 items-center justify-center w-9 h-9 rounded-full cursor-pointer transition-colors duration-200 text-(--text-muted) hover:text-(--color-accent-bright) hover:bg-(--color-accent-dim);
+    @apply flex shrink-0 items-center justify-center w-11 h-11 md:w-9 md:h-9 rounded-full cursor-pointer transition-colors duration-200 text-(--text-muted) hover:text-(--color-accent-bright) hover:bg-(--color-accent-dim);
   }
 
   /* `relative` keeps .nav__indicator sized to the item; without it the marker
@@ -237,12 +237,6 @@
 
   .nav__item:hover:not(.nav__item--active) {
     @apply text-(--color-accent-bright);
-  }
-
-  /* The menu is the primary control on a phone, so it gets a larger target
-     than the language and theme buttons beside it. */
-  .nav__control--menu {
-    @apply w-11 h-11;
   }
 
   .nav__close {
