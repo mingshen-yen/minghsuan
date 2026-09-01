@@ -45,3 +45,19 @@ export type SkillCategory = {
   category: string;
   items: string[];
 };
+
+export type LinkItem = {
+  icon: string;
+  label: string;
+  description: string;
+  url: string;
+};
+
+export type LinksData = {
+  profile: {
+    name: string;
+    tagline: string;
+    image: string;
+  };
+  links: LinkItem[];
+};

@@ -21,7 +21,20 @@ export const Hero = () => {
         </div>
 
         <div className="hero__cta">
-          <a href="/about" className="btn btn--primary">
+          <a href="/links" className="btn btn--primary">
+            My Links
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+          <a href="/about" className="btn btn--ghost">
             About Me
             <svg
               width="14"

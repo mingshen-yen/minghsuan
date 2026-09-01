@@ -224,6 +224,69 @@
   }
 
   /* ─────────────────────────────────────
+     LINK HUB BLOCK
+     ───────────────────────────────────── */
+  .link-hub {
+    @apply z-(--z-base) flex flex-col items-center text-center px-4 pt-30 pb-16 mx-auto max-w-140 w-full;
+    animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .link-hub__avatar {
+    @apply w-28 h-28 rounded-full object-cover border border-(--color-accent-dim);
+    box-shadow:
+      0 0 0 6px var(--color-accent-dim),
+      0 0 40px var(--color-accent-dim);
+  }
+
+  .link-hub__name {
+    @apply mt-6 text-3xl font-bold text-(--text-heading);
+  }
+
+  .link-hub__tagline {
+    @apply mt-4 text-sm leading-relaxed text-(--text-muted);
+  }
+
+  .link-hub__list {
+    @apply mt-9 flex flex-col gap-3 w-full list-none;
+  }
+
+  .link-hub__portfolio {
+    @apply mt-10;
+  }
+
+  .link-card {
+    @apply flex items-center gap-4 w-full px-5 py-4 rounded-xs text-left transition-all duration-200 bg-(--bg-media-card) border border-(--color-accent-dim) hover:-translate-y-px hover:border-(--color-accent-soft) hover:shadow-(--shadow-accent);
+  }
+
+  .link-card__icon {
+    @apply shrink-0 flex items-center justify-center w-6 h-6 text-(--color-accent-bright);
+  }
+
+  .link-card__icon svg {
+    @apply w-full h-full;
+  }
+
+  .link-card__text {
+    @apply flex flex-col min-w-0 grow;
+  }
+
+  .link-card__label {
+    @apply text-sm font-bold text-(--text-heading);
+  }
+
+  .link-card__description {
+    @apply text-xs text-(--text-muted) truncate;
+  }
+
+  .link-card__arrow {
+    @apply shrink-0 opacity-0 transition-opacity duration-200 text-(--color-accent-bright);
+  }
+
+  .link-card:hover .link-card__arrow {
+    @apply opacity-100;
+  }
+
+  /* ─────────────────────────────────────
      BUTTON BLOCK
      ───────────────────────────────────── */
   .btn {
