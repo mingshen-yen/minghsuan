@@ -6,7 +6,7 @@ import tseslint from 'typescript-eslint'
 import { defineConfig, globalIgnores } from 'eslint/config'
 
 export default defineConfig([
-  globalIgnores(['dist']),
+  globalIgnores(['dist', '.claude']),
   {
     files: ['**/*.{ts,tsx}'],
     extends: [
@@ -17,6 +17,12 @@ export default defineConfig([
     ],
     languageOptions: {
       globals: globals.browser,
+      parserOptions: {
+        // Nested git worktrees under .claude/ each carry a tsconfig, which
+        // leaves the project service with several candidate roots to choose
+        // from. Pin it to this file's directory.
+        tsconfigRootDir: import.meta.dirname,
+      },
     },
   },
 ])

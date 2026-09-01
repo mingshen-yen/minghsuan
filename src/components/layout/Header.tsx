@@ -1,7 +1,7 @@
 import { Menu, X, Sun, Moon } from "lucide-react";
 import { useState } from "react";
 import { Link, useLocation } from "react-router";
-import { useTheme } from "../../lib/ThemeContext";
+import { useTheme } from "../../lib/useTheme";
 
 export const Header = () => {
   const [open, setOpen] = useState(false);
