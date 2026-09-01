@@ -3,8 +3,7 @@
     "home": "Home",
     "about": "About",
     "projects": "Projects",
-    "links": "Links",
-    "contact": "Contact"
+    "links": "Links"
   },
   "about": {
     "greeting": "Hello,",
@@ -18,6 +17,13 @@
     "geophysics": "Geophysics",
     "tech": "Core Technologies",
     "curiosity": "Curiosity"
+  },
+  "contact": {
+    "title": "Let's work together",
+    "intro": "I'm open to data science and climate risk roles, research collaborations, and speaking about natural hazards.",
+    "emailLabel": "Email",
+    "linkedinLabel": "LinkedIn",
+    "note": "I read everything and usually reply within a few days."
   },
   "links": {
     "viewPortfolio": "View my portfolio"

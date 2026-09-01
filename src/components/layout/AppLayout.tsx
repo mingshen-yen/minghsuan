@@ -1,19 +1,38 @@
 import { useEffect } from "react";
-import { Outlet } from "react-router";
+import { Outlet, useLocation } from "react-router";
 import { LangContext, type Lang } from "../../lib/i18n";
+import { Footer } from "./Footer";
 import { Header } from "./Header";
 
 export const AppLayout = ({ lang }: { lang: Lang }) => {
+  const { hash } = useLocation();
+
   useEffect(() => {
     document.documentElement.lang = lang;
   }, [lang]);
 
+  /* React Router does not scroll to #anchors on its own, so /about#contact
+     would otherwise land at the top of the page. */
+  useEffect(() => {
+    if (!hash) return;
+    document
+      .querySelector(hash)
+      ?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, [hash]);
+
   return (
     <LangContext.Provider value={lang}>
-      <Header />
-      <main className="max-h-screen mx-auto">
-        <Outlet />
-      </main>
+      {/* A column, so the footer is pushed to the bottom on short pages and
+          follows the content on long ones. `max-h-screen` here used to cap
+          main at 100vh while its content overflowed, which left the footer
+          sitting on top of that overflow. */}
+      <div className="flex min-h-screen flex-col">
+        <Header />
+        <main className="grow w-full mx-auto">
+          <Outlet />
+        </main>
+        <Footer />
+      </div>
     </LangContext.Provider>
   );
 };

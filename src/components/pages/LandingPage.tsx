@@ -1,11 +1,10 @@
-import { Footer } from "../layout/Footer";
 import { Hero } from "../layout/Hero";
 import { MediaPage } from "./MediaPage";
 import { ProjectsPage } from "./ProjectsPage";
 
 export const LandingPage = () => {
   return (
-    <div className="max-h-screen mx-auto">
+    <div className="mx-auto">
       <Hero />
       <div className="flex flex-col gap-10 xl:gap-4 md:px-15 pb-10">
         <ProjectsPage />
@@ -13,7 +12,6 @@ export const LandingPage = () => {
           <MediaPage />
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

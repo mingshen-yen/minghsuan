@@ -4,7 +4,7 @@ import { LandingPage } from "./components/pages/LandingPage";
 import { MediaPage } from "./components/pages/MediaPage";
 import { ProjectsPage } from "./components/pages/ProjectsPage";
 import { ProjectDetailPage } from "./components/pages/ProjectDetailPage";
-import { ContactPage } from "./components/pages/ContactPage";
+import { ContactRedirect } from "./components/pages/ContactRedirect";
 import { AboutPage } from "./components/pages/AboutPage";
 import { LinksPage } from "./components/pages/LinksPage";
 
@@ -18,7 +18,7 @@ const pages = [
   { path: "media", element: <MediaPage /> },
   { path: "portfolio", element: <ProjectsPage /> },
   { path: "portfolio/:slug", element: <ProjectDetailPage /> },
-  { path: "contact", element: <ContactPage /> },
+  { path: "contact", element: <ContactRedirect /> },
   { path: "links", element: <LinksPage /> },
 ];
 

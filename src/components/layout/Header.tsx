@@ -27,7 +27,6 @@ export const Header = () => {
     { to: "/about", label: ui.nav.about },
     { to: "/portfolio", label: ui.nav.projects },
     { to: "/links", label: ui.nav.links },
-    { to: "/contact", label: ui.nav.contact },
   ];
 
   const isActive = (path: string) =>

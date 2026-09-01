@@ -3,8 +3,7 @@
     "home": "首頁",
     "about": "關於我",
     "projects": "作品",
-    "links": "連結",
-    "contact": "聯絡"
+    "links": "連結"
   },
   "about": {
     "greeting": "你好，",
@@ -18,6 +17,13 @@
     "geophysics": "地球物理",
     "tech": "核心技術",
     "curiosity": "好奇心"
+  },
+  "contact": {
+    "title": "一起合作",
+    "intro": "我開放資料科學與氣候風險相關的職缺、研究合作，以及自然災害主題的演講邀約。",
+    "emailLabel": "寄信給我",
+    "linkedinLabel": "LinkedIn",
+    "note": "每一封信我都會看，通常幾天內回覆。"
   },
   "links": {
     "viewPortfolio": "看我的作品集"

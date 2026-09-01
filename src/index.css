@@ -264,6 +264,31 @@
   }
 
   /* ─────────────────────────────────────
+     CONTACT BLOCK
+     ───────────────────────────────────── */
+  .contact {
+    @apply z-(--z-base) scroll-mt-24 flex flex-col items-center text-center px-4 pt-20 pb-20 mx-auto max-w-140 w-full;
+    animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  /* h2 is uppercase by default, which shouts at a sentence this long. */
+  .contact__title {
+    @apply text-3xl md:text-4xl font-black normal-case text-(--text-heading);
+  }
+
+  .contact__intro {
+    @apply mt-4 text-sm leading-relaxed text-(--text-muted);
+  }
+
+  .contact__list {
+    @apply mt-9 flex flex-col gap-3 w-full list-none;
+  }
+
+  .contact__note {
+    @apply mt-8 text-xs text-(--text-dim);
+  }
+
+  /* ─────────────────────────────────────
      LINK HUB BLOCK
      ───────────────────────────────────── */
   .link-hub {
@@ -620,7 +645,7 @@
   }
 
   .project-detail__not-found {
-    @apply flex flex-col items-center justify-center min-h-screen text-(--text-muted);
+    @apply flex flex-col items-center justify-center min-h-[60vh] text-(--text-muted);
   }
 
   .project-detail__back {

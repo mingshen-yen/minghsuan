@@ -3,7 +3,6 @@ import { Link } from "react-router";
 import { getLinks } from "../../api/links";
 import { getUi } from "../../api/ui";
 import { localizePath, useLang } from "../../lib/i18n";
-import { Footer } from "../layout/Footer";
 import { LinkIcon } from "../layout/LinkIcon";
 
 export const LinksPage = () => {
@@ -12,7 +11,7 @@ export const LinksPage = () => {
   const ui = getUi(lang);
 
   return (
-    <div className="max-h-screen mx-auto">
+    <div className="mx-auto">
       <section className="link-hub">
         <img
           src={profile.image}
@@ -52,7 +51,6 @@ export const LinksPage = () => {
           <ArrowUpRight size={14} />
         </Link>
       </section>
-      <Footer />
     </div>
   );
 };

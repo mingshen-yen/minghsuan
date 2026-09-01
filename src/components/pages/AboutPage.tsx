@@ -4,6 +4,7 @@ import { getAbout } from "../../api/aboutMe";
 import { getUi } from "../../api/ui";
 import { useLang } from "../../lib/i18n";
 import { AboutSubPage } from "./AboutSubPage";
+import { ContactSection } from "../layout/ContactSection";
 
 type AboutSection = "experience" | "education" | "skills";
 
@@ -66,6 +67,7 @@ export const AboutPage = () => {
         </div>
         <StatsStrip />
       </div>
+      <ContactSection />
     </>
   );
 };
