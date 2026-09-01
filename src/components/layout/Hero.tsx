@@ -8,7 +8,7 @@ export const Hero = () => {
     <section className="section--hero">
       <div id="hero-text">
         <div className="hero__label">Data Scientist & Content Creator</div>
-        <h1>
+        <h1 className="hero__title">
           Doing research about <br /> <em>Natural Hazards</em> <br />
           and make content about it.
         </h1>
