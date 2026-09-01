@@ -1,14 +1,14 @@
 {
   "aboutMe": {
     "name": "Ming-Hsuan",
-    "title": "Data Scientist | Climate Risk Analyst | Sustainability Consultant",
+    "title": "Data Scientist | Natural Hazard & Risk Analyst | Scientific Computing",
     "description": "Building reproducible analytical workflows and translating complex datasets into actionable insights.",
     "image": "/images/profile-photo.png",
     "skills": ["Python", "Data Analysis", "Web Dev"]
   },
   "experience": [
     {
-      "title": "Data Research Analyst",
+      "title": "Research Data Analyst",
       "company": "National Central University",
       "location": "Taoyuan, Taiwan",
       "period": "2016-2019",
@@ -18,7 +18,7 @@
       ]
     },
     {
-      "title": "Research Scientist",
+      "title": "Research Data Scientist",
       "company": "GFZ Helmholtz-Zentrum für Geoforschung",
       "location": "Potsdam, Germany",
       "period": "2019-2026",
@@ -53,9 +53,18 @@
   ],
   "skills": [
     { "category": "Programming", "items": ["Python", "MATLAB", "TypeScript"] },
-    { "category": "Frameworks", "items": ["React", "Node.js", "Express", "Jupyter"] },
-    { "category": "Databases", "items": ["MongoDB", "PostgreSQL", "REST APIs"] },
+    {
+      "category": "Frameworks",
+      "items": ["React", "Node.js", "Express", "Jupyter"]
+    },
+    {
+      "category": "Databases",
+      "items": ["MongoDB", "PostgreSQL", "REST APIs"]
+    },
     { "category": "Tools", "items": ["Git", "GitHub", "QGIS"] },
-    { "category": "Languages", "items": ["English", "German", "Mandarin", "Taiwanese"] }
+    {
+      "category": "Languages",
+      "items": ["English", "German", "Mandarin", "Taiwanese"]
+    }
   ]
 }

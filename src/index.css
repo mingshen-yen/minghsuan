@@ -516,7 +516,7 @@
      STATS STRIP BLOCK
      ───────────────────────────────────── */
   .stats-strip {
-    @apply border-t border-b backdrop-blur-md bg-(--bg-stats-strip) border-(--color-accent-dim);
+    @apply w-full border-t border-b backdrop-blur-md bg-(--bg-stats-strip) border-(--color-accent-dim);
   }
 
   .stats-strip__inner {
@@ -543,7 +543,7 @@
      ABOUT SECTION
      ───────────────────────────────────── */
   .about__detail {
-    @apply flex flex-col items-center justify-center md:flex-row pt-5 xl:pt-0 xl:gap-5;
+    @apply flex flex-col items-center justify-center md:flex-row pt-5 xl:pt-0 gap-10 md:gap-12 lg:gap-16;
   }
 
   .about__note {
@@ -551,28 +551,56 @@
   }
 
   .about__text-box {
-    @apply flex flex-col items-center justify-start pt-6 px-4 md:w-150 2xl:w-160 md:min-h-102 2xl:min-h-110;
+    @apply flex flex-col items-start justify-start text-left pt-6 w-full md:w-150 2xl:w-160;
   }
 
+  .about__intro {
+    @apply flex flex-col items-center gap-3 text-center mb-4;
+  }
+
+  .about__greeting {
+    @apply text-[11px] font-medium tracking-widest uppercase text-(--color-accent-bright);
+  }
+
+  /* Was a div at 80px with leading-[0.8], which clipped descenders and gave
+     the page no heading element at all. */
   .about__title {
-    @apply font-serif text-5xl lg:text-6xl 2xl:text-[80px] font-black text-center leading-[0.8];
+    @apply font-sans text-4xl md:text-5xl font-black leading-tight text-(--text-heading);
+  }
+
+  .about__role {
+    @apply max-w-160 text-sm md:text-base text-(--text-muted);
+  }
+
+  .about__tabs {
+    @apply flex flex-wrap gap-6 w-full pb-5 mb-5 border-b border-(--border-subtle);
   }
 
   .about__cta {
-    @apply inline-flex items-center text-xs font-medium tracking-widest uppercase mb-2;
+    @apply relative inline-flex items-center pb-1 text-xs font-medium tracking-widest uppercase cursor-pointer transition-colors duration-200 text-(--text-muted) hover:text-(--color-accent-bright);
   }
 
-  .about__cta::after {
-    content: "➤";
-    @apply block w-10 ml-0.5;
-  }
-
+  /* Underline instead of scale: the nav gave up text scaling for the same
+     reason — it nudges the neighbours and blurs mid-transition. */
   .about__cta-active {
-    @apply text-(--color-accent) font-black scale-110;
+    @apply font-bold text-(--color-accent-bright);
+  }
+
+  .about__cta-active::after {
+    content: "";
+    @apply absolute left-0 -bottom-[21px] h-0.5 w-full bg-(--color-accent-bright);
+  }
+
+  /* A fixed panel: switching tabs must not resize the page. Anything taller
+     than this scrolls inside it rather than pushing the layout around. */
+  .about__panel {
+    @apply w-full h-100 md:h-102 2xl:h-110 overflow-y-auto pr-2;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-accent-dim) transparent;
   }
 
   .about__company {
-    @apply flex justify-center font-bold text-sm 2xl:text-base text-(--text-body);
+    @apply flex justify-start font-bold text-sm 2xl:text-base text-(--text-muted);
   }
 
   .about__experience_description {
@@ -588,7 +616,7 @@
   }
 
   .about__skills {
-    @apply text-sm flex flex-wrap gap-1 justify-center;
+    @apply text-sm flex flex-wrap gap-1 justify-start;
   }
 
   .about__skill {

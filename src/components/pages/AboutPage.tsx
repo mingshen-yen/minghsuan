@@ -14,12 +14,6 @@ export const AboutPage = () => {
   const ui = getUi(lang);
   const [section, setSection] = useState<AboutSection>("experience");
 
-  const handleSectionChange =
-    (newSection: AboutSection) => (e: React.MouseEvent) => {
-      e.preventDefault();
-      setSection(newSection);
-    };
-
   const isActive = (s: AboutSection) => section === s;
 
   const { aboutMe } = data;
@@ -28,10 +22,13 @@ export const AboutPage = () => {
     <>
       <section className="section-block">
         <div className="section section--flush section--about">
-          <div className="about__title">
-            <span className="text-3xl">{ui.about.greeting}</span>
-            <br /> {ui.about.iam} <em>{aboutMe.name}</em>
-          </div>
+          <header className="about__intro">
+            <p className="about__greeting">{ui.about.greeting}</p>
+            <h1 className="about__title">
+              {ui.about.iam} <em>{aboutMe.name}</em>
+            </h1>
+            <p className="about__role">{aboutMe.title}</p>
+          </header>
           <div className="about__detail">
             <div className="avatar">
               <div className="about__figure">
@@ -45,23 +42,24 @@ export const AboutPage = () => {
               </div>
             </div>
             <div className="about__text-box">
-              <div>
+              <div className="about__tabs" role="group">
                 {(["experience", "education", "skills"] as AboutSection[]).map(
                   (s) => (
-                    <a
+                    <button
                       key={s}
-                      href={`#${s}`}
-                      onClick={handleSectionChange(s)}
+                      type="button"
+                      aria-pressed={isActive(s)}
+                      onClick={() => setSection(s)}
                       className={`about__cta capitalize ${
                         isActive(s) ? "about__cta-active" : ""
                       }`}
                     >
                       {ui.about[s]}
-                    </a>
+                    </button>
                   ),
                 )}
               </div>
-              <div>
+              <div className="about__panel">
                 <AboutSubPage section={section} data={data} />
               </div>
             </div>
