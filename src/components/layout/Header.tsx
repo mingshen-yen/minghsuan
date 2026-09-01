@@ -84,10 +84,10 @@ export const Header = () => {
           {!open && (
             <button
               onClick={() => setOpen(true)}
-              className="nav__control"
+              className="nav__control nav__control--menu"
               aria-label="Open menu"
             >
-              <Menu size={22} />
+              <Menu size={28} />
             </button>
           )}
         </div>
@@ -101,7 +101,7 @@ export const Header = () => {
           className="nav__close"
           aria-label="Close menu"
         >
-          <X size={22} />
+          <X size={26} />
         </button>
 
         {navItems.map(({ to, label }) => (

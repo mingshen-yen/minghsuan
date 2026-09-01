@@ -239,8 +239,14 @@
     @apply text-(--color-accent-bright);
   }
 
+  /* The menu is the primary control on a phone, so it gets a larger target
+     than the language and theme buttons beside it. */
+  .nav__control--menu {
+    @apply w-11 h-11;
+  }
+
   .nav__close {
-    @apply self-end m-3 flex items-center justify-center w-9 h-9 rounded-full cursor-pointer text-(--text-body) hover:bg-(--border-subtle);
+    @apply self-end m-3 flex items-center justify-center w-11 h-11 rounded-full cursor-pointer text-(--text-body) hover:bg-(--border-subtle);
   }
 
   .nav__indicator {
