@@ -60,7 +60,6 @@
     --bg-project-card: #0d1f17;
     --bg-media-card: #07140f;
     --bg-skill-tag: #07140f;
-    --bg-stats-strip: #07140f;
     --text-body: #ffffff;
     --text-heading: #e8eaf2;
     --text-muted: #8b93b0;
@@ -97,7 +96,6 @@
     --bg-project-card: #edf5f1;
     --bg-media-card: #edf5f1;
     --bg-skill-tag: #e6f4ee;
-    --bg-stats-strip: #e6f4ee;
     --text-body: #1a1a1a;
     --text-heading: #111827;
     --text-muted: #4b5563;
@@ -275,7 +273,7 @@
      CONTACT BLOCK
      ───────────────────────────────────── */
   .contact {
-    @apply z-(--z-base) scroll-mt-24 flex flex-col items-center text-center px-6 pt-28 md:pt-40 mx-auto max-w-140 w-full;
+    @apply z-(--z-base) scroll-mt-24 flex flex-col items-center text-center px-6 pt-28 md:pt-40 mx-auto max-w-160 w-full;
     animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 
@@ -359,6 +357,19 @@
     @apply opacity-100;
   }
 
+  /* Every interactive element shares one focus ring. Only .card had a visible
+     focus state, which left keyboard users unable to see where they were. */
+  .btn,
+  .filter,
+  .nav__item,
+  .nav__control,
+  .nav__close,
+  .social-row__link,
+  .link-card,
+  .media-card__link {
+    @apply focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--color-accent-bright);
+  }
+
   /* ─────────────────────────────────────
      BUTTON BLOCK
      ───────────────────────────────────── */
@@ -430,6 +441,28 @@
 
   .filter__count {
     @apply text-[10px] font-medium opacity-60;
+  }
+
+  /* ─────────────────────────────────────
+     DIVIDER BLOCK
+     ───────────────────────────────────── */
+  .divider {
+    @apply mx-auto flex w-full max-w-190 items-center gap-6;
+  }
+
+  .divider::before,
+  .divider::after {
+    content: "";
+    @apply h-px flex-1 bg-(--border-subtle);
+  }
+
+  .divider__label {
+    @apply shrink-0 text-xs font-bold tracking-[0.2em] uppercase text-(--color-accent-bright);
+  }
+
+  /* Follows the divider, which already spent the gap announcing it. */
+  .section-block--tight {
+    @apply pt-10 md:pt-14;
   }
 
   .section-block__more {
@@ -514,71 +547,24 @@
   /* ─────────────────────────────────────
      STATS STRIP BLOCK
      ───────────────────────────────────── */
-  .stats-strip {
-    @apply w-full border-t border-b backdrop-blur-md bg-(--bg-stats-strip) border-(--color-accent-dim);
-  }
 
-  .stats-strip__inner {
-    @apply max-w-275 mx-auto grid grid-cols-2 md:grid-cols-4;
-  }
 
-  .stats-strip__item {
-    @apply py-4 text-center border-(--color-accent-dim) md:border-r md:last:border-r-0;
-  }
 
   /* Phones lay the strip out as 2x2, so it needs a divider between the columns
      and one between the rows, not just the column rules the 4-up row uses. */
-  .stats-strip__item:nth-child(odd) {
-    @apply border-r;
-  }
 
-  .stats-strip__item:nth-child(-n + 2) {
-    @apply border-b md:border-b-0;
-  }
 
-  .stats-strip__number {
-    @apply font-sans font-medium text-xl 2xl:text-3xl leading-none mb-1.5 text-(--text-heading);
-  }
 
-  .stats-strip__number span {
-    @apply text-(--color-accent);
-  }
 
-  .stats-strip__label {
-    @apply text-[11px] tracking-widest uppercase text-(--color-accent-bright);
-  }
 
   /* ─────────────────────────────────────
      ABOUT SECTION
      ───────────────────────────────────── */
-  /* Wider than the CV column below, so the role line has room to stay on one
-     line; the two therefore no longer share a left edge. */
-  .about__intro {
-    @apply mx-auto flex w-full max-w-230 flex-col md:flex-row items-center gap-8 pb-10 md:pb-0 md:gap-14;
-  }
-
-  /* The source is 497x700; object-cover only crops once a shorter box is
-     imposed, and object-top keeps the head and takes the trim off the bottom. */
-  .about__portrait {
-    @apply w-52 md:w-60 aspect-[4/5] shrink-0 rounded-sm object-cover object-top;
-  }
-
-  /* `grow` matters: as a plain flex item this is only as wide as its content,
-     so the short Chinese text centred inside a narrow box and read as
-     left-shifted. */
-  .about__identity {
-    @apply flex grow flex-col items-center gap-3 text-center;
-  }
-
-  .about__quote {
-    @apply max-w-160 text-sm italic text-(--text-muted);
-  }
-
   /* ─────────────────────────────────────
      CV BLOCK
      ───────────────────────────────────── */
   .cv-list {
-    @apply mx-auto flex w-full max-w-160 flex-col gap-9;
+    @apply mx-auto flex w-full max-w-190 flex-col gap-9;
   }
 
   .cv-item {
@@ -610,7 +596,7 @@
   }
 
   .skills-grid {
-    @apply mx-auto grid w-full max-w-160 grid-cols-1 sm:grid-cols-2 gap-7 text-center;
+    @apply mx-auto grid w-full max-w-190 grid-cols-1 sm:grid-cols-2 gap-7 text-center;
   }
 
   .skills-group__name {
@@ -621,18 +607,51 @@
     @apply flex flex-wrap justify-center gap-1.5 list-none;
   }
 
-  .about__greeting {
-    @apply text-[11px] font-medium tracking-widest uppercase text-(--color-accent-bright);
-  }
-
-  /* Was a div at 80px with leading-[0.8], which clipped descenders and gave
-     the page no heading element at all. */
   .about__title {
     @apply font-sans text-4xl md:text-5xl font-black leading-tight text-(--text-heading);
   }
 
+  .about__photo {
+    @apply mx-auto mt-8 w-full max-w-110 rounded-sm object-cover;
+  }
+
+  .about__identity {
+    @apply mx-auto flex max-w-190 flex-col items-center gap-3 text-center;
+  }
+
+  .about__greeting {
+    @apply text-[11px] font-medium tracking-widest uppercase text-(--color-accent-bright);
+  }
+
   .about__role {
     @apply text-sm md:text-base lg:whitespace-nowrap text-(--text-muted);
+  }
+
+  /* nowrap only from lg, where there is room; below that it must be allowed to
+     wrap rather than overflow. */
+  .about__quote {
+    @apply max-w-190 text-sm italic lg:whitespace-nowrap text-(--text-muted);
+  }
+
+  /* ─────────────────────────────────────
+     STORY BLOCK
+     ───────────────────────────────────── */
+  /* Overrides .section-block's page rhythm: these blocks are one continuous
+     read, so they sit closer than the sections around them. */
+  .story {
+    @apply flex flex-col pt-12 md:pt-16;
+  }
+
+  .story__heading {
+    @apply mx-auto w-full max-w-190 mb-5 text-xl md:text-2xl font-black normal-case text-(--text-heading);
+  }
+
+  .story__text {
+    @apply mx-auto w-full max-w-190 mb-4 text-sm md:text-base leading-loose text-(--text-body);
+  }
+
+  .story__image {
+    @apply mx-auto mt-6 w-full max-w-110 rounded-sm object-cover;
   }
 
   .about__skill {

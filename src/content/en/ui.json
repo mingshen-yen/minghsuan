@@ -25,13 +25,8 @@
     "iam": "I'm",
     "experience": "Experience",
     "education": "Education",
-    "skills": "Skills"
-  },
-  "stats": {
-    "years": "Years Experience",
-    "geophysics": "Geophysics",
-    "tech": "Core Technologies",
-    "curiosity": "Curiosity"
+    "skills": "Skills",
+    "background": "My background"
   },
   "contact": {
     "title": "Let's work together",

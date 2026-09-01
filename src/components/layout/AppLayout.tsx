@@ -26,7 +26,7 @@ export const AppLayout = ({ lang }: { lang: Lang }) => {
           follows the content on long ones. `max-h-screen` here used to cap
           main at 100vh while its content overflowed, which left the footer
           sitting on top of that overflow. */}
-      <div className="flex min-h-screen flex-col">
+      <div className="relative z-(--z-base) flex min-h-screen flex-col">
         <Header />
         <main className="grow w-full mx-auto pb-20 md:pb-28">
           <Outlet />

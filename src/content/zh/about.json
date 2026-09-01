@@ -3,9 +3,30 @@
     "name": "銘萱",
     "title": "研究資料科學家｜自然災害風險分析｜科學計算",
     "description": "打造可重現的分析流程，把複雜的資料轉譯成可以行動的洞察。",
-    "image": "/images/profile-photo.png",
-    "skills": ["Python", "資料分析", "網頁開發"]
+    "image": "/images/socialmedia.png",
+    "skills": [
+      "Python",
+      "資料分析",
+      "網頁開發"
+    ]
   },
+  "story": [
+    {
+      "heading": "好奇心就是我的工作",
+      "paragraphs": [
+        "嗨，我是銘萱。我是研究資料科學家，也在 YouTube 和 Podcast 上做內容。",
+        "我住在德國波茨坦。過去幾年的工作是研究地震與自然災害 —— 用資料去理解那些難以預測的事，再把結果說給不是專家的人聽。",
+        "如果要用一句話形容我在做的事：用資料理解風險，並把它說成人人聽得懂的話。"
+      ]
+    },
+    {
+      "heading": "旅行、閱讀、電影，還有胡思亂想",
+      "paragraphs": [
+        "旅居德國六年，我還是愛旅行、愛看書、愛電影，也愛把生活裡的小問題想得比需要的還久。",
+        "2023 年開始，我把這些觀察拍成影片、錄成節目 —— 一個 YouTube 頻道，還有一檔叫《Huh? Germany!》的 Podcast，聊德國生活真實的樣子。"
+      ]
+    }
+  ],
   "experience": [
     {
       "title": "研究資料科學家",
@@ -54,23 +75,45 @@
   "skills": [
     {
       "category": "程式語言",
-      "items": ["Python", "MATLAB", "TypeScript"]
+      "items": [
+        "Python",
+        "MATLAB",
+        "TypeScript"
+      ]
     },
     {
       "category": "框架",
-      "items": ["React", "Node.js", "Express", "Jupyter"]
+      "items": [
+        "React",
+        "Node.js",
+        "Express",
+        "Jupyter"
+      ]
     },
     {
       "category": "資料庫",
-      "items": ["MongoDB", "PostgreSQL", "REST APIs"]
+      "items": [
+        "MongoDB",
+        "PostgreSQL",
+        "REST APIs"
+      ]
     },
     {
       "category": "工具",
-      "items": ["Git", "GitHub", "QGIS"]
+      "items": [
+        "Git",
+        "GitHub",
+        "QGIS"
+      ]
     },
     {
       "category": "語言",
-      "items": ["英文", "德文", "中文", "台語"]
+      "items": [
+        "英文",
+        "德文",
+        "中文",
+        "台語"
+      ]
     }
   ]
 }

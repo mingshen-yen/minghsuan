@@ -3,37 +3,50 @@ import { getUi } from "../../api/ui";
 import { useLang } from "../../lib/i18n";
 import { ContactSection } from "../layout/ContactSection";
 import { SectionHead } from "../layout/SectionHead";
-import { StatsStrip } from "../layout/StatsStrip";
 import { EducationList, ExperienceList, SkillsGrid } from "./AboutSections";
 
 export const AboutPage = () => {
   const lang = useLang();
-  const { aboutMe, experience, education, skills } = getAbout(lang);
+  const { aboutMe, story, experience, education, skills } = getAbout(lang);
   const ui = getUi(lang);
 
   return (
     <>
       <section className="section-block">
-        <div className="about__intro">
-          <img
-            className="about__portrait"
-            src={aboutMe.image}
-            alt={aboutMe.name}
-          />
-          <div className="about__identity">
-            <p className="about__greeting">{ui.about.greeting}</p>
-            <h1 className="about__title">
-              {ui.about.iam} <em>{aboutMe.name}</em>
-            </h1>
-            <p className="about__role">{aboutMe.title}</p>
-            <p className="about__quote">{aboutMe.description}</p>
-          </div>
+        <header className="about__identity">
+          <p className="about__greeting">{ui.about.greeting}</p>
+          <h1 className="about__title">
+            {ui.about.iam} <em>{aboutMe.name}</em>
+          </h1>
+          <p className="about__role">{aboutMe.title}</p>
+          <p className="about__quote">{aboutMe.description}</p>
+        </header>
+        <img className="about__photo" src={aboutMe.image} alt={aboutMe.name} />
+      </section>
+
+      {story.map((block) => (
+        <section key={block.heading} className="section-block story">
+          <h2 className="story__heading">{block.heading}</h2>
+          {block.paragraphs.map((paragraph) => (
+            <p key={paragraph} className="story__text">
+              {paragraph}
+            </p>
+          ))}
+          {block.image && (
+            <img className="story__image" src={block.image} alt="" />
+          )}
+        </section>
+      ))}
+
+      {/* The professional half starts here, announced rather than eased into:
+          the story above and the CV below are read very differently. */}
+      <section className="section-block">
+        <div className="divider">
+          <span className="divider__label">{ui.about.background}</span>
         </div>
       </section>
 
-      <StatsStrip />
-
-      <section className="section-block">
+      <section className="section-block section-block--tight">
         <SectionHead title={ui.about.experience} />
         <ExperienceList items={experience} />
       </section>

@@ -12,6 +12,12 @@ export type Project = {
   order: number;
 };
 
+export type StoryBlock = {
+  heading: string;
+  paragraphs: string[];
+  image?: string;
+};
+
 export type AboutData = {
   aboutMe: {
     name: string;
@@ -20,6 +26,8 @@ export type AboutData = {
     image: string;
     skills: string[];
   };
+  /** The personal opening; the CV arrays below are the professional half. */
+  story: StoryBlock[];
   experience: ExperienceItem[];
   education: EducationItem[];
   skills: SkillCategory[];
@@ -83,15 +91,10 @@ export type UiStrings = {
   about: {
     greeting: string;
     iam: string;
+    background: string;
     experience: string;
     education: string;
     skills: string;
-  };
-  stats: {
-    years: string;
-    geophysics: string;
-    tech: string;
-    curiosity: string;
   };
   project: {
     viewAll: string;

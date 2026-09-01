@@ -25,13 +25,8 @@
     "iam": "我是",
     "experience": "經歷",
     "education": "學歷",
-    "skills": "技能"
-  },
-  "stats": {
-    "years": "年資",
-    "geophysics": "地球物理",
-    "tech": "核心技術",
-    "curiosity": "好奇心"
+    "skills": "技能",
+    "background": "我的專業背景"
   },
   "contact": {
     "title": "一起合作",
