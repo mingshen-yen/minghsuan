@@ -74,6 +74,12 @@ export type LinksData = {
 
 export type UiStrings = {
   nav: { home: string; about: string; projects: string; links: string };
+  sections: {
+    projectsLabel: string;
+    projectsTitle: string;
+    mediaLabel: string;
+    mediaTitle: string;
+  };
   about: {
     greeting: string;
     iam: string;

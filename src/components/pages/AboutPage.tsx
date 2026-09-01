@@ -26,47 +26,49 @@ export const AboutPage = () => {
 
   return (
     <>
-      <div className="section section--about">
-        <div className="about__title">
-          <span className="text-3xl">{ui.about.greeting}</span>
-          <br /> {ui.about.iam} <em>{aboutMe.name}</em>
-        </div>
-        <div className="about__detail">
-          <div className="avatar">
-            <div className="about__figure">
-              <img src={aboutMe.image} alt={`${aboutMe.name} avatar`} />
-              <div className="about__note">
-                <p className="text-lg">❝</p>
-                <p className="about__description italic">
-                  {aboutMe.description}
-                </p>
+      <section className="section-block">
+        <div className="section section--flush section--about">
+          <div className="about__title">
+            <span className="text-3xl">{ui.about.greeting}</span>
+            <br /> {ui.about.iam} <em>{aboutMe.name}</em>
+          </div>
+          <div className="about__detail">
+            <div className="avatar">
+              <div className="about__figure">
+                <img src={aboutMe.image} alt={`${aboutMe.name} avatar`} />
+                <div className="about__note">
+                  <p className="text-lg">❝</p>
+                  <p className="about__description italic">
+                    {aboutMe.description}
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="about__text-box">
+              <div>
+                {(["experience", "education", "skills"] as AboutSection[]).map(
+                  (s) => (
+                    <a
+                      key={s}
+                      href={`#${s}`}
+                      onClick={handleSectionChange(s)}
+                      className={`about__cta capitalize ${
+                        isActive(s) ? "about__cta-active" : ""
+                      }`}
+                    >
+                      {ui.about[s]}
+                    </a>
+                  ),
+                )}
+              </div>
+              <div>
+                <AboutSubPage section={section} data={data} />
               </div>
             </div>
           </div>
-          <div className="about__text-box">
-            <div>
-              {(["experience", "education", "skills"] as AboutSection[]).map(
-                (s) => (
-                  <a
-                    key={s}
-                    href={`#${s}`}
-                    onClick={handleSectionChange(s)}
-                    className={`about__cta capitalize ${
-                      isActive(s) ? "about__cta-active" : ""
-                    }`}
-                  >
-                    {ui.about[s]}
-                  </a>
-                ),
-              )}
-            </div>
-            <div>
-              <AboutSubPage section={section} data={data} />
-            </div>
-          </div>
+          <StatsStrip />
         </div>
-        <StatsStrip />
-      </div>
+      </section>
       <ContactSection />
     </>
   );

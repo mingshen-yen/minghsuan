@@ -1,7 +1,17 @@
+import { getUi } from "../../api/ui";
+import { useLang } from "../../lib/i18n";
+import { SectionHead } from "../layout/SectionHead";
+
 export const MediaPage = () => {
+  const ui = getUi(useLang());
+
   return (
-    <>
-      <div className="section gap-4">
+    <section className="section-block">
+      <SectionHead
+        label={ui.sections.mediaLabel}
+        title={ui.sections.mediaTitle}
+      />
+      <div className="section section--flush gap-4">
         <div className="h-full">
           <div className="media-card">
             <div className="media-card__text">
@@ -46,6 +56,6 @@ export const MediaPage = () => {
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
 };

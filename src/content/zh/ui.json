@@ -5,6 +5,12 @@
     "projects": "作品",
     "links": "連結"
   },
+  "sections": {
+    "projectsLabel": "精選作品",
+    "projectsTitle": "作品",
+    "mediaLabel": "研究之外",
+    "mediaTitle": "影片與 Podcast"
+  },
   "about": {
     "greeting": "你好，",
     "iam": "我是",

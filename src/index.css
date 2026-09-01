@@ -184,7 +184,7 @@
 
   /* Lines the bar up with the page content instead of the viewport edges. */
   .nav__inner {
-    @apply mx-auto w-full max-w-280 2xl:max-w-7xl px-5 md:px-8 pt-7 pb-4 flex items-center justify-between gap-4;
+    @apply mx-auto w-full max-w-280 2xl:max-w-7xl px-6 md:px-12 pt-7 pb-4 flex items-center justify-between gap-4;
   }
 
   .nav__logo {
@@ -252,7 +252,7 @@
   }
 
   .social-row__link {
-    @apply flex items-center justify-center w-9 h-9 rounded-xs transition-all duration-200 text-(--text-muted) border border-transparent hover:-translate-y-px hover:text-(--color-accent-bright) hover:border-(--color-accent-soft) hover:bg-(--color-accent-dim);
+    @apply flex items-center justify-center w-9 h-9 transition-colors duration-200 text-(--text-muted) hover:text-(--color-accent-bright);
   }
 
   .social-row__link svg {
@@ -267,7 +267,7 @@
      CONTACT BLOCK
      ───────────────────────────────────── */
   .contact {
-    @apply z-(--z-base) scroll-mt-24 flex flex-col items-center text-center px-4 pt-20 pb-20 mx-auto max-w-140 w-full;
+    @apply z-(--z-base) scroll-mt-24 flex flex-col items-center text-center px-6 pt-20 pb-20 mx-auto max-w-140 w-full;
     animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 
@@ -292,7 +292,7 @@
      LINK HUB BLOCK
      ───────────────────────────────────── */
   .link-hub {
-    @apply z-(--z-base) flex flex-col items-center text-center px-4 pt-30 pb-16 mx-auto max-w-140 w-full;
+    @apply z-(--z-base) flex flex-col items-center text-center px-6 pt-30 pb-16 mx-auto max-w-140 w-full;
     animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 
@@ -385,16 +385,45 @@
      SECTION CONTAINERS
      ───────────────────────────────────── */
   .section {
-    @apply z-(--z-base) px-4 md:px-0 pt-25 gap-10 md:gap-0 min-h-80 relative justify-center text-center lg:text-start items-center max-w-255 md:max-w-260 lg:max-w-270 xl:max-w-280 2xl:max-w-7xl mx-auto grid-cols-1 lg:grid lg:grid-cols-2;
+    @apply z-(--z-base) px-6 md:px-0 pt-25 gap-10 md:gap-0 min-h-80 relative justify-center text-center lg:text-start items-center max-w-255 md:max-w-260 lg:max-w-270 xl:max-w-280 2xl:max-w-7xl mx-auto grid-cols-1 lg:grid lg:grid-cols-2;
     animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 
+  /* Landing blocks own their vertical rhythm, so .section's own pt-25 is
+     switched off inside them with --flush. Horizontal padding matches the
+     header's, so the bar and the content share one left edge. */
+  .section-block {
+    @apply mx-auto w-full max-w-280 2xl:max-w-7xl px-6 md:px-12 pt-12 md:pt-16;
+  }
+
+  /* First block on a page sits under the fixed bar. */
+  main > *:first-child > .section-block:first-child,
+  main > .section-block:first-child {
+    @apply pt-28 md:pt-32;
+  }
+
+  .section--flush {
+    @apply w-full max-w-none px-0 pt-0;
+  }
+
+  .section-head {
+    @apply mb-8 flex flex-col items-center gap-2 text-center;
+  }
+
+  .section-head__label {
+    @apply text-[11px] font-medium tracking-widest uppercase text-(--color-accent-bright);
+  }
+
+  .section-head__title {
+    @apply text-2xl md:text-3xl font-black normal-case text-(--text-heading);
+  }
+
   .section--hero {
-    @apply bg-(--bg-nav)/40 z-(--z-base) pb-10 md:pb-15 pt-26 relative justify-center text-center mx-auto;
+    @apply bg-(--bg-nav)/40 z-(--z-base) px-6 pb-10 md:pb-15 pt-26 relative justify-center text-center mx-auto;
   }
 
   .section--about {
-    @apply pt-15 grid-cols-1 2xl:min-h-120;
+    @apply grid-cols-1 2xl:min-h-120;
   }
 
   .section--portfolio {

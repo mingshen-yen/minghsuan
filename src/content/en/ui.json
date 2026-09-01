@@ -5,6 +5,12 @@
     "projects": "Projects",
     "links": "Links"
   },
+  "sections": {
+    "projectsLabel": "Selected work",
+    "projectsTitle": "Projects",
+    "mediaLabel": "Beyond the research",
+    "mediaTitle": "Video & podcast"
+  },
   "about": {
     "greeting": "Hello,",
     "iam": "I'm",
