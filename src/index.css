@@ -174,7 +174,17 @@
      NAVIGATION BLOCK
      ───────────────────────────────────── */
   nav {
-    @apply fixed w-full z-10 p-3 flex items-center justify-between backdrop-blur-md border-b border-(--border-subtle) transition-colors duration-300 bg-(--bg-nav)/85;
+    @apply fixed w-full z-10 border-b border-transparent transition-colors duration-300;
+  }
+
+  /* Only once content is under it — a rule and a blur over empty page is noise. */
+  .nav--scrolled {
+    @apply backdrop-blur-md border-(--border-subtle);
+  }
+
+  /* Lines the bar up with the page content instead of the viewport edges. */
+  .nav__inner {
+    @apply mx-auto w-full max-w-280 2xl:max-w-7xl px-5 md:px-8 pt-7 pb-4 flex items-center justify-between gap-4;
   }
 
   .nav__logo {
@@ -187,20 +197,28 @@
     @apply hidden sm:inline ml-1;
   }
 
+  /* `ml-auto` collapses the gap after the wordmark, so the nav and the controls
+     read as one right-hand group instead of floating mid-bar. */
   .nav__desktop {
-    @apply hidden text-base md:flex items-center md:gap-8 lg:gap-10;
+    @apply hidden text-base md:flex ml-auto items-center md:gap-6 lg:gap-8;
   }
 
+  .nav__controls {
+    @apply hidden md:flex items-center gap-1 md:ml-2 lg:ml-4;
+  }
+
+  /* Sits in the bar's own flow, so it keeps the container's padding. */
   .nav__mobile {
-    @apply md:hidden fixed flex gap-2 items-center right-5;
+    @apply md:hidden flex gap-0.5 items-center;
   }
 
   .nav__drawer {
-    @apply z-(--z-dropdown) fixed top-0 right-0 w-50 rounded-bl-lg shadow-lg flex flex-col justify-center items-center pb-10 overflow-hidden md:hidden transform transition-transform duration-300 ease-in-out bg-(--bg-nav);
+    @apply z-(--z-dropdown) fixed top-0 right-0 w-52 rounded-bl-lg shadow-lg flex flex-col items-center gap-4 pb-8 overflow-hidden md:hidden transform transition-transform duration-300 ease-in-out bg-(--bg-nav);
   }
 
-  .nav__theme-toggle {
-    @apply p-2 rounded-full transition-all duration-200 hover:scale-110 text-(--text-muted) hover:text-(--color-accent);
+  /* One shape and hit area for every control in the bar. */
+  .nav__control {
+    @apply flex shrink-0 items-center justify-center w-9 h-9 rounded-full cursor-pointer transition-colors duration-200 text-(--text-muted) hover:text-(--color-accent-bright) hover:bg-(--color-accent-dim);
   }
 
   /* `relative` keeps .nav__indicator sized to the item; without it the marker
@@ -217,12 +235,8 @@
     @apply text-(--color-accent-bright);
   }
 
-  .nav__toggle {
-    @apply md:hidden flex items-center relative z-(--z-dropdown);
-  }
-
   .nav__close {
-    @apply self-end m-4 p-2 rounded-full text-(--text-body) hover:bg-(--border-subtle);
+    @apply self-end m-3 flex items-center justify-center w-9 h-9 rounded-full cursor-pointer text-(--text-body) hover:bg-(--border-subtle);
   }
 
   .nav__indicator {
@@ -246,7 +260,7 @@
   }
 
   .nav__lang {
-    @apply px-2 py-1 text-xs font-bold tracking-wide rounded-xs transition-colors duration-200 text-(--text-muted) hover:text-(--color-accent-bright);
+    @apply text-xs font-bold tracking-wide;
   }
 
   /* ─────────────────────────────────────
