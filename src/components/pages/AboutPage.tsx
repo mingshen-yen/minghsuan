@@ -40,7 +40,7 @@ export const AboutPage = () => {
 
       {/* The professional half starts here, announced rather than eased into:
           the story above and the CV below are read very differently. */}
-      <section className="section-block">
+      <section className="section-block section-block--compact">
         <div className="divider">
           <span className="divider__label">{ui.about.background}</span>
         </div>
@@ -51,12 +51,12 @@ export const AboutPage = () => {
         <ExperienceList items={experience} />
       </section>
 
-      <section className="section-block">
+      <section className="section-block section-block--compact">
         <SectionHead title={ui.about.education} />
         <EducationList items={education} />
       </section>
 
-      <section className="section-block">
+      <section className="section-block section-block--compact">
         <SectionHead title={ui.about.skills} />
         <SkillsGrid items={skills} />
       </section>

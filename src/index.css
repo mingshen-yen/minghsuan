@@ -469,6 +469,12 @@
     @apply pt-10 md:pt-14;
   }
 
+  /* Parts of one document — the CV sections — rather than separate subjects,
+     so they sit closer than the page's default rhythm. */
+  .section-block--compact {
+    @apply pt-16 md:pt-20;
+  }
+
   .section-block__more {
     @apply mt-8 flex justify-center;
   }
@@ -615,8 +621,11 @@
     @apply font-sans text-4xl md:text-5xl font-black leading-tight text-(--text-heading);
   }
 
+  /* The source is a 3:4 full-length shot; a 3:2 box keeps the middle band —
+     head through knees — and takes the trim off the top and bottom. Cropped
+     in CSS rather than in the file, so the framing stays adjustable. */
   .about__photo {
-    @apply mx-auto mt-8 w-full max-w-110 rounded-sm object-cover;
+    @apply mx-auto mt-8 w-full max-w-140 aspect-[3/2] rounded-sm object-cover object-center;
   }
 
   .about__identity {
