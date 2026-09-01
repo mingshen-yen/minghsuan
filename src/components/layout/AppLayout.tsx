@@ -28,7 +28,7 @@ export const AppLayout = ({ lang }: { lang: Lang }) => {
           sitting on top of that overflow. */}
       <div className="flex min-h-screen flex-col">
         <Header />
-        <main className="grow w-full mx-auto">
+        <main className="grow w-full mx-auto pb-20 md:pb-28">
           <Outlet />
         </main>
         <Footer />

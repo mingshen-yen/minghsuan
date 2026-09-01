@@ -95,6 +95,7 @@ export type UiStrings = {
   };
   project: {
     viewAll: string;
+    filterAll: string;
     back: string;
     live: string;
     source: string;

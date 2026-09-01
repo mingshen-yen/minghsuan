@@ -275,7 +275,7 @@
      CONTACT BLOCK
      ───────────────────────────────────── */
   .contact {
-    @apply z-(--z-base) scroll-mt-24 flex flex-col items-center text-center px-6 pt-20 pb-20 mx-auto max-w-140 w-full;
+    @apply z-(--z-base) scroll-mt-24 flex flex-col items-center text-center px-6 pt-20 mx-auto max-w-140 w-full;
     animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 
@@ -300,7 +300,7 @@
      LINK HUB BLOCK
      ───────────────────────────────────── */
   .link-hub {
-    @apply z-(--z-base) flex flex-col items-center text-center px-6 pt-30 pb-16 mx-auto max-w-140 w-full;
+    @apply z-(--z-base) flex flex-col items-center text-center px-6 pt-30 mx-auto max-w-140 w-full;
     animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 
@@ -413,6 +413,25 @@
   /* min-h-0 matters: .section forces a 320px floor, which a short block like
      the media rows would otherwise sit inside, centred, with dead space above
      and below that no padding rule accounts for. */
+  /* ─────────────────────────────────────
+     FILTER BAR BLOCK
+     ───────────────────────────────────── */
+  .filter-bar {
+    @apply mb-8 flex flex-wrap justify-center gap-2;
+  }
+
+  .filter {
+    @apply inline-flex items-center gap-2 rounded-sm border px-3.5 py-1.5 text-xs font-bold tracking-widest uppercase cursor-pointer transition-colors duration-200 border-(--border-subtle) text-(--text-muted) hover:border-(--color-accent-soft) hover:text-(--color-accent-bright);
+  }
+
+  .filter--active {
+    @apply border-(--color-accent-soft) bg-(--color-accent-dim) text-(--color-accent-bright);
+  }
+
+  .filter__count {
+    @apply text-[10px] font-medium opacity-60;
+  }
+
   .section-block__more {
     @apply mt-8 flex justify-center;
   }
@@ -434,7 +453,7 @@
   }
 
   .section--hero {
-    @apply bg-(--bg-nav)/40 z-(--z-base) px-6 pb-10 md:pb-15 pt-26 relative justify-center text-center mx-auto;
+    @apply z-(--z-base) px-6 pt-32 md:pt-42 pb-14 md:pb-20 relative justify-center text-center mx-auto;
   }
 
   .section--portfolio {
@@ -673,7 +692,7 @@
      PROJECT CARD BLOCK
      ───────────────────────────────────── */
   .card {
-    @apply border rounded-xs transition-all duration-200 hover:-translate-y-px hover:shadow-(--shadow-accent);
+    @apply border rounded-xs overflow-hidden transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--color-accent-bright);
   }
 
   .card--project {
@@ -681,7 +700,7 @@
   }
 
   .card__image-frame {
-    @apply h-40 overflow-hidden bg-(--bg-card);
+    @apply aspect-[16/10] w-full overflow-hidden bg-(--bg-card);
   }
 
   .card__image {
@@ -692,17 +711,21 @@
     @apply scale-105;
   }
 
+  .card--project:hover .card__title {
+    @apply text-(--color-accent-bright);
+  }
+
   .card__content {
-    @apply flex grow flex-col gap-2 p-4;
+    @apply flex grow flex-col items-start gap-2.5 p-5;
   }
 
   /* h-6 used to clip any title that wrapped, which all four of them do. */
   .card__title {
-    @apply text-start text-base font-semibold text-(--text-heading);
+    @apply text-start text-base font-bold transition-colors duration-200 text-(--text-heading);
   }
 
   .card__description {
-    @apply text-xs text-start leading-relaxed line-clamp-2 text-(--text-muted);
+    @apply text-sm text-start leading-relaxed line-clamp-3 text-(--text-muted);
   }
 
   .card__tag {
@@ -722,7 +745,7 @@
      PROJECT DETAIL PAGE
      ───────────────────────────────────── */
   .project-detail {
-    @apply z-(--z-base) relative mx-auto w-full max-w-190 px-6 md:px-12 pt-28 md:pt-32 pb-24;
+    @apply z-(--z-base) relative mx-auto w-full max-w-190 px-6 md:px-12 pt-28 md:pt-32;
     animation: fadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 

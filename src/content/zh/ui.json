@@ -17,7 +17,8 @@
     "source": "原始碼",
     "builtWith": "使用技術",
     "notFound": "找不到這個作品。",
-    "viewAll": "看所有作品"
+    "viewAll": "看所有作品",
+    "filterAll": "全部"
   },
   "about": {
     "greeting": "你好，",

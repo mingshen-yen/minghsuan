@@ -4,7 +4,7 @@ type Props = {
   title: string;
 };
 
-/** Names a landing-page block, so a scroller knows what they are looking at. */
+/** Names a page block, so a scroller knows what they are looking at. */
 export const SectionHead = ({ label, title }: Props) => (
   <header className="section-head">
     {label && <span className="section-head__label">{label}</span>}

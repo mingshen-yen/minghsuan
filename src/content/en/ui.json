@@ -17,7 +17,8 @@
     "source": "Source",
     "builtWith": "Built with",
     "notFound": "Project not found.",
-    "viewAll": "View all projects"
+    "viewAll": "View all projects",
+    "filterAll": "All"
   },
   "about": {
     "greeting": "Hello,",

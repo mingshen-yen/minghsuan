@@ -1,10 +1,9 @@
 import { Link } from "react-router";
-import { getFeaturedProjects, getProjects } from "../../api/projects";
 import { localizePath, useLang } from "../../lib/i18n";
+import type { Project } from "../../lib/type";
 
-/** `featuredOnly` is the landing page's shorter selection; /portfolio shows all. */
-export const ProjectCard = ({ featuredOnly }: { featuredOnly?: boolean }) => {
-  const projects = featuredOnly ? getFeaturedProjects() : getProjects();
+/** Renders whatever selection the page decided on; it no longer fetches its own. */
+export const ProjectCard = ({ projects }: { projects: Project[] }) => {
   const lang = useLang();
 
   return (

@@ -1,5 +1,4 @@
 import { localizePath, useLang } from "../../lib/i18n";
-import { SocialRow } from "./SocialRow";
 
 export const Hero = () => {
   const lang = useLang();
@@ -52,10 +51,6 @@ export const Hero = () => {
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
           </a>
-        </div>
-
-        <div className="pt-6">
-          <SocialRow only={["linkedin", "github", "youtube"]} />
         </div>
       </div>
     </section>
