@@ -1,0 +1,22 @@
+[
+  {
+    "tone": "video",
+    "tag": "YouTube",
+    "image": "/images/socialmedia.png",
+    "imagePosition": "center",
+    "title": "Mingshen See the World",
+    "description": "Exploring corners of the world through curious eyes.",
+    "url": "https://www.youtube.com/@mingshenworld",
+    "linkLabel": "Visit the channel"
+  },
+  {
+    "tone": "audio",
+    "tag": "Podcast",
+    "image": "/images/huhGermany_LOGO.jpg",
+    "imagePosition": "center",
+    "title": "Huh? Germany!",
+    "description": "A foreigners share life abroad and travel stories.",
+    "url": "https://open.firstory.me/user/cmdthrpjf01ra01umdz514uwp",
+    "linkLabel": "All episodes"
+  }
+]

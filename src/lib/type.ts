@@ -104,3 +104,16 @@ export type UiStrings = {
   footer: { rights: string };
   langSwitch: { label: string; aria: string };
 };
+
+export type MediaItem = {
+  /** Drives the tag colour; see .media-card__tag--*. */
+  tone: "video" | "audio";
+  tag: string;
+  image: string;
+  /** Which edge the crop keeps; portraits need "top" to keep the face. */
+  imagePosition: "top" | "center";
+  title: string;
+  description: string;
+  url: string;
+  linkLabel: string;
+};

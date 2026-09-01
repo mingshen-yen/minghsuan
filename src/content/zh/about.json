@@ -1,14 +1,10 @@
 {
   "aboutMe": {
     "name": "銘萱",
-    "title": "研究資料科學家｜自然災害風險分析｜學術計算",
+    "title": "研究資料科學家｜自然災害風險分析｜科學計算",
     "description": "打造可重現的分析流程，把複雜的資料轉譯成可以行動的洞察。",
     "image": "/images/profile-photo.png",
-    "skills": [
-      "Python",
-      "資料分析",
-      "網頁開發"
-    ]
+    "skills": ["Python", "資料分析", "網頁開發"]
   },
   "experience": [
     {
@@ -58,45 +54,23 @@
   "skills": [
     {
       "category": "程式語言",
-      "items": [
-        "Python",
-        "MATLAB",
-        "TypeScript"
-      ]
+      "items": ["Python", "MATLAB", "TypeScript"]
     },
     {
       "category": "框架",
-      "items": [
-        "React",
-        "Node.js",
-        "Express",
-        "Jupyter"
-      ]
+      "items": ["React", "Node.js", "Express", "Jupyter"]
     },
     {
       "category": "資料庫",
-      "items": [
-        "MongoDB",
-        "PostgreSQL",
-        "REST APIs"
-      ]
+      "items": ["MongoDB", "PostgreSQL", "REST APIs"]
     },
     {
       "category": "工具",
-      "items": [
-        "Git",
-        "GitHub",
-        "QGIS"
-      ]
+      "items": ["Git", "GitHub", "QGIS"]
     },
     {
       "category": "語言",
-      "items": [
-        "英文",
-        "德文",
-        "中文",
-        "台語"
-      ]
+      "items": ["英文", "德文", "中文", "台語"]
     }
   ]
 }

@@ -43,6 +43,8 @@
     --color-border: rgba(255, 255, 255, 0.07);
 
     /* Component Colors */
+    --color-tag-video: #b4232a;
+    --color-tag-audio: #b4730f;
     --color-skill-bg: #07140f;
     --color-skill-text: #3db87a;
     --color-card-bg: rgba(24, 26, 28, 0.75);
@@ -79,6 +81,8 @@
     --color-accent-bright: #0a7d55;
     --color-accent-dim: rgba(13, 158, 107, 0.1);
     --color-accent-soft: rgba(13, 158, 107, 0.3);
+    --color-tag-video: #a41b22;
+    --color-tag-audio: #9a610a;
     --color-skill-text: #0a7d55;
     --color-card-border: rgba(13, 158, 107, 0.5);
     --shadow-accent: 0 8px 24px rgba(13, 158, 107, 0.2);
@@ -393,7 +397,7 @@
      switched off inside them with --flush. Horizontal padding matches the
      header's, so the bar and the content share one left edge. */
   .section-block {
-    @apply mx-auto w-full max-w-280 2xl:max-w-7xl px-6 md:px-12 pt-12 md:pt-16;
+    @apply mx-auto w-full max-w-280 2xl:max-w-7xl px-6 md:px-12 pt-14 md:pt-20;
   }
 
   /* First block on a page sits under the fixed bar. */
@@ -402,8 +406,11 @@
     @apply pt-28 md:pt-32;
   }
 
+  /* min-h-0 matters: .section forces a 320px floor, which a short block like
+     the media rows would otherwise sit inside, centred, with dead space above
+     and below that no padding rule accounts for. */
   .section--flush {
-    @apply w-full max-w-none px-0 pt-0;
+    @apply w-full max-w-none min-h-0 px-0 pt-0;
   }
 
   .section-head {
@@ -608,28 +615,50 @@
   /* ─────────────────────────────────────
      MEDIA SECTION
      ───────────────────────────────────── */
+  /* No hover lift: the panel is not clickable, only the link inside it is, so
+     a lift would promise an interaction that does not exist. mb-4 used to
+     double the grid gap under every card. */
+  /* No panel: the cover art is already a framed block, so wrapping it in a
+     second bordered box read as a frame inside a frame. No h-full either —
+     each row is as tall as its own content. */
+  /* The image and the text form one centred group, so the body must not grow —
+     a growing body would fill the cell and pin the cover to the left edge. */
   .media-card {
-    @apply z-(--z-elevated) relative mb-4 p-6 rounded-xs flex flex-col gap-6 items-center h-full lg:items-start shadow-2xl hover:-translate-y-px hover:shadow-(--shadow-accent) bg-(--bg-media-card) border border-(--color-accent-dim) transition-colors duration-300;
+    @apply z-(--z-base) relative flex w-full max-w-130 flex-row items-center justify-start gap-5;
   }
 
-  .media-card__text {
-    @apply flex flex-col items-center md:items-start;
+  .media-card__body {
+    @apply flex min-w-0 flex-col items-start gap-2 text-start;
   }
 
-  .media-card__frame {
-    @apply w-full flex-1 min-h-0;
+  /* Both sources are square cover art, so a square frame crops neither the
+     podcast title nor the face. */
+  .media-card__image {
+    @apply w-32 md:w-40 shrink-0 aspect-square rounded-xs object-cover border border-(--color-accent-dim);
   }
 
-  .media-card__frame--video {
-    @apply flex-none;
+  .media-card__title {
+    @apply pb-0 text-xl md:text-2xl font-black text-(--text-heading);
   }
 
-  .media-card__embed {
-    @apply block w-full min-h-80 border-0;
+  .media-card__blurb {
+    @apply text-sm text-(--text-muted);
+  }
+
+  .media-card__link {
+    @apply mt-1 inline-flex items-center gap-1 text-xs font-bold tracking-wide transition-colors duration-200 text-(--color-accent-bright) hover:text-(--color-accent);
   }
 
   .media-card__tag {
     @apply w-fit italic text-sm font-bold py-0.5 px-1.5 rounded-sm text-white;
+  }
+
+  .media-card__tag--video {
+    @apply bg-(--color-tag-video);
+  }
+
+  .media-card__tag--audio {
+    @apply bg-(--color-tag-audio);
   }
 
   /* ─────────────────────────────────────

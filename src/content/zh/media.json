@@ -1,0 +1,22 @@
+[
+  {
+    "tone": "video",
+    "tag": "YouTube",
+    "image": "/images/socialmedia.png",
+    "imagePosition": "center",
+    "title": "Mingshen 看世界",
+    "description": "用好奇的眼睛，走看世界的各個角落。",
+    "url": "https://www.youtube.com/@mingshenworld",
+    "linkLabel": "前往頻道"
+  },
+  {
+    "tone": "audio",
+    "tag": "Podcast",
+    "image": "/images/huhGermany_LOGO.jpg",
+    "imagePosition": "center",
+    "title": "Huh? Germany!",
+    "description": "一個台灣人在德國 —— 聊旅居生活、旅行故事，以及日常縫隙裡的觀察。",
+    "url": "https://open.firstory.me/user/cmdthrpjf01ra01umdz514uwp",
+    "linkLabel": "所有集數"
+  }
+]

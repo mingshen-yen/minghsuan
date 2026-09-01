@@ -1,9 +1,13 @@
+import { ArrowUpRight } from "lucide-react";
+import { getMedia } from "../../api/media";
 import { getUi } from "../../api/ui";
 import { useLang } from "../../lib/i18n";
 import { SectionHead } from "../layout/SectionHead";
 
 export const MediaPage = () => {
-  const ui = getUi(useLang());
+  const lang = useLang();
+  const ui = getUi(lang);
+  const items = getMedia(lang);
 
   return (
     <section className="section-block">
@@ -11,50 +15,35 @@ export const MediaPage = () => {
         label={ui.sections.mediaLabel}
         title={ui.sections.mediaTitle}
       />
-      <div className="section section--flush gap-4">
-        <div className="h-full">
-          <div className="media-card">
-            <div className="media-card__text">
-              <div className="media-card__tag bg-red-700">YouTube</div>
-              <h3>Mingshen See the world</h3>
-              <p>
-                Exploring corners of the world through curious eyes. <br />
-                <br />
-              </p>
+      <div className="section section--flush flex flex-col items-center gap-14 lg:grid lg:grid-cols-2 lg:gap-12">
+        {items.map((item) => (
+          <article key={item.url} className="media-card">
+            <img
+              className={`media-card__image ${
+                item.imagePosition === "top" ? "object-top" : "object-center"
+              }`}
+              src={item.image}
+              alt={item.title}
+              loading="lazy"
+            />
+            <div className="media-card__body">
+              <span className={`media-card__tag media-card__tag--${item.tone}`}>
+                {item.tag}
+              </span>
+              <h3 className="media-card__title">{item.title}</h3>
+              <p className="media-card__blurb">{item.description}</p>
+              <a
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="media-card__link"
+              >
+                {item.linkLabel}
+                <ArrowUpRight size={14} />
+              </a>
             </div>
-            <div className="media-card__frame media-card__frame--video">
-              <iframe
-                className="media-card__embed"
-                src="https://www.youtube.com/embed/D4RDnNKNF6Q?si=WvGH7TV59YBBbBmz"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                loading="lazy"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="h-full">
-          <div className="media-card h-full">
-            <div className="media-card__text">
-              <div className="media-card__tag bg-amber-600">Podcast</div>
-              <h3>Huh? Germany!</h3>
-              <p>
-                A Taiwanese in Germany — sharing life abroad, travel stories,
-                and quiet observations from daily moments in between.
-              </p>
-            </div>
-            <div className="media-card__frame">
-              <iframe
-                className="media-card__embed"
-                title="Firstory Podcast"
-                src="https://open.firstory.me/embed/user/cmdthrpjf01ra01umdz514uwp"
-                scrolling="no"
-                loading="lazy"
-              />
-            </div>
-          </div>
-        </div>
+          </article>
+        ))}
       </div>
     </section>
   );
