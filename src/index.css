@@ -608,12 +608,14 @@
     @apply text-center;
   }
 
+  /* The accent sits on the role, not the employer: only one of the two lines
+     should carry it, and the role is the one being scanned for. */
   .cv-item__role {
-    @apply text-base md:text-lg font-bold text-(--text-heading);
+    @apply text-lg md:text-xl font-bold text-(--color-accent-bright);
   }
 
   .cv-item__org {
-    @apply mt-0.5 text-sm font-medium text-(--color-accent-bright);
+    @apply mt-0.5 text-sm font-medium text-(--text-muted);
   }
 
   .cv-item__meta {
