@@ -2,35 +2,35 @@
   "nav": {
     "home": "首頁",
     "about": "關於我",
-    "projects": "作品",
+    "projects": "作品集",
     "links": "連結"
   },
   "sections": {
     "projectsLabel": "精選作品",
     "projectsTitle": "作品",
     "mediaLabel": "研究之外",
-    "mediaTitle": "影片與 Podcast"
+    "mediaTitle": "影片與Podcast"
   },
   "project": {
     "back": "所有作品",
     "live": "線上展示",
-    "source": "原始碼",
+    "source": "原始來源",
     "builtWith": "使用技術",
-    "notFound": "找不到這個作品。",
+    "notFound": "找不到這個作品",
     "viewAll": "看所有作品",
     "filterAll": "全部"
   },
   "about": {
     "greeting": "你好，",
     "iam": "我是",
-    "experience": "經歷",
+    "experience": "專業經歷",
     "education": "學歷",
     "skills": "技能",
     "background": "我的專業背景"
   },
   "contact": {
     "title": "一起合作",
-    "intro": "我開放資料科學與氣候風險相關的職缺、研究合作，以及自然災害主題的演講邀約。",
+    "intro": "我開放資料科學與自然災害風險相關的職缺和研究合作，或德國文化生活的演講邀約。",
     "emailLabel": "寄信給我",
     "linkedinLabel": "LinkedIn",
     "note": "每一封信我都會看，通常幾天內回覆。"
