@@ -374,7 +374,7 @@
      BUTTON BLOCK
      ───────────────────────────────────── */
   .btn {
-    @apply inline-flex items-center gap-1 px-4 py-2.5 w-fit rounded-xs text-sm font-bold cursor-pointer transition-all duration-200 hover:-translate-y-px;
+    @apply inline-flex items-center gap-1 px-4 py-2.5 w-fit rounded-xs text-sm font-bold whitespace-nowrap cursor-pointer transition-all duration-200 hover:-translate-y-px;
   }
 
   .btn--primary {
@@ -488,7 +488,7 @@
   }
 
   .section-head__title {
-    @apply text-2xl md:text-3xl font-black normal-case text-(--text-heading);
+    @apply text-3xl md:text-4xl font-black normal-case text-(--text-heading);
   }
 
   .section--hero {
@@ -546,8 +546,10 @@
     @apply hidden md:inline;
   }
 
+  /* Wraps as whole buttons; without it the row stayed on one line and the
+     labels inside broke instead. */
   .hero__cta {
-    @apply pt-8 md:pt-10 flex gap-3 items-center justify-center;
+    @apply pt-8 md:pt-10 flex flex-wrap gap-3 items-center justify-center;
   }
 
   /* ─────────────────────────────────────
