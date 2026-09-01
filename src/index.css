@@ -280,8 +280,10 @@
     @apply text-3xl md:text-4xl font-black normal-case text-(--text-heading);
   }
 
+  /* Lifted by size and tone rather than colour: a green sentence this long
+     reads as a link, and the accent is what marks the real links below it. */
   .contact__intro {
-    @apply mt-4 text-sm leading-relaxed text-(--text-muted);
+    @apply mt-4 text-base leading-relaxed text-(--text-heading);
   }
 
   .contact__list {
