@@ -92,11 +92,24 @@ to `main`.
 
 ## Deployment
 
-The site is hosted on **Cloudflare Pages** (project `minghsuan`, live at
-<https://minghsuan.pages.dev>) and builds automatically from the `main` branch.
+The site is hosted on **Cloudflare Pages** (project `minghsuan`) and builds
+automatically from the `main` branch.
 
 **To deploy: push to `main`.** There is no manual deploy command — `npm run
 deploy` only prints this reminder and exits.
+
+### Domains
+
+| Hostname                | Behaviour                                        |
+| ----------------------- | ------------------------------------------------ |
+| <https://mingslab.com>  | Canonical URL                                    |
+| `www.mingslab.com`      | 301 redirect to the canonical URL                |
+| `minghsuan.pages.dev`   | Cloudflare Pages default domain, still reachable |
+
+Both custom hostnames are bound to the Pages project and served over
+Cloudflare-managed TLS. The `www` → apex redirect is a Cloudflare **Redirect
+Rule** on the `mingslab.com` zone, not something in this repo, so changing it
+means editing the rule in the Cloudflare dashboard.
 
 Cloudflare Pages build settings:
 
