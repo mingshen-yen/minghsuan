@@ -14,9 +14,9 @@
      the body text instead of dropping into a Ming/serif style. */
   --font-serif:
     ui-serif, Georgia, Cambria, "Times New Roman", Times, "Noto Sans TC", serif;
-  /* Wordmark only. Fredoka has no ✦ (U+2726), so the star still comes from the
-     system symbol font, exactly as it did before. */
-  --font-display: "Fredoka", ui-rounded, "Noto Sans TC", sans-serif;
+  /* Wordmark only. The star ✦ (U+2726) is not in the face, so it still comes
+     from the system symbol font. */
+  --font-display: "Fraunces", ui-serif, "Noto Sans TC", serif;
 }
 
 @layer base {
@@ -188,7 +188,7 @@
   }
 
   .nav__logo {
-    @apply md:flex items-center ml-2 font-display text-2xl font-semibold tracking-tight not-italic text-(--text-body);
+    @apply md:flex items-center ml-2 font-display text-2xl font-medium tracking-tight not-italic text-(--text-body);
   }
 
   /* The full name from sm up; below that the monogram stands in, so the bar
