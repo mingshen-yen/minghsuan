@@ -10,7 +10,7 @@ import { SectionHead } from "../layout/SectionHead";
 const ALL = "__all";
 
 /**
- * `featuredOnly` is what separates the landing section from /portfolio: without
+ * `featuredOnly` is what separates the landing section from /projects: without
  * it the two rendered the same grid under the same heading, so the hero's
  * "View projects" button led to a page the visitor had just scrolled past.
  * The full page also filters; the landing section deliberately does not.
@@ -39,7 +39,7 @@ export const ProjectsPage = ({ featuredOnly }: { featuredOnly?: boolean }) => {
   return (
     <section className="section-block">
       {/* The eyebrow introduces the block on the landing page, where it sits
-          among other sections; on /portfolio the page is the block. */}
+          among other sections; on /projects the page is the block. */}
       <SectionHead
         label={featuredOnly ? ui.sections.projectsLabel : undefined}
         title={ui.sections.projectsTitle}
@@ -69,7 +69,7 @@ export const ProjectsPage = ({ featuredOnly }: { featuredOnly?: boolean }) => {
       {featuredOnly && (
         <div className="section-block__more">
           <Link
-            to={localizePath("/portfolio", lang)}
+            to={localizePath("/projects", lang)}
             className="btn btn--ghost"
           >
             {ui.project.viewAll}

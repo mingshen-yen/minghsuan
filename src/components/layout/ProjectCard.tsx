@@ -10,7 +10,7 @@ export const ProjectCard = ({ projects }: { projects: Project[] }) => {
     <>
       {projects.map((project) => (
         <Link
-          to={localizePath(`/portfolio/${project.slug}`, lang)}
+          to={localizePath(`/projects/${project.slug}`, lang)}
           key={project.slug}
           className="card card--project"
         >

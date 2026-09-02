@@ -10,7 +10,7 @@ export const ProjectDetailPage = () => {
   const lang = useLang();
   const ui = getUi(lang);
   const project = slug ? getProjectBySlug(slug) : null;
-  const backHref = localizePath("/portfolio", lang);
+  const backHref = localizePath("/projects", lang);
 
   if (!project) {
     return (

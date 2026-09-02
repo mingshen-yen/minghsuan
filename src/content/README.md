@@ -26,7 +26,7 @@ which is the intended fallback rather than a bug.
 ## Projects
 
 One markdown file per project in `projects/`. **The filename is the URL slug**:
-`projects/nextup-live.md` is served at `/portfolio/nextup-live`. Renaming a file
+`projects/nextup-live.md` is served at `/projects/nextup-live`. Renaming a file
 changes its public URL, so only rename when you mean to — and add a 301 for the
 old path in `public/_redirects`, above the SPA fallback line, so links already
 shared keep working.

@@ -40,7 +40,7 @@ export const Hero = () => {
         <p className="hero__subtitle">{ui.hero.subtitle}</p>
         <div className="hero__cta">
           <a
-            href={localizePath("/portfolio", lang)}
+            href={localizePath("/projects", lang)}
             className="btn btn--primary"
           >
             {ui.hero.projects}

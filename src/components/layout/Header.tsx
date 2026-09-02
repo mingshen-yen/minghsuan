@@ -25,7 +25,7 @@ export const Header = () => {
   const navItems = [
     { to: "/", label: ui.nav.home },
     { to: "/about", label: ui.nav.about },
-    { to: "/portfolio", label: ui.nav.projects },
+    { to: "/projects", label: ui.nav.projects },
     { to: "/links", label: ui.nav.links },
   ];
 

@@ -16,8 +16,8 @@ const pages = [
   { index: true, element: <LandingPage /> },
   { path: "about", element: <AboutPage /> },
   { path: "media", element: <MediaPage /> },
-  { path: "portfolio", element: <ProjectsPage /> },
-  { path: "portfolio/:slug", element: <ProjectDetailPage /> },
+  { path: "projects", element: <ProjectsPage /> },
+  { path: "projects/:slug", element: <ProjectDetailPage /> },
   { path: "contact", element: <ContactRedirect /> },
   { path: "links", element: <LinksPage /> },
 ];

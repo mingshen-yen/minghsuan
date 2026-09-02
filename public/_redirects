@@ -1,14 +1,21 @@
-# Project slugs were renamed when the tags changed; keep shared links working.
-/portfolio/data-1        /portfolio/velocity-pulses-moderate          301
-/portfolio/data-2        /portfolio/stress-drop-scaling               301
-/portfolio/data-3        /portfolio/directivity-pulses-kahramanmaras  301
-/portfolio/web-1         /portfolio/nextup-live                       301
-/portfolio/climate-1     /portfolio/emissions-pathway-gap             301
-/zh/portfolio/data-1     /zh/portfolio/velocity-pulses-moderate          301
-/zh/portfolio/data-2     /zh/portfolio/stress-drop-scaling               301
-/zh/portfolio/data-3     /zh/portfolio/directivity-pulses-kahramanmaras  301
-/zh/portfolio/web-1      /zh/portfolio/nextup-live                       301
-/zh/portfolio/climate-1  /zh/portfolio/emissions-pathway-gap             301
+# /portfolio became /projects, and the project slugs were renamed before that.
+# The old-slug rules point straight at the new path so nothing hops twice.
+/portfolio/data-1        /projects/velocity-pulses-moderate          301
+/portfolio/data-2        /projects/stress-drop-scaling               301
+/portfolio/data-3        /projects/directivity-pulses-kahramanmaras  301
+/portfolio/web-1         /projects/nextup-live                       301
+/portfolio/climate-1     /projects/emissions-pathway-gap             301
+/zh/portfolio/data-1     /zh/projects/velocity-pulses-moderate          301
+/zh/portfolio/data-2     /zh/projects/stress-drop-scaling               301
+/zh/portfolio/data-3     /zh/projects/directivity-pulses-kahramanmaras  301
+/zh/portfolio/web-1      /zh/projects/nextup-live                       301
+/zh/portfolio/climate-1  /zh/projects/emissions-pathway-gap             301
+
+# Everything else that lived under /portfolio keeps its slug.
+/portfolio/*     /projects/:splat     301
+/zh/portfolio/*  /zh/projects/:splat  301
+/portfolio       /projects            301
+/zh/portfolio    /zh/projects         301
 
 # SPA fallback — must stay last, or it would swallow the rules above.
 /*  /index.html  200
