@@ -685,11 +685,23 @@
   }
 
   .story__heading {
-    @apply mx-auto w-full max-w-190 mb-5 text-xl md:text-2xl font-black normal-case text-(--text-heading);
+    @apply mx-auto w-full max-w-160 mb-5 text-xl md:text-2xl font-black normal-case text-(--text-heading);
   }
 
   .story__text {
-    @apply mx-auto w-full max-w-190 mb-4 text-base md:text-base leading-loose text-(--text-body);
+    @apply mx-auto w-full max-w-160 mb-4 text-base leading-loose text-(--text-body);
+  }
+
+  .story__text strong {
+    @apply font-bold text-(--text-heading);
+  }
+
+  .story__text em {
+    @apply not-italic text-(--color-accent-bright);
+  }
+
+  .story__text a {
+    @apply underline underline-offset-2 text-(--color-accent-bright) hover:text-(--color-accent);
   }
 
   .story__image {

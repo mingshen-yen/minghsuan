@@ -1,3 +1,4 @@
+import ReactMarkdown from "react-markdown";
 import { getAbout } from "../../api/aboutMe";
 import { getUi } from "../../api/ui";
 import { useLang } from "../../lib/i18n";
@@ -29,7 +30,13 @@ export const AboutPage = () => {
           <h2 className="story__heading">{block.heading}</h2>
           {block.paragraphs.map((paragraph) => (
             <p key={paragraph} className="story__text">
-              {paragraph}
+              {/* Markdown for emphasis inside a sentence. The paragraph wrapper
+                  is unwrapped so the result stays inline in our own <p>. */}
+              <ReactMarkdown
+                components={{ p: ({ children }) => <>{children}</> }}
+              >
+                {paragraph}
+              </ReactMarkdown>
             </p>
           ))}
           {block.image && (

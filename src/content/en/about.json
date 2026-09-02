@@ -1,8 +1,8 @@
 {
   "aboutMe": {
     "name": "Ming-Hsuan",
-    "title": "Data Scientist | Natural Hazard & Risk Analyst | Scientific Computing",
-    "description": "Building reproducible analytical workflows and translating complex datasets into actionable insights.",
+    "title": "Earth Scinece | Data Scientist | Natural Hazards | Content Creator",
+    "description": "Science is not just knowing. It's discovering.",
     "image": "/images/aboutme_photo.jpg",
     "skills": [
       "Python",
@@ -12,18 +12,29 @@
   },
   "story": [
     {
-      "heading": "Curiosity is the whole job",
+      "heading": "Curiosity is everything 💡",
       "paragraphs": [
-        "Hi, I'm Mingshen. I'm a research data scientist, and I make things on YouTube and a podcast.",
-        "I live in Potsdam, Germany. For the past few years my work has been about earthquakes and natural hazards — using data to understand things that are hard to predict, and then explaining what came out of it to people who are not specialists.",
-        "If I had to put the work in one line: use data to understand risk, and say it in language anyone can follow."
+        "I'm a scientist working in earth science, and a content creator exploring the world.",
+        "For the past few years I have studied earthquakes and natural hazards, using data to understand phenomena that resist prediction.",
+        "Somewhere in the research, I came to see this:",
+        "**What matters more than knowing an answer is noticing a question, and starting to look for one.**",
+        "So now I want to bring the way a researcher sees the world to more people.",
+        "Faced with a hard problem, how do we begin?",
+        "What makes an answer worth believing? What is the evidence? And when the evidence runs short, what can we still know?",
+        "From earthquakes and natural hazards to the things we take for granted in everyday life,",
+        "**all of it is worth asking again: why?**"
       ]
     },
     {
-      "heading": "Travel, books, films, and overthinking",
+      "heading": "Travel, books, films, and overthinking 💭",
       "paragraphs": [
-        "Six years into living abroad, I still love travelling, reading, watching films, and turning life's small questions over far longer than they need.",
-        "Since 2023 I have been putting those observations into videos and episodes — a YouTube channel, and a podcast called Huh? Germany! about what living here is actually like."
+        "Outside the research, I like to travel, read, watch films, and think about whatever life puts in front of me.",
+        "Living in Germany now, I keep meeting new questions — in different places, different books, different stories.",
+        "Since 2025 I have been turning those observations into videos and episodes on YouTube, sharing the world as I see it.",
+        "Sometimes it is science, sometimes a trip, sometimes a book or a film — sometimes just a question that turns up out of nowhere.",
+        "I don't know what I will find next.",
+        "**But I want to stay curious.**",
+        "**Let's explore the unknown together.**"
       ]
     }
   ],
