@@ -627,7 +627,7 @@
   }
 
   .cv-item__points {
-    @apply mt-3 flex flex-col gap-1.5 text-base list-none text-(--text-body);
+    @apply mt-3 flex flex-col gap-1.5 text-base text-start list-none text-(--text-body);
   }
 
   .cv-item__note {
@@ -692,15 +692,19 @@
     @apply mx-auto w-full max-w-160 mb-4 text-base leading-loose text-(--text-body);
   }
 
-  .story__text strong {
+  /* Shared by the story and the CV entries, both of which render markdown. */
+  .story__text strong,
+  .cv-item strong {
     @apply font-bold text-(--text-heading);
   }
 
-  .story__text em {
+  .story__text em,
+  .cv-item em {
     @apply not-italic text-(--color-accent-bright);
   }
 
-  .story__text a {
+  .story__text a,
+  .cv-item a {
     @apply underline underline-offset-2 text-(--color-accent-bright) hover:text-(--color-accent);
   }
 

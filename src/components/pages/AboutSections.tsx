@@ -1,9 +1,18 @@
 import { CalendarDays, MapPin } from "lucide-react";
+import ReactMarkdown from "react-markdown";
 import type {
   EducationItem,
   ExperienceItem,
   SkillCategory,
 } from "../../lib/type";
+
+/** Emphasis inside a sentence; the paragraph wrapper is unwrapped so the
+ *  result stays inline in the element that holds it. */
+const Inline = ({ children }: { children: string }) => (
+  <ReactMarkdown components={{ p: ({ children }) => <>{children}</> }}>
+    {children}
+  </ReactMarkdown>
+);
 
 const Meta = ({ period, location }: { period: string; location: string }) => (
   <div className="cv-item__meta">
@@ -27,7 +36,9 @@ export const ExperienceList = ({ items }: { items: ExperienceItem[] }) => (
         <Meta period={period} location={location} />
         <ul className="cv-item__points">
           {descriptions.map((d) => (
-            <li key={d}>{d}</li>
+            <li key={d}>
+              <Inline>{d}</Inline>
+            </li>
           ))}
         </ul>
       </article>
@@ -42,7 +53,11 @@ export const EducationList = ({ items }: { items: EducationItem[] }) => (
         <h3 className="cv-item__role">{degree}</h3>
         <p className="cv-item__org">{uni}</p>
         <Meta period={period} location={location} />
-        {description && <p className="cv-item__note">{description}</p>}
+        {description && (
+          <p className="cv-item__note">
+            <Inline>{description}</Inline>
+          </p>
+        )}
       </article>
     ))}
   </div>
