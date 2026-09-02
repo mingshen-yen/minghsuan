@@ -41,9 +41,9 @@
       "location": "Potsdam, Germany",
       "period": "2019-2026",
       "descriptions": [
-        "**- Earthquake & Seismic Hazard Modeling:** Developed physics-based and statistical models of earthquake source behavior, ground motion, and seismic wave propagation using seismic data.",
-        "**- Data & Computational Methods:** Built reproducible Python pipelines to integrate large, heterogeneous seismic and geospatial datasets across Europe for seismic hazard assessment.",
-        "**- Research & Science Communication:** Published 5 journal articles in seismology, and communicated complex hazard modeling results to researchers, engineers, and non-specialists through reports, presentations, and conferences."
+        "**Earthquake & Seismic Hazard Modeling:** Developed physics-based and statistical models of earthquake source behavior, ground motion, and seismic wave propagation using seismic data.",
+        "**Data & Computational Methods:** Built reproducible Python pipelines to integrate large, heterogeneous seismic and geospatial datasets across Europe for seismic hazard assessment.",
+        "**Research & Science Communication:** Published 5 journal articles in seismology, and communicated complex hazard modeling results to researchers, engineers, and non-specialists through reports, presentations, and conferences."
       ]
     },
     {
@@ -52,9 +52,9 @@
       "location": "Taoyuan, Taiwan",
       "period": "2016-2019",
       "descriptions": [
-        "**- International Research Collaboration:** Contributed to international seismic hazard and risk meetings and facilitated cross-country collaboration, model development, and data exchange among research teams in Taiwan, Japan, and New Zealand.",
-        "**- Earthquake Simulation & Hazard Modeling:** Conducted numerical simulations of historical earthquakes using numerical simulations (SEM, FK + EXSIM) to support earthquake hazard and risk modeling and high-stakes site evaluations.",
-        "**- Cross-disciplinary Risk Assessment:** Collaborated with geologists, seismologists, and engineering seismologists to integrate geological, seismic, and engineering data into site risk assessments, delivering technical reports to government agencies."
+        "**International Research Collaboration:** Contributed to international seismic hazard and risk meetings and facilitated cross-country collaboration, model development, and data exchange among research teams in Taiwan, Japan, and New Zealand.",
+        "**Earthquake Simulation & Hazard Modeling:** Conducted numerical simulations of historical earthquakes using SEM and FK + EXSIM to support earthquake hazard and risk modeling and high-stakes site evaluations.",
+        "**Cross-disciplinary Risk Assessment:** Collaborated with geologists, seismologists, and engineering seismologists to integrate geological, seismic, and engineering data into site risk assessments, delivering technical reports to government agencies."
       ]
     }
   ],
@@ -84,7 +84,7 @@
   "skills": [
     {
       "category": "Programming",
-      "items": ["Python", "MATLAB", "TypeScript"]
+      "items": ["Python", "MATLAB", "Fortran", "TypeScript"]
     },
     {
       "category": "Frameworks",

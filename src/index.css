@@ -627,7 +627,7 @@
   }
 
   .cv-item__points {
-    @apply mt-3 flex flex-col gap-1.5 text-base text-start list-none text-(--text-body);
+    @apply mt-3 flex flex-col gap-2 ps-5 text-base text-start list-disc list-outside text-(--text-body);
   }
 
   .cv-item__note {
