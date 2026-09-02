@@ -188,7 +188,7 @@
   }
 
   .nav__logo {
-    @apply md:flex items-center ml-2 font-display text-2xl font-medium tracking-tight not-italic text-(--text-body);
+    @apply md:flex items-center ml-2 font-display text-2xl font-semibold italic tracking-tight text-(--text-body);
   }
 
   /* The full name from sm up; below that the monogram stands in, so the bar
