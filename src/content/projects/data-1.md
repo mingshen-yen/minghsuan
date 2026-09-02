@@ -7,7 +7,7 @@ stack: [Python, Matlab]
 sourceUrl: https://www.researchgate.net/publication/354429255_Within-_and_Between-Event_Variabilities_of_Strong-Velocity_Pulses_of_Moderate_Earthquakes_within_Dense_Seismic_Arrays
 liveUrl: https://tec.earth.sinica.edu.tw/publication/newsletter/html/202412/46_06.html
 featured: false
-order: 2
+order: 3
 ---
 
 Ground motion with strong velocity pulses can cause significant damage to structures at certain periods. Understanding pulse periods and velocity amplitudes is critical for earthquake structural engineering, yet the physical factors governing how pulse periods scale with magnitude remain poorly understood.
