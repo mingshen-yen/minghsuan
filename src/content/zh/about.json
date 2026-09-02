@@ -4,11 +4,7 @@
     "title": "地球科學研究 × 資料分析 × 自然災害 × 內容創作",
     "description": "研究地震與自然，用資料探索那些還沒有答案的問題。",
     "image": "/images/aboutme_photo.jpg",
-    "skills": [
-      "Python",
-      "資料分析",
-      "網頁開發"
-    ]
+    "skills": ["Python", "資料分析", "網頁開發"]
   },
   "story": [
     {
@@ -64,7 +60,7 @@
   ],
   "education": [
     {
-      "degree": "Dr. rer. nat.，地球物理學",
+      "degree": "地球物理學博士",
       "uni": "Universität Potsdam",
       "location": "德國",
       "period": "2019-2024",
@@ -122,23 +118,11 @@
   "skills": [
     {
       "category": "程式語言",
-      "items": [
-        "Python",
-        "FORTRAN",
-        "MATLAB",
-        "SQL",
-        "TypeScript"
-      ]
+      "items": ["Python", "FORTRAN", "MATLAB", "SQL", "TypeScript"]
     },
     {
       "category": "工具",
-      "items": [
-        "QGIS",
-        "Jupyter",
-        "Linux/Unix",
-        "Git/GitHub",
-        "HPC 叢集"
-      ]
+      "items": ["QGIS", "Jupyter", "Linux/Unix", "Git/GitHub", "HPC 叢集"]
     },
     {
       "category": "網頁開發",
@@ -153,11 +137,7 @@
     },
     {
       "category": "語言",
-      "items": [
-        "英文（流利）",
-        "德文（中等）",
-        "中文（母語）"
-      ]
+      "items": ["英文（流利）", "德文（中等）", "中文（母語）"]
     }
   ]
 }
