@@ -67,7 +67,7 @@ export const Header = () => {
       <div className="nav__inner">
         <Link to={localizePath("/", lang)} className="nav__logo">
           <span className="nav__logo-short">M</span>
-          <span className="nav__logo-name">Mingshen</span>✦
+          <span className="nav__logo-name">MingsLab</span>✦
         </Link>
 
         {/* Desktop Navigation */}
