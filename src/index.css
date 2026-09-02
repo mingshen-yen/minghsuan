@@ -38,10 +38,10 @@
     --color-border: rgba(255, 255, 255, 0.07);
 
     /* Component Colors */
-    --color-tag-web: #7aa2f7;
-    --color-tag-web-bg: rgba(122, 162, 247, 0.12);
-    --color-tag-climate: #e0a44a;
-    --color-tag-climate-bg: rgba(224, 164, 74, 0.12);
+    --color-tag-software: #7aa2f7;
+    --color-tag-software-bg: rgba(122, 162, 247, 0.12);
+    --color-tag-analysis: #e0a44a;
+    --color-tag-analysis-bg: rgba(224, 164, 74, 0.12);
     --color-tag-writing: #33404d;
     --color-tag-video: #b4232a;
     --color-tag-audio: #8f5a0a;
@@ -77,10 +77,10 @@
     --color-accent-bright: #0a7d55;
     --color-accent-dim: rgba(13, 158, 107, 0.1);
     --color-accent-soft: rgba(13, 158, 107, 0.3);
-    --color-tag-web: #3059b8;
-    --color-tag-web-bg: rgba(48, 89, 184, 0.1);
-    --color-tag-climate: #8a5a08;
-    --color-tag-climate-bg: rgba(138, 90, 8, 0.1);
+    --color-tag-software: #3059b8;
+    --color-tag-software-bg: rgba(48, 89, 184, 0.1);
+    --color-tag-analysis: #8a5a08;
+    --color-tag-analysis-bg: rgba(138, 90, 8, 0.1);
     --color-tag-writing: #2f3d4a;
     --color-tag-video: #a41b22;
     --color-tag-audio: #9a610a;
@@ -840,17 +840,17 @@
     @apply w-fit text-xs font-semibold tracking-widest uppercase py-0.5 px-2 rounded-sm;
   }
 
-  .card__tag--data,
+  .card__tag--research,
   .card__tag--project {
     @apply bg-(--color-accent-dim) text-(--color-accent) border border-(--color-accent-soft);
   }
 
-  .card__tag--web {
-    @apply bg-(--color-tag-web-bg) text-(--color-tag-web) border border-(--color-tag-web);
+  .card__tag--software {
+    @apply bg-(--color-tag-software-bg) text-(--color-tag-software) border border-(--color-tag-software);
   }
 
-  .card__tag--climate {
-    @apply bg-(--color-tag-climate-bg) text-(--color-tag-climate) border border-(--color-tag-climate);
+  .card__tag--analysis {
+    @apply bg-(--color-tag-analysis-bg) text-(--color-tag-analysis) border border-(--color-tag-analysis);
   }
 
   /* ─────────────────────────────────────

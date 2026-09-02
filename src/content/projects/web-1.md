@@ -1,7 +1,7 @@
 ---
 title: NextUp Live
 summary: "A full-stack app for tracking what is playing next — React and TypeScript on the front, Node, Express and MongoDB behind it."
-tag: Web
+tag: Software
 image: /images/nextup-live.jpg
 stack: [React, TypeScript, TailwindCSS, Node.js, Express, MongoDB, REST APIs]
 sourceUrl: https://github.com/johdac/wbs_nextup_live

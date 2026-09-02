@@ -1,7 +1,7 @@
 ---
 title: Seismic Stress Drop Scaling Study
 summary: "A study of how seismic stress drop scales with magnitude, and what that implies for hazard estimates."
-tag: Data
+tag: Research
 image: /images/stress-drop-fig8b.jpg
 stack: [Python, SQL]
 sourceUrl: https://www.researchgate.net/publication/377440476_Source_parameters_and_scaling_relationships_of_stress_drop_for_shallow_crustal_seismic_events_in_Western_Europe

@@ -1,7 +1,7 @@
 ---
 title: Current Trends Against 1.5°C Scenarios
 summary: "How far Asia's emissions drift from a 1.5°C-compatible pathway if current trends hold, measured against the IPCC AR6 scenario database."
-tag: Climate
+tag: Analysis
 image: /images/iam-emissions-pathways.jpg
 stack: [Python, pyam, pandas, matplotlib]
 sourceUrl: https://github.com/mingshen-yen/IAM_analysis

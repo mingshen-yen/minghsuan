@@ -1,7 +1,7 @@
 ---
 title: Velocity Pulse in Large Earthquakes
 summary: "Near-fault pulse behaviour in large earthquakes, mapped across station networks."
-tag: Data
+tag: Research
 image: /images/nearfault-stations.jpg
 stack: [Python, Matlab]
 sourceUrl: https://www.researchgate.net/publication/387726568_An_analysis_of_directivity_pulses_using_empirical_data_and_dynamic_rupture_simulations_of_the_2023_Kahramanmaras_earthquake_doublet
