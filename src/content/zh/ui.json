@@ -47,7 +47,9 @@
     "experience": "專業經歷",
     "education": "學歷",
     "skills": "技能",
-    "background": "我的專業背景"
+    "background": "我的專業背景",
+    "publications": "代表著作",
+    "certificates": "證照"
   },
   "contact": {
     "title": "一起合作",

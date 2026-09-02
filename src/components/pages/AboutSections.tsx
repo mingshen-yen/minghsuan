@@ -1,8 +1,10 @@
 import { CalendarDays, MapPin } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import type {
+  Certificate,
   EducationItem,
   ExperienceItem,
+  Publication,
   SkillCategory,
 } from "../../lib/type";
 
@@ -78,4 +80,32 @@ export const SkillsGrid = ({ items }: { items: SkillCategory[] }) => (
       </div>
     ))}
   </div>
+);
+
+export const PublicationList = ({ items }: { items: Publication[] }) => (
+  <div className="cv-list">
+    {items.map(({ title, venue, year, url }) => (
+      <article key={url} className="cv-item">
+        <h3 className="cv-item__role">
+          <a href={url} target="_blank" rel="noopener noreferrer">
+            {title}
+          </a>
+        </h3>
+        <p className="cv-item__org">
+          {venue} · {year}
+        </p>
+      </article>
+    ))}
+  </div>
+);
+
+export const CertificateList = ({ items }: { items: Certificate[] }) => (
+  <ul className="cert-list">
+    {items.map(({ name, year }) => (
+      <li key={name} className="cert-item">
+        <span>{name}</span>
+        <span className="cert-item__year">{year}</span>
+      </li>
+    ))}
+  </ul>
 );

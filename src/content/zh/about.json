@@ -64,7 +64,7 @@
   ],
   "education": [
     {
-      "degree": "地球物理學博士",
+      "degree": "Dr. rer. nat.，地球物理學",
       "uni": "Universität Potsdam",
       "location": "德國",
       "period": "2019-2024",
@@ -85,47 +85,78 @@
       "description": "GPA: 3.6/4.0"
     }
   ],
+  "publications": [
+    {
+      "title": "An analysis of directivity pulses using empirical data and dynamic rupture simulations of the 2023 Kahramanmaraş earthquake doublet",
+      "venue": "Earthquake Spectra",
+      "year": "2025",
+      "url": "https://doi.org/10.1177/87552930241305012"
+    },
+    {
+      "title": "Source parameters and scaling relationships of stress drop for shallow crustal earthquakes in Western Europe",
+      "venue": "Journal of Seismology",
+      "year": "2024",
+      "url": "https://doi.org/10.1007/s10950-023-10188-y"
+    },
+    {
+      "title": "Within- and between-event variabilities of strong-velocity pulses of moderate earthquakes within dense seismic arrays",
+      "venue": "Bulletin of the Seismological Society of America",
+      "year": "2022",
+      "url": "https://doi.org/10.1785/0120200376"
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Natural Disaster and Climate Change Risk Assessment",
+      "year": "2026"
+    },
+    {
+      "name": "AI Software Development",
+      "year": "2026"
+    },
+    {
+      "name": "IBM Data Science Professional Certificate",
+      "year": "2025"
+    }
+  ],
   "skills": [
     {
       "category": "程式語言",
       "items": [
         "Python",
+        "FORTRAN",
         "MATLAB",
+        "SQL",
         "TypeScript"
-      ]
-    },
-    {
-      "category": "框架",
-      "items": [
-        "React",
-        "Node.js",
-        "Express",
-        "Jupyter"
-      ]
-    },
-    {
-      "category": "資料庫",
-      "items": [
-        "MongoDB",
-        "PostgreSQL",
-        "REST APIs"
       ]
     },
     {
       "category": "工具",
       "items": [
-        "Git",
-        "GitHub",
-        "QGIS"
+        "QGIS",
+        "Jupyter",
+        "Linux/Unix",
+        "Git/GitHub",
+        "HPC 叢集"
+      ]
+    },
+    {
+      "category": "網頁開發",
+      "items": [
+        "React",
+        "TypeScript",
+        "TailwindCSS",
+        "Node.js",
+        "Express",
+        "MongoDB"
       ]
     },
     {
       "category": "語言",
       "items": [
-        "英文",
-        "德文",
-        "中文",
-        "台語"
+        "英文（流利）",
+        "德文（中等）",
+        "中文（母語）"
       ]
     }
   ]

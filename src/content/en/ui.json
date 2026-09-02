@@ -51,7 +51,9 @@
     "experience": "Experience",
     "education": "Education",
     "skills": "Skills",
-    "background": "My background"
+    "background": "My background",
+    "publications": "Selected publications",
+    "certificates": "Certificates"
   },
   "contact": {
     "title": "Let's work together",

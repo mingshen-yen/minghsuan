@@ -4,11 +4,25 @@ import { getUi } from "../../api/ui";
 import { useLang } from "../../lib/i18n";
 import { ContactSection } from "../layout/ContactSection";
 import { SectionHead } from "../layout/SectionHead";
-import { EducationList, ExperienceList, SkillsGrid } from "./AboutSections";
+import {
+  CertificateList,
+  EducationList,
+  ExperienceList,
+  PublicationList,
+  SkillsGrid,
+} from "./AboutSections";
 
 export const AboutPage = () => {
   const lang = useLang();
-  const { aboutMe, story, experience, education, skills } = getAbout(lang);
+  const {
+    aboutMe,
+    story,
+    experience,
+    education,
+    skills,
+    publications,
+    certificates,
+  } = getAbout(lang);
   const ui = getUi(lang);
 
   return (
@@ -66,6 +80,16 @@ export const AboutPage = () => {
       <section className="section-block section-block--compact">
         <SectionHead title={ui.about.skills} />
         <SkillsGrid items={skills} />
+      </section>
+
+      <section className="section-block section-block--compact">
+        <SectionHead title={ui.about.publications} />
+        <PublicationList items={publications} />
+      </section>
+
+      <section className="section-block section-block--compact">
+        <SectionHead title={ui.about.certificates} />
+        <CertificateList items={certificates} />
       </section>
 
       <ContactSection />

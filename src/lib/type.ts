@@ -18,6 +18,18 @@ export type StoryBlock = {
   image?: string;
 };
 
+export type Publication = {
+  title: string;
+  venue: string;
+  year: string;
+  url: string;
+};
+
+export type Certificate = {
+  name: string;
+  year: string;
+};
+
 export type AboutData = {
   aboutMe: {
     name: string;
@@ -31,6 +43,8 @@ export type AboutData = {
   experience: ExperienceItem[];
   education: EducationItem[];
   skills: SkillCategory[];
+  publications: Publication[];
+  certificates: Certificate[];
 };
 
 export type ExperienceItem = {
@@ -103,6 +117,8 @@ export type UiStrings = {
     greeting: string;
     iam: string;
     background: string;
+    publications: string;
+    certificates: string;
     experience: string;
     education: string;
     skills: string;

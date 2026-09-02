@@ -634,6 +634,18 @@
     @apply mt-2 text-base text-(--text-body);
   }
 
+  .cert-list {
+    @apply mx-auto flex w-full max-w-190 flex-col gap-3 list-none;
+  }
+
+  .cert-item {
+    @apply flex flex-wrap items-baseline justify-center gap-x-3 text-base text-(--text-body);
+  }
+
+  .cert-item__year {
+    @apply text-sm text-(--text-muted);
+  }
+
   .skills-grid {
     @apply mx-auto grid w-full max-w-190 grid-cols-1 sm:grid-cols-2 gap-7 text-center;
   }
