@@ -1,14 +1,10 @@
 {
   "aboutMe": {
     "name": "Ming-Hsuan",
-    "title": "Earth Scinece | Data Scientist | Natural Hazards | Content Creator",
+    "title": "Data Scinece | Natural Hazards | Content Creation",
     "description": "Science is not just knowing. It's discovering.",
     "image": "/images/aboutme_photo.jpg",
-    "skills": [
-      "Python",
-      "Data Analysis",
-      "Web Dev"
-    ]
+    "skills": ["Python", "Data Analysis", "Web Dev"]
   },
   "story": [
     {
@@ -122,23 +118,11 @@
   "skills": [
     {
       "category": "Programming",
-      "items": [
-        "Python",
-        "FORTRAN",
-        "MATLAB",
-        "SQL",
-        "TypeScript"
-      ]
+      "items": ["Python", "FORTRAN", "MATLAB", "SQL", "TypeScript"]
     },
     {
       "category": "Tools",
-      "items": [
-        "QGIS",
-        "Jupyter",
-        "Linux/Unix",
-        "Git/GitHub",
-        "HPC clusters"
-      ]
+      "items": ["QGIS", "Jupyter", "Linux/Unix", "Git/GitHub", "HPC clusters"]
     },
     {
       "category": "Web",

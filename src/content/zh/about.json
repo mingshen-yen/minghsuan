@@ -1,7 +1,7 @@
 {
   "aboutMe": {
     "name": "銘萱",
-    "title": "地球科學研究 × 資料分析 × 自然災害 × 內容創作",
+    "title": "資料研究 × 自然災害 × 內容創作",
     "description": "研究地震與自然，用資料探索那些還沒有答案的問題。",
     "image": "/images/aboutme_photo.jpg",
     "skills": ["Python", "資料分析", "網頁開發"]

@@ -147,7 +147,7 @@
      TYPOGRAPHY
      ───────────────────────────────────── */
   h1 {
-    @apply font-serif font-bold text-[45px] md:text-[56px] mb-3 tracking-tight md:tracking-normal leading-[1.05] text-(--text-heading);
+    @apply font-serif font-bold text-[52px] md:text-[56px] mb-3 tracking-tight md:tracking-normal leading-[1.05] text-(--text-heading);
   }
 
   em {
@@ -155,23 +155,23 @@
   }
 
   h2 {
-    @apply text-4xl md:text-5xl font-black uppercase text-(--text-heading);
+    @apply text-[42px] md:text-5xl font-black uppercase text-(--text-heading);
   }
 
   h3 {
-    @apply pb-2 text-2xl md:text-3xl 2xl:text-4xl font-black text-(--text-heading);
+    @apply pb-2 text-3xl md:text-3xl 2xl:text-4xl font-black text-(--text-heading);
   }
 
   h4 {
-    @apply pt-2 pb-1 text-base md:text-lg 2xl:text-xl font-bold text-(--color-accent);
+    @apply pt-2 pb-1 text-lg md:text-lg 2xl:text-xl font-bold text-(--color-accent);
   }
 
   p {
-    @apply text-base text-(--text-muted);
+    @apply text-xl md:text-base text-(--text-muted);
   }
 
   footer {
-    @apply relative z-10 py-8 flex flex-col justify-center items-center gap-2 text-sm text-center text-(--text-dim) bg-(--bg-nav);
+    @apply relative z-10 py-8 flex flex-col justify-center items-center gap-2 text-base md:text-sm text-center text-(--text-dim) bg-(--bg-nav);
   }
 
   /* ─────────────────────────────────────
@@ -299,13 +299,13 @@
 
   /* h2 is uppercase by default, which shouts at a sentence this long. */
   .contact__title {
-    @apply text-3xl md:text-4xl font-black normal-case text-(--text-heading);
+    @apply text-4xl md:text-4xl font-black normal-case text-(--text-heading);
   }
 
   /* Lifted by size and tone rather than colour: a green sentence this long
      reads as a link, and the accent is what marks the real links below it. */
   .contact__intro {
-    @apply mt-4 text-base leading-relaxed text-(--text-heading);
+    @apply mt-4 text-xl md:text-base leading-relaxed text-(--text-heading);
   }
 
   .contact__list {
@@ -313,7 +313,7 @@
   }
 
   .contact__note {
-    @apply mt-8 text-sm text-(--text-dim);
+    @apply mt-8 text-base md:text-sm text-(--text-dim);
   }
 
   /* ─────────────────────────────────────
@@ -333,11 +333,11 @@
 
   /* The wordmark's face: this is the same name the header carries. */
   .link-hub__name {
-    @apply mt-6 font-display text-3xl font-semibold tracking-tight text-(--text-heading);
+    @apply mt-6 font-display text-4xl md:text-3xl font-semibold tracking-tight text-(--text-heading);
   }
 
   .link-hub__tagline {
-    @apply mt-4 text-base leading-relaxed text-(--text-muted);
+    @apply mt-4 text-xl md:text-base leading-relaxed text-(--text-muted);
   }
 
   .link-hub__list {
@@ -369,7 +369,7 @@
   }
 
   .link-card__description {
-    @apply text-sm text-(--text-muted) truncate;
+    @apply text-base md:text-sm text-(--text-muted) truncate;
   }
 
   .link-card__arrow {
@@ -416,7 +416,7 @@
   }
 
   .skill-tag {
-    @apply px-2.5 py-1.5 rounded-sm text-sm tracking-wide transition-all duration-200 bg-(--bg-skill-tag) border border-(--border-subtle) text-(--color-skill-text) hover:border-(--color-accent-soft) hover:text-(--color-accent) hover:bg-(--color-accent-dim);
+    @apply px-2.5 py-1.5 rounded-sm text-base md:text-sm tracking-wide transition-all duration-200 bg-(--bg-skill-tag) border border-(--border-subtle) text-(--color-skill-text) hover:border-(--color-accent-soft) hover:text-(--color-accent) hover:bg-(--color-accent-dim);
   }
 
   .skill-label {
@@ -455,7 +455,7 @@
   }
 
   .filter {
-    @apply inline-flex items-center gap-2 rounded-sm border px-3.5 py-1.5 text-sm font-bold tracking-widest uppercase cursor-pointer transition-colors duration-200 border-(--border-subtle) text-(--text-muted) hover:border-(--color-accent-soft) hover:text-(--color-accent-bright);
+    @apply inline-flex items-center gap-2 rounded-sm border px-3.5 py-1.5 text-base md:text-sm font-bold tracking-widest uppercase cursor-pointer transition-colors duration-200 border-(--border-subtle) text-(--text-muted) hover:border-(--color-accent-soft) hover:text-(--color-accent-bright);
   }
 
   .filter--active {
@@ -480,7 +480,7 @@
   }
 
   .divider__label {
-    @apply shrink-0 text-sm font-bold tracking-[0.2em] uppercase text-(--color-accent-bright);
+    @apply shrink-0 text-base md:text-sm font-bold tracking-[0.2em] uppercase text-(--color-accent-bright);
   }
 
   /* Follows the divider, which already spent the gap announcing it. */
@@ -511,7 +511,7 @@
   }
 
   .section-head__title {
-    @apply text-3xl md:text-4xl font-black normal-case text-(--text-heading);
+    @apply text-4xl md:text-4xl font-black normal-case text-(--text-heading);
   }
 
   .section--hero {
@@ -561,7 +561,7 @@
   }
 
   .hero__subtitle {
-    @apply mx-auto mt-5 max-w-160 text-base leading-relaxed text-(--text-muted);
+    @apply mx-auto mt-5 max-w-160 text-xl md:text-base leading-relaxed text-(--text-muted);
   }
 
   /* Hard breaks only where there is room for them. */
@@ -615,15 +615,15 @@
   /* The accent sits on the role, not the employer: only one of the two lines
      should carry it, and the role is the one being scanned for. */
   .cv-item__role {
-    @apply text-lg md:text-xl font-bold text-(--color-accent-bright);
+    @apply text-2xl md:text-xl font-bold text-(--color-accent-bright);
   }
 
   .cv-item__org {
-    @apply mt-0.5 text-sm font-medium text-(--text-muted);
+    @apply mt-0.5 text-base md:text-sm font-medium text-(--text-muted);
   }
 
   .cv-item__meta {
-    @apply mt-1.5 flex flex-wrap justify-center gap-x-4 gap-y-1 text-sm text-(--text-muted);
+    @apply mt-1.5 flex flex-wrap justify-center gap-x-4 gap-y-1 text-base md:text-sm text-(--text-muted);
   }
 
   .cv-item__meta span {
@@ -631,11 +631,11 @@
   }
 
   .cv-item__points {
-    @apply mt-3 flex flex-col gap-2 ps-5 text-base text-start list-disc list-outside text-(--text-body);
+    @apply mt-3 flex flex-col gap-2 ps-5 text-xl md:text-base text-start list-disc list-outside text-(--text-body);
   }
 
   .cv-item__note {
-    @apply mt-2 text-base text-(--text-body);
+    @apply mt-2 text-xl md:text-base text-(--text-body);
   }
 
   .cert-list {
@@ -647,7 +647,7 @@
   }
 
   .cert-item__year {
-    @apply text-sm text-(--text-muted);
+    @apply text-base md:text-sm text-(--text-muted);
   }
 
   .skills-grid {
@@ -655,7 +655,7 @@
   }
 
   .skills-group__name {
-    @apply mb-2.5 text-sm font-bold tracking-widest uppercase text-(--color-accent-bright);
+    @apply mb-2.5 text-base md:text-sm font-bold tracking-widest uppercase text-(--color-accent-bright);
   }
 
   .skills-list {
@@ -663,7 +663,7 @@
   }
 
   .about__title {
-    @apply font-sans text-4xl md:text-5xl font-black leading-tight text-(--text-heading);
+    @apply font-sans text-[42px] md:text-5xl font-black leading-tight text-(--text-heading);
   }
 
   /* The source is a 3:4 full-length shot; a 3:2 box keeps the middle band —
@@ -682,13 +682,13 @@
   }
 
   .about__role {
-    @apply text-base lg:whitespace-nowrap text-(--text-muted);
+    @apply text-xl md:text-base lg:whitespace-nowrap text-(--text-muted);
   }
 
   /* nowrap only from lg, where there is room; below that it must be allowed to
      wrap rather than overflow. */
   .about__quote {
-    @apply max-w-190 text-base italic lg:whitespace-nowrap text-(--text-muted);
+    @apply max-w-190 text-xl md:text-base italic lg:whitespace-nowrap text-(--text-muted);
   }
 
   /* ─────────────────────────────────────
@@ -701,11 +701,11 @@
   }
 
   .story__heading {
-    @apply mx-auto w-full max-w-160 mb-5 text-xl md:text-2xl font-black normal-case text-(--text-heading);
+    @apply mx-auto w-full max-w-160 mb-5 text-2xl md:text-2xl font-black normal-case text-(--text-heading);
   }
 
   .story__text {
-    @apply mx-auto w-full max-w-160 mb-4 text-base leading-loose text-(--text-body);
+    @apply mx-auto w-full max-w-160 mb-4 text-xl md:text-base leading-loose text-(--text-body);
   }
 
   /* Shared by the story and the CV entries, both of which render markdown. */
@@ -769,15 +769,15 @@
   }
 
   .media-card__title {
-    @apply pb-0 text-xl md:text-2xl font-black text-(--text-heading);
+    @apply pb-0 text-2xl md:text-2xl font-black text-(--text-heading);
   }
 
   .media-card__blurb {
-    @apply text-base text-(--text-muted);
+    @apply text-xl md:text-base text-(--text-muted);
   }
 
   .media-card__link {
-    @apply mt-1 inline-flex items-center gap-1 text-sm font-bold tracking-wide transition-colors duration-200 text-(--color-accent-bright) hover:text-(--color-accent);
+    @apply mt-1 inline-flex items-center gap-1 text-base md:text-sm font-bold tracking-wide transition-colors duration-200 text-(--color-accent-bright) hover:text-(--color-accent);
   }
 
   .media-card__tag {
@@ -829,11 +829,11 @@
 
   /* h-6 used to clip any title that wrapped, which all four of them do. */
   .card__title {
-    @apply text-start text-base font-bold transition-colors duration-200 text-(--text-heading);
+    @apply text-start text-lg md:text-base font-bold transition-colors duration-200 text-(--text-heading);
   }
 
   .card__description {
-    @apply text-base text-start leading-relaxed line-clamp-3 text-(--text-muted);
+    @apply text-xl md:text-base text-start leading-relaxed line-clamp-3 text-(--text-muted);
   }
 
   .card__tag {
@@ -866,7 +866,7 @@
   }
 
   .project-detail__back {
-    @apply inline-flex items-center gap-1.5 text-sm tracking-widest uppercase transition-colors mb-10 text-(--color-accent-bright) hover:text-(--color-accent);
+    @apply inline-flex items-center gap-1.5 text-base md:text-sm tracking-widest uppercase transition-colors mb-10 text-(--color-accent-bright) hover:text-(--color-accent);
   }
 
   .project-detail__header {
@@ -878,7 +878,7 @@
   }
 
   .project-detail__title {
-    @apply font-sans font-black text-3xl md:text-4xl leading-tight mb-4 tracking-tight text-(--text-heading);
+    @apply font-sans font-black text-4xl md:text-4xl leading-tight mb-4 tracking-tight text-(--text-heading);
   }
 
   .project-detail__actions {
@@ -909,7 +909,7 @@
      visible markers until they were given their indent back. */
   .project-detail__body ul,
   .project-detail__body ol {
-    @apply flex flex-col gap-2 ps-6 text-base text-(--text-body);
+    @apply flex flex-col gap-2 ps-6 text-xl md:text-base text-(--text-body);
   }
 
   .project-detail__body ul {
@@ -921,7 +921,7 @@
   }
 
   .project-detail__body p {
-    @apply text-base leading-relaxed text-(--text-body);
+    @apply text-xl md:text-base leading-relaxed text-(--text-body);
   }
 
 }
