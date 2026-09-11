@@ -27,6 +27,8 @@
     "links": "連結"
   },
   "sections": {
+    "newsLabel": "最新動向",
+    "newsTitle": "近況",
     "projectsLabel": "精選作品",
     "projectsTitle": "作品集",
     "mediaLabel": "研究之外",

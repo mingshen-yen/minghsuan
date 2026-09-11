@@ -1,0 +1,26 @@
+[
+  {
+    "date": "2026-09-09",
+    "tag": "Launch",
+    "title": "Near-Fault Pulse Database is live",
+    "description": "The velocity-pulse classifier now runs as a hosted pipeline, pulling waveforms from the strong-motion archives and refreshing itself every six hours.",
+    "url": "https://pulse-extraction.pages.dev/",
+    "linkLabel": "Open the map"
+  },
+  {
+    "date": "2025",
+    "tag": "Paper",
+    "title": "Directivity pulses of the 2023 Kahramanmaraş doublet",
+    "description": "Published in Earthquake Spectra: what 637 stations recorded, set against dynamic rupture simulations of the same rupture.",
+    "url": "https://doi.org/10.1177/87552930241305012",
+    "linkLabel": "Read the paper"
+  },
+  {
+    "date": "2024",
+    "tag": "Paper",
+    "title": "Pulse-like ground motions in the Mw 6.1 Gölyaka-Düzce earthquake",
+    "description": "Co-authored in the Bulletin of the Seismological Society of America, on directivity effects in moderate earthquakes.",
+    "url": "https://doi.org/10.1785/0120230043",
+    "linkLabel": "Read the paper"
+  }
+]

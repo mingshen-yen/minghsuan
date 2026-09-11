@@ -31,6 +31,8 @@
     "links": "Links"
   },
   "sections": {
+    "newsLabel": "What's new",
+    "newsTitle": "News",
     "projectsLabel": "Selected work",
     "projectsTitle": "Projects",
     "mediaLabel": "Beyond the research",

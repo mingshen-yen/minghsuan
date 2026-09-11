@@ -1,0 +1,26 @@
+[
+  {
+    "date": "2026-09-09",
+    "tag": "上線",
+    "title": "近斷層速度脈衝資料庫上線",
+    "description": "速度脈衝分類器改寫成線上管線，直接從強震資料庫抓取波形，每六小時自動更新一次。",
+    "url": "https://pulse-extraction.pages.dev/",
+    "linkLabel": "打開地圖"
+  },
+  {
+    "date": "2025",
+    "tag": "論文",
+    "title": "2023 年 Kahramanmaraş 雙主震的指向性脈衝",
+    "description": "發表於 Earthquake Spectra：637 個測站記錄到什麼，以及它與同一場破裂的動態模擬有何差距。",
+    "url": "https://doi.org/10.1177/87552930241305012",
+    "linkLabel": "閱讀論文"
+  },
+  {
+    "date": "2024",
+    "tag": "論文",
+    "title": "Mw 6.1 Gölyaka-Düzce 地震的脈衝型地動",
+    "description": "共同作者，發表於 Bulletin of the Seismological Society of America，探討中型地震的指向性效應。",
+    "url": "https://doi.org/10.1785/0120230043",
+    "linkLabel": "閱讀論文"
+  }
+]

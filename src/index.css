@@ -526,6 +526,48 @@
     @apply text-4xl md:text-4xl font-black normal-case text-(--text-heading);
   }
 
+  /* ─────────────────────────────────────
+     NEWS
+     ───────────────────────────────────── */
+
+  /* A dated list rather than another card grid: the items are one-liners with
+     no art, and a second grid of tiles would read as more projects. */
+  .news {
+    @apply mx-auto flex w-full max-w-200 flex-col;
+  }
+
+  .news__item {
+    @apply grid gap-2 border-t border-(--color-accent-dim) py-6 md:grid-cols-[8rem_1fr] md:gap-8;
+  }
+
+  .news__item:last-child {
+    @apply border-b;
+  }
+
+  .news__date {
+    @apply text-base md:text-sm font-bold uppercase tracking-widest text-(--text-muted) md:pt-1;
+  }
+
+  .news__body {
+    @apply flex flex-col items-start gap-2;
+  }
+
+  .news__tag {
+    @apply w-fit rounded-sm border border-(--color-accent-dim) px-1.5 py-0.5 text-xs font-bold uppercase tracking-widest text-(--color-accent-bright);
+  }
+
+  .news__title {
+    @apply pb-0 text-2xl md:text-xl font-black text-(--text-heading);
+  }
+
+  .news__blurb {
+    @apply text-xl md:text-base text-(--text-muted);
+  }
+
+  .news__link {
+    @apply inline-flex items-center gap-1 text-base md:text-sm font-bold tracking-wide text-(--color-accent-bright) transition-colors duration-200 hover:text-(--color-accent) focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--color-accent-bright);
+  }
+
   .section--hero {
     @apply z-(--z-base) px-6 pt-32 md:pt-42 pb-2 md:pb-4 relative justify-center text-center mx-auto;
   }

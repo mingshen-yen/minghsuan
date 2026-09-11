@@ -112,6 +112,8 @@ export type UiStrings = {
   };
   nav: { home: string; about: string; projects: string; links: string };
   sections: {
+    newsLabel: string;
+    newsTitle: string;
     projectsLabel: string;
     projectsTitle: string;
     mediaLabel: string;
@@ -166,4 +168,17 @@ export type MediaItem = {
   description: string;
   url: string;
   linkLabel: string;
+};
+
+export type NewsItem = {
+  /** `YYYY`, `YYYY-MM` or `YYYY-MM-DD`. Sorts the list and sets how precisely
+   *  the date is shown, so an item known only to the year need not invent a day. */
+  date: string;
+  /** Short kind label: Launch, Paper, Talk. */
+  tag: string;
+  title: string;
+  description: string;
+  /** Optional: plenty of news has nowhere to click through to. */
+  url?: string;
+  linkLabel?: string;
 };
