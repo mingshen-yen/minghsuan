@@ -6,8 +6,7 @@ image: /images/velocity-pulses-moderate.jpg
 stack: [Python, MATLAB, wavelet analysis, statistical validation, signal processing]
 # sourceUrl: https://doi.org/10.1177/87552930241305012
 # sourceKind: code
-liveUrl: https://tec.earth.sinica.edu.tw/publication/newsletter/html/202412/46_06.html
-liveKind: article
+liveUrl: https://pulse-extraction.pages.dev/
 featured: false
 order: 3
 ---
