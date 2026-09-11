@@ -6,7 +6,8 @@ image: /images/velocity-pulses-moderate.jpg
 stack: [Python, MATLAB, wavelet analysis, statistical validation, signal processing]
 # sourceUrl: https://doi.org/10.1177/87552930241305012
 # sourceKind: code
-liveUrl: https://pulse-extraction.pages.dev/
+liveUrl: https://tec.earth.sinica.edu.tw/publication/newsletter/html/202412/46_06.html
+liveKind: article
 featured: false
 order: 3
 ---
@@ -68,6 +69,10 @@ Observed records were compared station by station with seven simulated fault mod
 The results show that directivity and earthquake magnitude cannot fully explain near-fault velocity pulses. Local slip heterogeneity, fault geometry, and site response can be equally important.
 
 For seismic hazard assessment, this means that magnitude-based relationships may hide the extreme variability experienced at individual sites. More realistic dynamic rupture models require heterogeneous slip distributions and fault geometries to reproduce what instruments record.
+
+#### ***Tooling***
+
+The extraction pipeline described here has since been rebuilt in Python and wired to the strong-motion archives directly — see *Near-Fault Pulse Database*, which reproduces 25 of the 27 published reference pulses straight from live archive queries.
 
 #### ***Publications***
 

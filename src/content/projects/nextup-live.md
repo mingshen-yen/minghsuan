@@ -7,7 +7,7 @@ stack: [React, TypeScript, Vite, TailwindCSS, Node.js, Express, MongoDB, REST AP
 sourceUrl: https://github.com/johdac/wbs_nextup_live
 liveUrl: https://wbs-nextup-live-n5yv.onrender.com/
 featured: false
-order: 4
+order: 5
 ---
 
 A full-stack TypeScript application for managing and browsing live music events, built with a React and Vite frontend against an Express and MongoDB backend.

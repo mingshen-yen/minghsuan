@@ -6,7 +6,7 @@ image: /images/iam-emissions-pathways.jpg
 stack: [Python, pyam, pandas, matplotlib]
 sourceUrl: https://github.com/mingshen-yen/IAM_analysis
 featured: false
-order: 1
+order: 4
 ---
 
 How far do emissions drift from a 1.5°C-compatible pathway if current trends hold? The answer is a number, and getting to it means pulling two scenarios out of a database of thousands and measuring the distance between them.
