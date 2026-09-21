@@ -75,7 +75,9 @@
     --color-navy: #ffffff;
     --color-accent: #0d9e6b;
     --color-accent-bright: #0a7d55;
-    --color-accent-dim: rgba(13, 158, 107, 0.1);
+    /* Also the resting border on white cards, so it carries a touch more weight
+       than the dark theme's fill-only use of the token. */
+    --color-accent-dim: rgba(13, 158, 107, 0.16);
     --color-accent-soft: rgba(13, 158, 107, 0.3);
     --color-tag-software: #3059b8;
     --color-tag-software-bg: rgba(48, 89, 184, 0.1);
@@ -88,17 +90,21 @@
     --color-card-border: rgba(13, 158, 107, 0.5);
     --shadow-accent: 0 8px 24px rgba(13, 158, 107, 0.2);
 
-    --bg-body: #f4f7f5;
-    --bg-nav: #e7ecea;
-    --bg-card: rgba(255, 255, 255, 0.7);
+    /* Neutral greys, no green cast: the mint only shows up as an accent, so the
+       page reads as white paper rather than as a tinted theme. */
+    --bg-body: #fafafa;
+    --bg-nav: #ffffff;
+    --bg-card: rgba(255, 255, 255, 0.8);
     --bg-project-card: #ffffff;
     --bg-media-card: #ffffff;
-    --bg-skill-tag: #eef2f0;
-    --text-body: #1a1a1a;
-    --text-heading: #111827;
-    --text-muted: #4b5563;
-    --text-dim: #5c6674;
-    --border-subtle: rgba(0, 0, 0, 0.08);
+    --bg-skill-tag: #f4f4f5;
+    --text-body: #27272a;
+    --text-heading: #18181b;
+    --text-muted: #52525b;
+    --text-dim: #71717a;
+    --border-subtle: rgba(0, 0, 0, 0.09);
+    /* The grid backdrop is white-on-dark by default, i.e. invisible here. */
+    --color-border: rgba(0, 0, 0, 0.045);
   }
 
   html {
