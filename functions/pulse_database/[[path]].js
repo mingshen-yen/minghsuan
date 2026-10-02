@@ -3,6 +3,9 @@
 // mingslab.com/pulse_database/ by proxying to its pages.dev host.
 const ORIGIN = "https://pulse-extraction.pages.dev";
 const PREFIX = "/pulse_database";
+// pulse-extraction redirects pages.dev visits without this header to
+// mingslab.com (its functions/_middleware.js), so the site has one public URL.
+const PROXY_HEADER = "X-Pulse-Proxy";
 
 export async function onRequest({ request }) {
   const url = new URL(request.url);
@@ -14,7 +17,9 @@ export async function onRequest({ request }) {
   }
 
   const upstream = new URL(url.pathname.slice(PREFIX.length) + url.search, ORIGIN);
-  const res = await fetch(upstream, request);
+  const req = new Request(upstream, request);
+  req.headers.set(PROXY_HEADER, "mingslab");
+  const res = await fetch(req);
 
   // pages.dev redirects (e.g. /index.html -> /) point at its own host;
   // keep the visitor on mingslab.com.
