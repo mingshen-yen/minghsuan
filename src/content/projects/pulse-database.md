@@ -2,9 +2,9 @@
 title: Near-Fault Pulse Database
 summary: "A pipeline that pulls strong-motion waveforms straight from the archives, runs each one end to end through a velocity-pulse classifier, and publishes the verdicts as a live map — reproducing 25 of 27 published pulses without a local file anywhere."
 tag: Software
-image: /images/pulse-database.jpg
+image: /images/pulse-database.png
 stack: [Python, ObsPy, NumPy, SciPy, PyWavelets, pandas, pytest, Leaflet]
-liveUrl: https://pulse-extraction.pages.dev/
+liveUrl: https://mingslab.com/pulse_database/
 featured: true
 order: 1
 ---
